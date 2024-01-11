@@ -1,0 +1,64 @@
+<div id="curriculum-vitae">
+
+    <div id="cv-menu-desktop">
+        <div id="menu_content_common">
+            <img src="../../../../../assets/app_logos/logo_fp_03.png" routerLink="/"/>
+            <p>Tony's Resume</p>
+            <div class="box_buttons">
+                <a routerLink="/">Home</a>
+            </div>
+            <div class="box_buttons">
+                <a routerLink="/training">Training</a>
+                <a routerLink="/experience">Experience</a>
+            </div>
+            <div class="box_buttons">
+                <a routerLink="/soft-skills">Soft Skills</a>
+                <a routerLink="/hard-skills">Hard Skills</a>
+            </div>
+            <div class="box_buttons">
+                <a routerLink="/projects">Projects</a>
+            </div>
+            <p>Download</p>
+            <div id="cv-menu-links">
+                <p> ▸ <a target="_blank" href="../../../../../assets/curriculum_vitae/tony_resume_en.png">Tony's Resume *.png ( English )</a></p>
+                <p> ▸ <a target="_blank" href="../../../../../assets/curriculum_vitae/tony_cv_fr.png">Mon CV *.png ( Français )</a></p>  
+            </div>
+        </div>
+    </div>
+
+    <div id="cv-menu-mobile" [ngClass]="menuService.menuIsActive === true ? 'cv-menu-mobile-active' : 'cv-menu-mobile-hidden' " [ngStyle]="{'top': topPosition + 'px'}">
+        <div id="menu_content_common">
+            <img src="../../../../../assets/app_logos/logo_fp_03.png" (click)="menuService.menuTrigger()"/>
+            <p>Tony's Resume</p>
+            <div class="box_buttons">
+                <a routerLink="/" (click)="menuService.menuTrigger()">Home</a>
+            </div>
+            <div class="box_buttons">
+                <a routerLink="/training" (click)="menuService.menuTrigger()">Training</a>
+                <a routerLink="/experience" (click)="menuService.menuTrigger()">Experience</a>
+            </div>
+            <div class="box_buttons">
+                <a routerLink="/soft-skills" (click)="menuService.menuTrigger()">Soft Skills</a>
+                <a routerLink="/hard-skills" (click)="menuService.menuTrigger()">Hard Skills</a>
+            </div>
+            <div class="box_buttons">
+                <a routerLink="/projects" (click)="menuService.menuTrigger()">Projects</a>
+            </div>
+            <p>Download</p>
+            <div id="cv-menu-links">
+                <p> ▸ <a target="_blank" href="../../../../../assets/curriculum_vitae/tony_resume_en.png">Tony's Resume *.png ( English )</a></p>
+                <p> ▸ <a target="_blank" href="../../../../../assets/curriculum_vitae/tony_cv_fr.png">Mon CV *.png ( Français )</a></p>  
+            </div>
+        </div>
+    </div>
+
+    <div class="toggle">
+        <div id="button">
+            <a (click)="menuService.menuTrigger()">MENU</a>
+        </div>
+    </div>
+
+    <div id="overlay" (click)="menuService.menuTrigger()" *ngIf="menuService.menuIsActive"></div>
+
+    <router-outlet></router-outlet>
+</div>
