@@ -1,5 +1,6 @@
 import { Component, HostListener, inject } from '@angular/core';
-import { MenuService } from './core/services/menu.service';
+import { MenuService } from './services/menu.service';
+
 
 @Component({
   selector: 'app-root',

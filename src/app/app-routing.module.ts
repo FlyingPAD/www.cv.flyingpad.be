@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { NotFoundComponent } from './core/components/not-found/not-found.component';
-import { HomeComponent } from './core/components/home/home.component';
-import { ExperienceComponent } from './core/components/experience/experience.component';
-import { HardSkillsComponent } from './core/components/hard-skills/hard-skills.component';
-import { ProjectsComponent } from './core/components/projects/projects.component';
-import { SoftSkillsComponent } from './core/components/soft-skills/soft-skills.component';
-import { TrainingComponent } from './core/components/training/training.component';
+import { ExperienceComponent } from './components/experience/experience.component';
+import { HardSkillsComponent } from './components/hard-skills/hard-skills.component';
+import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { SoftSkillsComponent } from './components/soft-skills/soft-skills.component';
+import { TrainingComponent } from './components/training/training.component';
 
 const routes: Routes = 
 [
