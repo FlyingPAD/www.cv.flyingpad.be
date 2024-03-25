@@ -5,9 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class MenuService 
 {
-
   menuIsActive : boolean = false
-
   menuTrigger() { this.menuIsActive = !this.menuIsActive }
-  
 }
