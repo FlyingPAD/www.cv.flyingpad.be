@@ -108,6 +108,8 @@
     display: block;
 
     background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 3px 6px 0px rgba(80, 42, 14, 0.3);
     padding: 15px;
 
     #button
