@@ -10,6 +10,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SoftSkillsComponent } from './components/soft-skills/soft-skills.component';
 import { TrainingComponent } from './components/training/training.component';
+import { ButtonTopComponent } from './components/button-top/button-top.component';
 
 @NgModule({
   declarations: 
@@ -22,6 +23,7 @@ import { TrainingComponent } from './components/training/training.component';
     HardSkillsComponent,
     SoftSkillsComponent,
     TrainingComponent,
+    ButtonTopComponent,
   ],
   imports: 
   [
