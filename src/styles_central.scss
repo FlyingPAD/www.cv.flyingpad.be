@@ -1,7 +1,4 @@
-// ------------------------------------------------------------------
-// - Central CV :
-
-#curriculum-vitae
+.curriculum-vitae
 {
     margin-bottom: 150px;
 
@@ -54,7 +51,7 @@
         width: 50px;
     }
 
-    .cv_title_category
+    .cv-title-category
     {
         display: flex;
         justify-content: center;
@@ -74,12 +71,12 @@
         }
     }
     
-    #row_white
+    .row-white
     {
         background-color: rgba(255, 255, 255, 0.4);
     }
 
-    #container
+    .container
     {
         padding: 20px;
 
@@ -108,16 +105,28 @@
             }
         }
 
-        .cv_category_title
+        ul
+        {
+            color: #6b5240;  
+
+            li
+            {
+                margin-bottom: 8px;
+            }
+        }
+
+        .cv-category-title
         {
             display: flex;
 
             .period
             {
+                padding: 10px; padding-right: 15px;
                 background-color: rgba(107, 82, 64, 0.1);
                 border-radius: 5px;  
-                padding: 10px; padding-right: 15px;
+                box-shadow: 0 3px 4px 0px rgba(80, 42, 14, 0.3);
                 font-weight: bold;
+                font-size: 15px;
             }
             .title
             {
@@ -142,10 +151,9 @@
             }
         }
     }
-
     @media (min-width: 650px) 
     {
-        #container
+        .container
         {
             width: 500px;
             margin: auto;
@@ -153,37 +161,101 @@
         }
     }
 
-    #menu_flex
+    // Menu Content.
+    .menu-content-common
     {
-        margin: 15px;
+        padding-top: 15px;
 
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        a
+        img
         {
             display: block;
-            width: 125px;
-            margin: 10px;
-            padding: 9px;
+            margin: auto;
 
-            border: 1px solid #6b5240;  
-            border-radius: 5px;
-            background-color: #6b5240;          
+            width: 161px;
+            height: 77px;
 
-            font-size: 14px;
-            text-align: center;
-            letter-spacing: 1px;
-            text-decoration: none;
-            color:#ffffff;
+            opacity: 0.7;
         }
-        a:hover
+        img:hover
         {
-            background-color: rgb(255, 255, 255);
-            color:#6b5240;
-            transition-duration: 500ms;
+            opacity: 1;
+            transition-duration: 250ms;
             cursor: pointer;
+        }
+
+        .box-buttons
+        {      
+            margin: 15px;
+
+            background-color: rgba(107, 82, 64, 0.2);
+            border-radius: 5px; 
+            box-shadow: 0 3px 4px 0px rgba(80, 42, 14, 0.3);
+            
+            padding: 25px;
+            padding-top : 10px; padding-bottom: 10px;
+            
+            a
+            {
+                display: block;
+
+                padding: 10px;
+                margin: 10px;
+
+                border: 1px solid #6b5240;
+                border-radius: 5px;
+                background-color:  #6b5240;
+                box-shadow: 0 3px 4px 0px rgba(80, 42, 14, 0.3);
+
+                text-align: center;
+                font-size: 15px;
+                text-decoration: none;
+                color: white;
+            }
+            a:hover
+            {
+                cursor: pointer;
+                background-color:  rgba(255, 255, 255, 0.9);     
+                color:  #6b5240;  
+                transition-duration: 500ms;
+            }
+            .active
+            {
+                background-color: rgba(255, 255, 255, 0.3);  
+                color:#6b5240; 
+            }
+        }
+
+        .cv-menu-links
+        {
+            padding: 15px;
+            padding-top: 0;
+
+            p
+            {
+                margin: 0;
+                text-align: left;
+
+                background-color: rgba(107, 82, 64, 0.1);
+                border-radius: 5px;
+                box-shadow: 0 3px 4px 0px rgba(80, 42, 14, 0.3);
+
+                padding: 10px;
+
+                margin-top: 10px;
+
+                font-size: 15px;
+
+                a
+                {
+                    text-align: left;
+                    color:#6b5240;
+                    text-decoration: none;
+                }
+                a:hover
+                {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
