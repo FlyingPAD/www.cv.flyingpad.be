@@ -1,6 +1,7 @@
 <div class="toggle">
-    <div class="button">
-        <a (click)="menuService.menuTrigger()">MENU</a>
+    <div class="group" (click)="menuService.menuTrigger()">
+        <img src="../../../assets/hamburger.png" />
+        <p>MENU</p>
     </div>
 </div>
 <div class="cv-menu-mobile" [ngClass]="menuService.menuIsActive === true ? 'cv-menu-mobile-active' : 'cv-menu-mobile-hidden' " [ngStyle]="{'top': topPosition + 'px'}">

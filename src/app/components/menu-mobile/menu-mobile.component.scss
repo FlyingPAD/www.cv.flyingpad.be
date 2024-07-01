@@ -60,44 +60,49 @@
     position: sticky;
     top: 0;
 
-    height: auto;
-
-    display: block;
+    display: flex;
+    justify-content: center;
 
     background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(3px);
     box-shadow: 0 3px 6px 0px rgba(80, 42, 14, 0.3);
     padding: 15px;
 
-    .button
+    .group
     {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        align-items: center;
 
-        a
+        background-color: #6b5240;
+        border:1px solid #6b5240;
+        border-radius: 5px;
+        box-shadow: 0 3px 6px 0px rgba(80, 42, 14, 0.3);
+
+        padding: 17px;
+        padding-top: 9px; padding-bottom: 9px;
+
+        img
         {
-            display: block;
-            width: 125px;
-            margin: 10px;
-            padding: 9px;
-
-            border: 1px solid #6b5240;  
-            border-radius: 5px;
-            background-color: #6b5240;          
-
-            font-size: 14px;
-            text-align: center;
-            letter-spacing: 1px;
-            text-decoration: none;
-            color:#ffffff;
+            height: 17px;
+            width: 17px;
+            margin-right: 13px;
         }
-        a:hover
+        p
         {
-            background-color: rgb(255, 255, 255);
+            margin: 0;
+            font-size: 14px;
+            color: #fff;  
+        }
+    }
+    .group:hover
+    {
+        background-color: #fff;
+        transition-duration: 500ms;
+        cursor: pointer;
+        p
+        {
             color:#6b5240;
             transition-duration: 500ms;
-            cursor: pointer;
         }
     }
 }
