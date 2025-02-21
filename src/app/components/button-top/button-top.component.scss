@@ -1,47 +1,42 @@
-// TO TOP BUTTON
-
-.button-top
-{
+.button-top {
     position: fixed;
-
-    bottom: 50px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
-
     height: 50px;
     width: 50px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    border: 1px solid lightgrey;
+    border: 5px solid var(--colorMainOpacity3);
     border-radius: 10px;
+    background-color: var(--colorWhite);
+    cursor: pointer;
+    transition: bottom 0.75s, opacity 0.75s, height 0.75s, width 0.75s;
+    opacity: 1;
+    z-index: 19;
 
-    background-color: rgb(255, 255, 255);
-
-    transition-duration: 300ms;
-
-    z-index: 15;
-
-    img
-    {
-        height: 30px;
-        width: 30px;
+    &:hover {
+        border-color: var(--colorMain);
+        background-color: #fff;
+        box-shadow: 0px 2px 6px var(--colorMainOpacity2);
     }
-}
-.button-top:hover
-{
-    border: 1px solid #6b5240;
-    background-color: #fff;
-    box-shadow: 0px 2px 6px rgba(73, 26, 6, 0.3);
 
-    img
-    {
-        cursor: pointer;
+    &.is-hidden {
+        height: 5px;
+        width: 5px;
+        bottom: -150px;
+        opacity: 0;
     }
-}
-.button-none
-{
-    bottom: -150px;
+
+    .img {
+        transition: opacity 0.75s, transform 0.75s;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &.is-hidden .img {
+        opacity: 0;
+        transform: scale(0.5);
+    }
 }

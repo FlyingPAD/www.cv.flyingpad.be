@@ -1,0 +1,26 @@
+.overlay {
+    position: absolute;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--colorMainOpacity5);
+    backdrop-filter: blur(3px);
+
+    z-index: 10;
+
+    cursor: pointer;
+
+    transition-duration: 300ms;
+}
+
+.on {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.off {
+    opacity: 0;
+    pointer-events: none;
+}

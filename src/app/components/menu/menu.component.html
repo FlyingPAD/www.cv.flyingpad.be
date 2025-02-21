@@ -1,0 +1,46 @@
+<div class="menu" [ngClass]="isMenuActive() ? 'menu-on' : 'menu-off'">
+    <app-menu-toggle />
+
+    <div class="menu-item" routerLink="/home" routerLinkActive="active" (click)="handleToggle()">
+        <div class="icon">
+            <app-icon-hamburger />
+        </div>
+        <p>Home</p>
+    </div>
+    <div class="menu-item" routerLink="/training" routerLinkActive="active" (click)="handleToggle()">
+        <div class="icon">
+            <app-icon-hamburger />
+        </div>
+        <p>Training</p>
+    </div>
+    <div class="menu-item" routerLink="/experience" routerLinkActive="active" (click)="handleToggle()">
+        <div class="icon">
+            <app-icon-hamburger />
+        </div>
+        <p>Experience</p>
+    </div>
+    <div class="menu-item" routerLink="/hard-skills" routerLinkActive="active" (click)="handleToggle()">
+        <div class="icon">
+            <app-icon-hamburger />
+        </div>
+        <p>Hard Skills</p>
+    </div>
+    <div class="menu-item" routerLink="/soft-skills" routerLinkActive="active" (click)="handleToggle()">
+        <div class="icon">
+            <app-icon-hamburger />
+        </div>
+        <p>Soft Skills</p>
+    </div>
+    <div class="menu-item" routerLink="/projects" routerLinkActive="active" (click)="handleToggle()">
+        <div class="icon">
+            <app-icon-hamburger />
+        </div>
+        <p>Projects</p>
+    </div>
+    <div class="menu-item" routerLink="/resume" routerLinkActive="active" (click)="handleToggle()">
+        <div class="icon">
+            <app-icon-hamburger />
+        </div>
+        <p>Resume</p>
+    </div>
+</div>

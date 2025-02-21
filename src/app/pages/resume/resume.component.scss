@@ -1,0 +1,214 @@
+.languages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .language {
+        width: 125px;
+        
+        display: flex;
+        align-items: center;
+
+        background-color: var(--colorMainOpacity2);
+        border: 2px solid var(--colorMain);
+        border-radius: 5px;
+
+        padding: 5px;
+        margin: 5px;
+
+        cursor: pointer;
+        transition-duration: 300ms;
+
+        img {
+            height: 20px;
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+    .language:hover {
+        background-color: var(--colorWhite);
+    }
+}
+
+#page {
+    /* A4 Dimensions */
+    width: 794px;
+    height: 1123px;
+    size: A4;
+    margin: 0;
+    /* ------------- */
+    border: 1px solid black;
+    margin: auto;
+    display: flex;
+    /* Flex for columns L & R */
+
+    margin-top: 15px;
+    font-family: Segoe UI Symbol;
+
+    a {
+        color: black;
+    }
+
+    /* --------------------------------------------------- */
+    /* LEFT */
+    /* --------------------------------------------------- */
+    #left {
+        width: 250px;
+        height: 100%;
+        background-image: url('/assets/curriculum_vitae/back/left_01.png');
+    }
+
+    #left_photo {
+        width: 210px;
+        margin: auto;
+        margin-top: 15px;
+    }
+
+    #left_photo img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #left_intro h1 {
+        text-align: center;
+        font-size: 19px;
+        line-height: 7px;
+    }
+
+    #left_intro h2 {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    #left_intro p {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .left_category {
+        margin-left: 15px;
+    }
+
+    .left_category p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .left_separator {
+        width: 90%;
+        margin: auto;
+    }
+
+    .table {
+        font-size: 14px;
+        margin-top: 11px;
+    }
+
+    .l_td {
+        width: 70px;
+    }
+
+    /* --------------------------------------------------- */
+    /* RIGHT */
+    /* --------------------------------------------------- */
+    #right {
+        width: 544px;
+        height: 100%;
+        background-image: url('/assets/curriculum_vitae/back/right_01.png');
+    }
+
+    h4 {
+        font-size: 15px;
+        line-height: 0px;
+        text-indent: 5px;
+        margin: 10px;
+    }
+
+    .star {
+        margin: 8px;
+        text-indent: 15px;
+    }
+
+    .right_category p {
+        font-size: 14px;
+        line-height: 10px;
+    }
+
+    .right_category {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .right_separator {
+        width: 95%;
+        margin: auto;
+    }
+
+    /* --------------------------------------------------- */
+    /* - table date  ------------------------------------- */
+    /* --------------------------------------------------- */
+    .table_date {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .table_date td {
+        margin-right: 5px;
+        border-bottom: 1px dotted black;
+    }
+
+    /* --------------------------------------------------- */
+    /* - td size for content ----------------------------- */
+    /* --------------------------------------------------- */
+    #period {
+        width: 115px;
+        font-weight: bold;
+    }
+
+    #what {
+        width: 75px;
+        font-weight: bold;
+    }
+
+    #title {
+        width: 225px;
+    }
+
+    #place {
+        width: 180px;
+    }
+
+    /* --------------------------------------------------- */
+    /* - Flex for Icons + Title -------------------------- */
+    /* --------------------------------------------------- */
+    #flex_title {
+        display: flex;
+        margin-bottom: -5px;
+    }
+
+    .title {
+        font-size: 16px;
+        line-height: 0px;
+    }
+
+    .icons {
+        height: 25px;
+        width: 25px;
+        margin-right: 8px;
+    }
+
+    /* --------------------------------------------------- */
+    /* - Classes ----------------------------------------- */
+    /* --------------------------------------------------- */
+    ul li {
+        font-size: 14px;
+    }
+
+    #right_space {
+        height: 15px;
+    }
+}

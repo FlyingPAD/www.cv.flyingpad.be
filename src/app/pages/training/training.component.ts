@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { SpacerComponent } from '../../components/spacer/spacer.component';
 
 @Component({
   selector: 'app-training',
+  imports: [SpacerComponent],
   templateUrl: './training.component.html',
-  styleUrls: ['./training.component.scss']
+  styleUrl: './training.component.scss'
 })
 export class TrainingComponent {
 
