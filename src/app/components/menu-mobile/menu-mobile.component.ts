@@ -1,8 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, HostListener, inject } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-menu-mobile',
+  imports: [CommonModule, RouterModule],
   templateUrl: './menu-mobile.component.html',
   styleUrls: ['./menu-mobile.component.scss']
 })

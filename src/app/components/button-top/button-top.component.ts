@@ -1,7 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-button-top',
+  imports: [CommonModule],
   templateUrl: './button-top.component.html',
   styleUrls: ['./button-top.component.scss']
 })
