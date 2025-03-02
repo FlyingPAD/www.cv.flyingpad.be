@@ -1,0 +1,11 @@
+{
+    "title": {
+        "training": "Training",
+        "french" : "French",
+        "dutch" : "Dutch",
+        "english" : "English"
+    },
+    "message": {
+        "about": "More than just a job ..."
+    }
+}

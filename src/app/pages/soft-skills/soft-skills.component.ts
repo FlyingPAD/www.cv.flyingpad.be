@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { ButtonTopComponent } from 'src/app/components/button-top/button-top.component';
+import { SpacerComponent } from '../../components/spacer/spacer.component';
 
 @Component({
   selector: 'app-soft-skills',
-  imports: [ButtonTopComponent],
+  imports: [SpacerComponent],
   templateUrl: './soft-skills.component.html',
-  styleUrls: ['./soft-skills.component.scss']
+  styleUrl: './soft-skills.component.scss'
 })
 export class SoftSkillsComponent {
 

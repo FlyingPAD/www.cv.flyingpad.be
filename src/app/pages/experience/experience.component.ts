@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { ButtonTopComponent } from 'src/app/components/button-top/button-top.component';
+import { SpacerComponent } from '../../components/spacer/spacer.component';
 
 @Component({
   selector: 'app-experience',
-  imports: [ButtonTopComponent],
+  imports: [SpacerComponent],
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+  styleUrl: './experience.component.scss'
 })
 export class ExperienceComponent {
 

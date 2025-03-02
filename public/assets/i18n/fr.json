@@ -1,0 +1,11 @@
+{
+    "title": {
+        "training": "Formation",
+        "french" : "Français",
+        "dutch" : "Néerlandais",
+        "english" : "Anglais"
+    },
+    "message": {
+        "about": "More than just a job ..."
+    }
+}

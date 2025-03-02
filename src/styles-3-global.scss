@@ -1,0 +1,95 @@
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    -moz-user-select: none;
+    /* Firefox */
+    -webkit-user-select: none;
+    /* Chrome, Safari, Opéra depuis la version 15 */
+    -ms-user-select: none;
+    /* Internet explorer depuis la version 10 et Edge */
+    user-select: none;
+    /* Propriété standard */
+
+    body {
+        font-family: var(--fontFamily);
+        background-image: var(--texture001);
+        background-repeat: repeat;
+        background-position: top left;
+    }
+}
+
+.layout {
+    margin-top: 75px;
+
+    .title {
+        width: 500px;
+        margin: auto;
+
+        h1 {
+            color: var(--colorMain);
+            font-size: 20px;
+        }
+    }
+
+    .box {
+        max-width: 500px;
+        margin: auto;
+
+        padding: 15px;
+
+        p {
+            color: var(--colorMain);
+        }
+
+        hr {
+            opacity: 0.2;
+            color: var(--colorMain);
+            margin: 25px 0;
+        }
+    }
+
+    .back {
+        background-color: var(--colorWhiteOpacity5);
+        border-radius: 15px;
+        backdrop-filter: blur(3px);
+        box-shadow: 0 3px 3px 0 var(--colorMainOpacity2);
+    }
+
+    .cv-category-title {
+        display: flex;
+        
+
+        .period {
+            width: 150px;
+            padding: 10px;
+            padding-right: 15px;
+            background-color: rgba(107, 82, 64, 0.1);
+            border-radius: 5px;
+            box-shadow: 0 3px 4px 0px rgba(80, 42, 14, 0.3);
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .title {
+            padding: 10px;
+        }
+    }
+
+    .place {
+        color: #3e2e22;
+        margin: 0;
+        margin-bottom: 20px;
+        text-indent: 15px;
+        font-size: 15px;
+
+        a {
+            color: #6b5240;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}

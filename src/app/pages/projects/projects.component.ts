@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { ButtonTopComponent } from 'src/app/components/button-top/button-top.component';
+import { SpacerComponent } from '../../components/spacer/spacer.component';
 
 @Component({
   selector: 'app-projects',
-  imports: [ButtonTopComponent],
+  imports: [SpacerComponent],
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
 
