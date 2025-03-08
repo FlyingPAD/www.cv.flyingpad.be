@@ -1,0 +1,12 @@
+.header {
+    position: sticky;
+    top: 0;
+
+    height: 63px;
+    
+    background-color: var(--colorWhiteOpacity9);
+    border-bottom: 3px solid var(--colorMain);
+    backdrop-filter: blur(3px);
+
+    z-index: 10;
+}

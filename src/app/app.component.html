@@ -1,7 +1,15 @@
-<app-menu-toggle />
+<app-header />
 <app-menu />
-<app-overlay />
-<div class="layout">
-    <router-outlet />
-</div>
+
+@if(isMobile()) {
+@if(!isMenuActive()) {
+<router-outlet />
 <app-button-top />
+}
+}
+@else {
+<router-outlet />
+<app-button-top />
+}
+
+<app-overlay />

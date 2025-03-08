@@ -3,13 +3,9 @@ html {
     overflow-x: hidden;
 
     -moz-user-select: none;
-    /* Firefox */
     -webkit-user-select: none;
-    /* Chrome, Safari, Opéra depuis la version 15 */
     -ms-user-select: none;
-    /* Internet explorer depuis la version 10 et Edge */
     user-select: none;
-    /* Propriété standard */
 
     body {
         font-family: var(--fontFamily);
@@ -20,11 +16,18 @@ html {
 }
 
 .layout {
-    margin-top: 75px;
+    margin-top: 15px;
+    
+    background-color: var(--colorMainOpacity1);
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 3px 3px 0 var(--colorMainOpacity2);
 
-    .title {
-        width: 500px;
-        margin: auto;
+    .page-title {
+        margin-top: 15px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
 
         h1 {
             color: var(--colorMain);
@@ -33,9 +36,6 @@ html {
     }
 
     .box {
-        max-width: 500px;
-        margin: auto;
-
         padding: 15px;
 
         p {
@@ -50,15 +50,15 @@ html {
     }
 
     .back {
+        margin: 25px;
         background-color: var(--colorWhiteOpacity5);
-        border-radius: 15px;
+        border-radius: 10px;
         backdrop-filter: blur(3px);
         box-shadow: 0 3px 3px 0 var(--colorMainOpacity2);
     }
 
     .cv-category-title {
         display: flex;
-        
 
         .period {
             width: 150px;
@@ -91,5 +91,12 @@ html {
         a:hover {
             text-decoration: underline;
         }
+    }
+}
+
+@media (min-width: 800px) {
+    .layout {
+        width: 800px;
+        margin: auto;
     }
 }

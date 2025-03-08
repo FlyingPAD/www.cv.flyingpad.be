@@ -5,6 +5,8 @@
     height: 100vh;
     width: 240px;
 
+    overflow-y: scroll;
+
     background-color: var(--colorWhiteOpacity8);
     border-right: 3px solid var(--colorMain);
     backdrop-filter: blur(3px);

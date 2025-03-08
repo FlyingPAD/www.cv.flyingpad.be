@@ -1,49 +1,49 @@
+<app-spacer height="15px" />
+
 <div class="languages">
     <div class="language" (click)="switchLanguage('fr')">
-        <img src="/assets/icons-flags/fr.png">
+        <img src="/assets/icons-flags/fr.png" alt="Français">
         <p>Français</p>
     </div>
     <div class="language" (click)="switchLanguage('en')">
-        <img src="/assets/icons-flags/en.png">
+        <img src="/assets/icons-flags/en.png" alt="Anglais">
         <p>Anglais</p>
     </div>
 </div>
-<div id="page">
-    <div id="left">
-        <div id="left_photo">
-            <img src="/assets/curriculum_vitae/tony.jpg" />
+
+<div class="page">
+    <div class="left">
+        <div class="photo">
+            <img src="/assets/curriculum_vitae/tony.jpg" alt="Tony Van Langenhove">
         </div>
-        <div id="left_intro">
+        <div class="full-name">
             <h1>Tony Van Langenhove</h1>
-            <h2>Pleasant | Creative | Assertive</h2>
         </div>
-        <div class="left_separator">
-            <hr />
+        <div class="main-traits">
+            <h2>{{ "traits.first" | translate }} | {{ "traits.second" | translate }} | {{ "traits.third" | translate }}</h2>
         </div>
-        <div class="left_category">
-            <div id="flex_title">
-                <img class="icons" src="/assets/curriculum_vitae/icons/icon_1.png" />
-                <h3 class="title">About me</h3>
-            </div>
-            <p>I'm a quick learner, passionate about learning & sharing new techniques.</p>
-            <p>Sharing my knowledge with anyone interested while learning from my mentors.</p>
+        <hr>
+        <div class="category-title">
+            <img class="icon" src="/assets/curriculum_vitae/icons/icon_1.png" alt="About me">
+            <h3>{{ "section.about-me" | translate }}</h3>
         </div>
-        <div class="left_separator">
-            <hr />
+        <div class="category-content">
+            <p>{{ "message.about" | translate }}</p>
         </div>
-        <div class="left_category">
-            <div id="flex_title">
-                <img class="icons" src="/assets/curriculum_vitae/icons/icon_2.png" />
-                <h3 class="title">Languages</h3>
-            </div>
+        <hr>
+        <div class="category-title">
+            <img class="icon" src="/assets/curriculum_vitae/icons/icon_2.png" alt="Languages">
+            <h3>{{ "section.languages" | translate }}</h3>
+        </div>
+        <div class="category-content">
             <div class="elao">
                 <div class="group">
                     <p> ▸ <b>{{ "title.french" | translate }}</b> :</p>
-                    <p class="tweak">C2 </p>
+                    <p class="tweak">C2</p>
                 </div>
                 <div class="group">
                     <p> ▸ <b>{{ "title.dutch" | translate }}</b> :</p>
-                    <p class="tweak">B2 </p>
+                    <p class="tweak">B2</p>
                 </div>
                 <div class="group">
                     <p> ▸ <b>{{ "title.english" | translate }}</b> :</p>
@@ -51,229 +51,185 @@
                 </div>
             </div>
         </div>
-        <div class="left_separator">
-            <hr />
+        <hr>
+        <div class="category-title">
+            <img class="icons" src="/assets/curriculum_vitae/icons/icon_4.png" alt="Contact me">
+            <h3 class="title">{{ "section.contact-me" | translate }}</h3>
         </div>
-        <div class="left_category">
-            <div id="flex_title">
-                <img class="icons" src="/assets/curriculum_vitae/icons/icon_4.png" />
-                <h3 class="title">Contact me</h3>
-            </div>
+        <div class="category-content">
             <p>
-                +32 ( 0 ) 472 / 42 57 44<br />
-                Rue Lamir 8B / 2 ( 7000 ) Mons<br /><br />
-                ▸ E-Mail : <a href="mailto:tonyvan&#64;live.fr">tonyvan&#64;live.fr</a><br />
-                ▸ Network : Linkedin<br />
-                ▸ Website : <a href="https://www.flyingpad.be" target="_blank">www.flyingpad.be</a>
-
+                +32 ( 0 ) 472 / 42 57 44<br>
+                Rue Lamir 8B / 2 ( 7000 ) Mons<br><br>
+                ▸ {{ "contact.e-mail" | translate }} : <a href="mailto:tonyvan@live.fr">tonyvan&#64;live.fr</a><br>
+                ▸ {{ "contact.network" | translate }} : <a target="_blank" href="https://www.linkedin.com/in/tony-van-langenhove-37373450/">Linkedin</a><br>
+                ▸ {{ "contact.website" | translate }} : <a href="https://cv.flyingpad.be" target="_blank">cv.flyingpad.be</a>
             </p>
         </div>
-        <div class="left_separator">
-            <hr />
+        <hr>
+        <div class="category-title">
+            <img class="icons" src="/assets/curriculum_vitae/icons/icon_5.png" alt="Additional info">
+            <h3 class="title">{{ "section.add-info" | translate }}</h3>
         </div>
-        <div class="left_category">
-            <div id="flex_title">
-                <img class="icons" src="/assets/curriculum_vitae/icons/icon_5.png" />
-                <h3 class="title">Additional info</h3>
-            </div>
+        <div class="category-content">
             <p>
-                ▸ July 15th 1982 ( 40 years old )<br />
-                ▸ Driver's license ( B )<br />
+                ▸ {{ "info.birthday" | translate }}<br>
+                ▸ {{ "info.license" | translate }}
             </p>
         </div>
-        <div class="left_separator">
-            <hr />
+        <hr>
+        <div class="category-title">
+            <img class="icons" src="/assets/curriculum_vitae/icons/icon_3.png" alt="Hobbies">
+            <h3 class="title">{{ "section.hobbies" | translate }}</h3>
         </div>
-        <div class="left_category">
-            <div id="flex_title">
-                <img class="icons" src="/assets/curriculum_vitae/icons/icon_3.png" />
-                <h3 class="title">Hobbies</h3>
-            </div>
-            <table class="table">
-                <tr>
-                    <td class="s_td"> ▸ Audio & Video Production</td>
-                </tr>
-                <tr>
-                    <td class="s_td"> ▸ Coding music applications</td>
-                </tr>
-                <tr>
-                    <td class="s_td"> ▸ Playing & teaching music</td>
-                </tr>
-                <tr>
-                    <td class="s_td">( <a target="_blank" href="https://www.flyingpad.be">www.flyingpad.be</a> )</td>
-                </tr>
-            </table>
+        <div class="category-content">
+            <p>
+                ▸ {{ "hobbies.first" | translate }}<br>
+                ▸ {{ "hobbies.second" | translate }}<br>
+                ▸ {{ "hobbies.third" | translate }}<br>
+            </p>
+            <p>( <a target="_blank" href="https://www.flyingpad.be">www.flyingpad.be</a> )</p>
         </div>
     </div>
-    <!-- --------------------------------------------------------------------------------------------------- -->
-    <div id="right">
-        <div id="right_space"></div>
-        <div class="right_category">
-            <div id="flex_title">
-                <img class="icons" src="/assets/curriculum_vitae/icons/icon_6.png" />
-                <h3 class="title">Education</h3>
-            </div>
-            <div id="right_space"></div>
-            <h4>Training</h4>
-            <table class="table_date">
-                <tr>
-                    <td id="period">▸ 2023-2024</td>
-                    <td id="title">Internship ( .NET Developer )</td>
-                    <td id="place">&#64; <a href="http://www.satellit.be/" target="_blank">Satellit</a>
-                    </td>
-                </tr>
-            </table>
-            <p class="star">.NET Developer / API's / Azure / Services & WEB Integration</p>
-            <table class="table_date">
-                <tr>
-                    <td id="period">▸ 2023</td>
-                    <td id="title">WEB Developer ( Full Stack )</td>
-                    <td id="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a>
-                    </td>
-                </tr>
-            </table>
-            <p class="star">JavaScript | Restful API in NodeJS (SQL Server) | Angular | React</p>
-            <table class="table_date">
-                <tr>
-                    <td id="period">▸ 2022</td>
-                    <td id="title">.NET Azure</td>
-                    <td id="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a>
-                    </td>
-                </tr>
-            </table>
-            <p class="star">Restful API in .NET C# (SQL Server) | Angular | ASP MVC | WPF MVVM</p>
-            <table class="table_date">
-                <tr>
-                    <td id="period">▸ 2022</td>
-                    <td id="title">IT Fundamentals</td>
-                    <td id="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a>
-                    </td>
-                </tr>
-            </table>
-            <p class="star">Algorithmics, Object-oriented programming, UML, ERD & ER Schema, SQL</p>
-            <table class="table_date">
-                <tr>
-                    <td id="period">▸ 2022</td>
-                    <td id="title">PHP Initiation</td>
-                    <td id="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a>
-                    </td>
-                </tr>
-            </table>
-            <table class="table_date">
-                <tr>
-                    <td id="period">▸ 2021</td>
-                    <td id="title">Digital Coordinator / E-Commerce</td>
-                    <td id="place">&#64; <a href="https://grow.google/intl/ch-fr" target="_blank">Google Digital
-                            Atelier</a>
-                    </td>
-                </tr>
-            </table>
-            <table class="table_date">
-                <tr>
-                    <td id="period">▸ 2019</td>
-                    <td id="title">SEO, SEA, SMM</td>
-                    <td id="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a>
-                    </td>
-                </tr>
-            </table>
-            <table class="table_date">
-                <tr>
-                    <td id="period">▸ 2017</td>
-                    <td id="title">Sound Design</td>
-                    <td id="place">&#64; <a href="https://www.technocite.be" target="_blank">Technocité</a></td>
-                </tr>
-            </table>
 
-            <h4>C.E.S.S.</h4>
+    <div class="right">
+        <app-spacer height="10px" />
+        <div class="category-title">
+            <img class="icons" src="/assets/curriculum_vitae/icons/icon_6.png" alt="Education">
+            <h3 class="title">{{ "section.education" | translate }}</h3>
+        </div>
+        <h4>{{ "section.training" | translate }}</h4>
+        <div class="category-content">
+            <div class="period">▸ 2023-2024</div>
+            <div class="title">Internship ( .NET Developer )</div>
+            <div class="place">&#64; <a href="http://www.satellit.be/" target="_blank">Satellit</a></div>
+        </div>
+        <p class="description">.NET Developer / API's / Azure / Services & WEB Integration</p>
+        <div class="category-content">
+            <div class="period">▸ 2023</div>
+            <div class="title">WEB Developer ( Full Stack )</div>
+            <div class="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a></div>
+        </div>
+        <p class="description">JavaScript | Restful API in NodeJS (SQL Server) | Angular | React</p>
+        <div class="category-content">
+            <div class="period">▸ 2022</div>
+            <div class="title">.NET Azure</div>
+            <div class="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a></div>
+        </div>
+        <p class="description">Restful API in .NET C# (SQL Server) | Angular | ASP MVC | WPF MVVM</p>
+        <div class="category-content">
+            <div class="period">▸ 2022</div>
+            <div class="title">IT Fundamentals</div>
+            <div class="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a></div>
+        </div>
+        <p class="description">Algorithmics, Object-oriented programming, UML, ERD & ER Schema, SQL</p>
+        <div class="category-content">
+            <div class="period">▸ 2022</div>
+            <div class="title">PHP Initiation</div>
+            <div class="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a></div>
+        </div>
+        <div class="category-content">
+            <div class="period">▸ 2021</div>
+            <div class="title">Digital Coordinator / E-Commerce</div>
+            <div class="place">&#64; <a href="https://grow.google/intl/ch-fr" target="_blank">Google Digital Atelier</a></div>
+        </div>
+        <div class="category-content">
+            <div class="period">▸ 2019</div>
+            <div class="title">SEO, SEA, SMM</div>
+            <div class="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a></div>
+        </div>
+        <div class="category-content">
+            <div class="period">▸ 2017</div>
+            <div class="title">Sound Design</div>
+            <div class="place">&#64; <a href="https://www.technocite.be" target="_blank">Technocité</a></div>
+        </div>
+        <h4>C.E.S.S.</h4>
+        <div class="right_category">
             <table class="table_date">
                 <tr>
-                    <td id="period">▸ 2002</td>
-                    <td id="title">Visual Arts</td>
-                    <td id="place">&#64; <a href="https://www.sainte-marie.be" target="_blank">Institut Ste-Marie</a>
+                    <td class="period">▸ 2002</td>
+                    <td class="title">Visual Arts</td>
+                    <td class="place">&#64; <a href="https://www.sainte-marie.be" target="_blank">Institut Ste-Marie</a>
                     </td>
                 </tr>
             </table>
         </div>
-        <div class="right_separator">
-            <hr />
+        <hr>
+        <div class="category-title">
+            <img class="icons" src="/assets/curriculum_vitae/icons/icon_7.png" alt="Work experience">
+            <h3 class="title">{{ "section.work-experience" | translate }}</h3>
         </div>
+        <h4>{{ "section.employee" | translate }}</h4>
         <div class="right_category">
-            <div id="flex_title">
-                <img class="icons" src="/assets/curriculum_vitae/icons/icon_7.png" />
-                <h3 class="title">Work experience</h3>
-            </div>
-            <div id="right_space"></div>
-            <h4>Employee</h4>
             <table class="table_date">
                 <tr>
-                    <td id="period">▸ 2024</td>
-                    <td id="title">.NET Developer ( Full Stack )</td>
-                    <td id="place">&#64; <a href="https://www.satellit.be" target="_blank">Satellit</a>
-                    </td>
+                    <td class="period">▸ 2024</td>
+                    <td class="title">.NET Developer ( Full Stack )</td>
+                    <td class="place">&#64; <a href="https://www.satellit.be" target="_blank">Satellit</a></td>
                 </tr>
             </table>
             <p class="star">Backend & Frontend Development / Azure Services / CI-CD</p>
             <table class="table_date">
                 <tr>
-                    <td id="period">▸ 2019 - 2020</td>
-                    <td id="title">Audio Producer</td>
-                    <td id="place">&#64; <a href="https://www.brandy-jingles.com" target="_blank">Brandy Jingles</a>
+                    <td class="period">▸ 2019 - 2020</td>
+                    <td class="title">Audio Producer</td>
+                    <td class="place">&#64; <a href="https://www.brandy-jingles.com" target="_blank">Brandy Jingles</a>
                     </td>
                 </tr>
             </table>
             <p class="star">( Outlook ) Planification | Customer reception | Production & Post-Production</p>
             <table class="table_date">
                 <tr>
-                    <td id="period">▸ 2006 - 2008</td>
-                    <td id="title">Administrative</td>
-                    <td id="place">&#64; <a href="https://www.vivaqua.be" target="_blank">Vivaqua</a></td>
+                    <td class="period">▸ 2006 - 2008</td>
+                    <td class="title">Administrative</td>
+                    <td class="place">&#64; <a href="https://www.vivaqua.be" target="_blank">Vivaqua</a></td>
                 </tr>
             </table>
             <p class="star">Helpdesk | Encoding ( Excel / SAP ) | File Management</p>
-            <div id="right_space"></div>
-            <h4>Freelance</h4>
+        </div>
+        <h4>Freelance</h4>
+        <div class="right_category">
             <table class="table_date">
                 <tr>
-                    <td id="period">▸ 2015 - 2022</td>
-                    <td id="title">Audio Producer</td>
-                    <td id="place">&#64; <a href="https://www.flyingpad.be" target="_blank">Flying PAD</a></td>
+                    <td class="period">▸ 2015 - 2022</td>
+                    <td class="title">Audio Producer</td>
+                    <td class="place">&#64; <a href="https://www.flyingpad.be" target="_blank">Flying PAD</a></td>
                 </tr>
             </table>
             <p class="star">Prospection | Edition & Production | Sales & after-Sales services</p>
             <table class="table_date">
                 <tr>
-                    <td id="period">▸ 2018 - 2022</td>
-                    <td id="title">Webmaster</td>
-                    <td id="place">&#64; <a href="#">Various Clients</a></td>
+                    <td class="period">▸ 2018 - 2022</td>
+                    <td class="title">Webmaster</td>
+                    <td class="place">&#64; <a href="#">Various Clients</a></td>
                 </tr>
             </table>
             <p class="star">Consultancy | Conception | Administration & Maintenance</p>
-            <div id="right_space"></div>
-            <h4>Interim</h4>
+        </div>
+        <h4>{{ "section.interim" | translate }}</h4>
+        <div class="right_category">
             <table class="table_date">
                 <tr>
-                    <td id="period">▸ 2021</td>
-                    <td id="title">Sale & Restocking</td>
-                    <td id="place">&#64; <a href="https://www.sportsdirect.com" target="_blank">Sport Direct</a></td>
+                    <td class="period">▸ 2021</td>
+                    <td class="title">Sale & Restocking</td>
+                    <td class="place">&#64; <a href="https://www.sportsdirect.com" target="_blank">Sport Direct</a></td>
                 </tr>
             </table>
             <table class="table_date">
                 <tr>
-                    <td id="period">▸ 2005</td>
-                    <td id="title">Construction</td>
-                    <td id="place">&#64; <a href="https://www.outlet-kantoormeubelen.be" target="_blank">Mewaf</a></td>
+                    <td class="period">▸ 2005</td>
+                    <td class="title">Construction</td>
+                    <td class="place">&#64; <a href="https://www.outlet-kantoormeubelen.be" target="_blank">Mewaf</a></td>
                 </tr>
             </table>
             <table class="table_date">
                 <tr>
-                    <td id="period">▸ 2004</td>
-                    <td id="title">Horeca</td>
-                    <td id="place">&#64; <a href="https://www.kasteelgrootbijgaarden.be" target="_blank">Art
-                            Catering</a>
-                    </td>
+                    <td class="period">▸ 2004</td>
+                    <td class="title">Horeca</td>
+                    <td class="place">&#64; <a href="https://www.kasteelgrootbijgaarden.be" target="_blank">Art Catering</a></td>
                 </tr>
             </table>
         </div>
     </div>
 </div>
+
 <app-spacer height="200px" />

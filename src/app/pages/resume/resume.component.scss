@@ -2,20 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 15px;
 
     .language {
         width: 125px;
-        
         display: flex;
         align-items: center;
-
         background-color: var(--colorMainOpacity2);
         border: 2px solid var(--colorMain);
         border-radius: 5px;
-
         padding: 5px;
         margin: 5px;
-
         cursor: pointer;
         transition-duration: 300ms;
 
@@ -28,123 +25,166 @@
         p {
             margin: 0;
         }
-    }
-    .language:hover {
-        background-color: var(--colorWhite);
+
+        &:hover {
+            background-color: var(--colorWhite);
+        }
     }
 }
 
-#page {
-    /* A4 Dimensions */
+.page {
+    position: relative;
     width: 794px;
     height: 1123px;
-    size: A4;
-    margin: 0;
-    /* ------------- */
+    margin: 15px auto;
     border: 1px solid black;
-    margin: auto;
+    overflow: hidden;
     display: flex;
-    /* Flex for columns L & R */
+    font-family: "Segoe UI Symbol", sans-serif;
 
-    margin-top: 15px;
-    font-family: Segoe UI Symbol;
+    border: 3px solid var(--colorMain);
+    border-radius: 10px;
+    box-shadow: 0 3px 3px 0 var(--colorMainOpacity2);
 
     a {
         color: black;
     }
 
-    /* --------------------------------------------------- */
-    /* LEFT */
-    /* --------------------------------------------------- */
-    #left {
+    .left {
         width: 250px;
         height: 100%;
         background-image: url('/assets/curriculum_vitae/back/left_01.png');
-    }
+        background-size: cover;
 
-    #left_photo {
-        width: 210px;
-        margin: auto;
-        margin-top: 15px;
-    }
+        .photo {
+            display: flex;
+            justify-content: center;
 
-    #left_photo img {
-        width: 100%;
-        border-radius: 10px;
-    }
+            margin: 20px;
 
-    #left_intro h1 {
-        text-align: center;
-        font-size: 19px;
-        line-height: 7px;
-    }
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
 
-    #left_intro h2 {
-        text-align: center;
-        font-size: 14px;
-    }
+        .full-name {
+            display: flex;
+            justify-content: center;
 
-    #left_intro p {
-        text-align: center;
-        font-size: 15px;
-    }
+            h1 {
+                font-size: 20px;
+                margin: 0;
+            }
+        }
 
-    .left_category {
-        margin-left: 15px;
+        .main-traits {
+            display: flex;
+            justify-content: center;
 
-        .elao {
-            width: 60%;
-            margin-top: 10px; 
+            h2 {
+                margin: 5px;
+                font-size: 14px;
+                opacity: 0.7;
+            }
+        }
 
-            .group {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+        .category-content {
+            margin-left: 15px;
 
-                p {
-                    margin: 0;
-                }
+            p {
+                margin: 10px auto;
+                font-size: 14px;
+            }
 
-                .tweak {
-                    margin-right: 13px;
+            .elao {
+                width: 65%;
+                margin-top: 10px;
+
+                .group {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    p {
+                        margin: 1px;
+                    }
+
+                    .tweak {
+                        margin-right: 14px;
+                    }
                 }
             }
         }
     }
 
-    .left_category p {
-        font-size: 14px;
-        line-height: 18px;
-    }
-
-    .left_separator {
+    hr {
         width: 90%;
-        margin: auto;
+        margin: 10px auto;
+        opacity: 0.5;
     }
 
-    .table {
-        font-size: 14px;
-        margin-top: 11px;
+    .category-title {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        margin-left: 15px;
+
+        .icon {
+            height: 25px;
+            width: 25px;
+        }
+
+        h3 {
+            margin: 0 5px;
+            font-size: 15px;
+            opacity: 0.8;
+        }
     }
 
-    .l_td {
-        width: 70px;
-    }
-
-    /* --------------------------------------------------- */
-    /* RIGHT */
-    /* --------------------------------------------------- */
-    #right {
+    .right {
         width: 544px;
         height: 100%;
         background-image: url('/assets/curriculum_vitae/back/right_01.png');
-    }
+        background-size: cover;
 
-    h4 {
-        font-size: 15px;
-        line-height: 0px;
-        text-indent: 5px;
-        margin: 10px;
+        h4 {
+            font-size: 15px;
+            margin: 0;
+            margin-top: 10px;
+            text-indent: 15px;
+        }
+
+        .category-content {
+            display: flex;
+            align-items: center;
+
+            margin: 15px;
+            font-size: 13px;
+
+            .period {
+                width: 115px;
+                font-weight: bold;
+                border-bottom: 1px dotted black;
+            }
+
+            .title {
+                width: 225px;
+                border-bottom: 1px dotted black;
+            }
+
+            .place {
+                width: 180px;
+                border-bottom: 1px dotted black;
+            }
+        }
+
+        .description {
+            margin: 0;
+            margin-left: 35px;
+            margin-top: 5px;
+            font-size: 13px;
+        }
     }
 
     .star {
@@ -152,82 +192,29 @@
         text-indent: 15px;
     }
 
-    .right_category p {
-        font-size: 14px;
-        line-height: 10px;
-    }
-
     .right_category {
         margin-left: 15px;
         margin-right: 15px;
+
+        p {
+            font-size: 14px;
+            line-height: 10px;
+        }
     }
 
-    .right_separator {
-        width: 95%;
-        margin: auto;
-    }
-
-    /* --------------------------------------------------- */
-    /* - table date  ------------------------------------- */
-    /* --------------------------------------------------- */
     .table_date {
         font-size: 14px;
         padding: 5px;
-    }
 
-    .table_date td {
-        margin-right: 5px;
-        border-bottom: 1px dotted black;
-    }
-
-    /* --------------------------------------------------- */
-    /* - td size for content ----------------------------- */
-    /* --------------------------------------------------- */
-    #period {
-        width: 115px;
-        font-weight: bold;
-    }
-
-    #what {
-        width: 75px;
-        font-weight: bold;
-    }
-
-    #title {
-        width: 225px;
-    }
-
-    #place {
-        width: 180px;
-    }
-
-    /* --------------------------------------------------- */
-    /* - Flex for Icons + Title -------------------------- */
-    /* --------------------------------------------------- */
-    #flex_title {
-        display: flex;
-        margin-bottom: -5px;
-    }
-
-    .title {
-        font-size: 16px;
-        line-height: 0px;
+        td {
+            margin-right: 5px;
+            border-bottom: 1px dotted black;
+        }
     }
 
     .icons {
         height: 25px;
         width: 25px;
         margin-right: 8px;
-    }
-
-    /* --------------------------------------------------- */
-    /* - Classes ----------------------------------------- */
-    /* --------------------------------------------------- */
-    ul li {
-        font-size: 14px;
-    }
-
-    #right_space {
-        height: 15px;
     }
 }

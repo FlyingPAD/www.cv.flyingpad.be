@@ -1,4 +1,17 @@
 {
+    "section": {
+        "about-me": "About me",
+        "languages": "Languages",
+        "contact-me": "Contact me",
+        "add-info": "Addiotional Info",
+        "hobbies": "Hobbies",
+        "education": "Education",
+        "training": "Training",
+        "work-experience": "Work Experience",
+        "employee": "Employee",
+        "freelance": "Freelance",
+        "interim": "Interim"
+    },
     "title": {
         "training": "Training",
         "french" : "French",
@@ -6,6 +19,25 @@
         "english" : "English"
     },
     "message": {
-        "about": "More than just a job ..."
+        "about": "I'm a quick learner, passionate about learning & sharing new techniques."
+    },
+    "traits": {
+        "first": "Rigorous",
+        "second": "Curious",
+        "third": "Assertive"
+    },
+    "contact": {
+        "e-mail": "E-Mail",
+        "network": "Network",
+        "website": "Website"
+    },
+    "info": {
+        "birthday": "July 15th 1982 ( 42 years old )",
+        "license": "Driver's license ( B )"
+    },
+    "hobbies": {
+        "first": "Audio & Video Production",
+        "second": "Coding music applications",
+        "third": "Playing & teaching music"
     }
 }

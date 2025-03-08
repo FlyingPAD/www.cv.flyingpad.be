@@ -1,4 +1,17 @@
 {
+    "section": {
+        "about-me": "À mon propos",
+        "languages": "Langues",
+        "contact-me": "Me contacter",
+        "add-info": "Informations",
+        "hobbies": "Passe-temps",
+        "education": "Formation",
+        "training": "Formation",
+        "work-experience": "Expérience Professionelle",
+        "employee": "Employé",
+        "freelance": "Freelance",
+        "interim": "Intérim"
+    },
     "title": {
         "training": "Formation",
         "french" : "Français",
@@ -6,6 +19,25 @@
         "english" : "Anglais"
     },
     "message": {
-        "about": "More than just a job ..."
+        "about": "Apprenant véloce, j'aime apprendre et partager de nouvelles techniques."
+    },
+    "traits": {
+        "first": "Rigoureux",
+        "second": "Curieux",
+        "third": "Assertif"
+    },
+    "contact": {
+        "e-mail": "Courriel",
+        "network": "Réseau",
+        "website": "Site WEB"
+    },
+    "info": {
+        "birthday": "15 Juillet 1982 ( 42 ans )",
+        "license": "Permis de conduire ( B )"
+    },
+    "hobbies": {
+        "first": "Production Audio & Video",
+        "second": "Coder des applications musicales",
+        "third": "Jouer et enseigner la musique"
     }
 }

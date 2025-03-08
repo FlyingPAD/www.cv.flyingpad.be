@@ -14,14 +14,16 @@
         padding: 5px;
 
         background-color: var(--colorMainOpacity2);
-        border: 3px solid var(--colorMain);
+        border: 3px solid var(--colorMainOpacity5);
         border-radius: 5px;
 
         transition-duration: 300ms;
     }
 
     .active {
-        background-color: var(--colorWhite);
+        border: 3px solid var(--colorMain);
+
+        transition-duration: 300ms;
     }
 
     p {
@@ -32,6 +34,6 @@
 
 .toggle:hover {
     .icon {
-        background-color: var(--colorWhite);
+        border: 3px solid var(--colorMain);
     }
 }
