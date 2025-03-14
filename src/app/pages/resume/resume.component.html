@@ -1,13 +1,13 @@
 <app-spacer height="15px" />
 
 <div class="languages">
-    <div class="language" (click)="switchLanguage('fr')">
+    <div class="language" (click)="switchLanguage('fr')" [class.active]="currentLanguage === 'fr' ">
         <img src="/assets/icons-flags/fr.png" alt="Français">
         <p>Français</p>
     </div>
-    <div class="language" (click)="switchLanguage('en')">
+    <div class="language" (click)="switchLanguage('en')" [class.active]="currentLanguage === 'en' ">
         <img src="/assets/icons-flags/en.png" alt="Anglais">
-        <p>Anglais</p>
+        <p>English</p>
     </div>
 </div>
 

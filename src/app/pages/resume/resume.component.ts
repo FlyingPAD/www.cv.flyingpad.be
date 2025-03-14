@@ -12,6 +12,9 @@ export class ResumeComponent {
   #translateService = inject(TranslateService)
 
   public switchLanguage(lang: string): void {
-    this.#translateService.use(lang);
+    this.#translateService.use(lang)
+  }
+  public get currentLanguage(): string {
+    return this.#translateService.currentLang
   }
 }
