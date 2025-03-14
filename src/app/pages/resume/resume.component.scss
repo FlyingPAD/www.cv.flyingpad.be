@@ -13,7 +13,7 @@
         border-radius: 5px;
         padding: 5px;
         margin: 5px;
-        cursor: pointer;
+        
         transition-duration: 300ms;
 
         img {
@@ -25,10 +25,15 @@
         p {
             margin: 0;
         }
+    }
 
-        &:hover {
-            background-color: var(--colorWhite);
-        }
+    .language:hover:not(.active) {
+        cursor: pointer;
+        background-color: var(--colorWhiteOpacity5);
+    }
+
+    .active {
+        background-color: var(--colorWhite);
     }
 }
 

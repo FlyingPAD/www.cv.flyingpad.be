@@ -40,12 +40,34 @@ html {
 
         p {
             color: var(--colorMain);
+            font-size: 14px;
         }
 
         hr {
             opacity: 0.2;
             color: var(--colorMain);
-            margin: 25px 0;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .box-title {
+            padding: 10px;
+
+            background-color: var(--colorMainOpacity2);
+            border: 1px solid var(--colorMainOpacity3);
+            border-radius: 5px;
+            backdrop-filter: blur(3px);
+            box-shadow: 0 3px 3px 0 var(--colorMainOpacity2);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                margin: 0;
+                font-size: 14px;
+                font-weight: bold;
+            }
         }
     }
 
@@ -78,14 +100,12 @@ html {
 
     .place {
         color: #3e2e22;
-        margin: 0;
-        margin-bottom: 20px;
         text-indent: 15px;
-        font-size: 15px;
+        font-size: 14px;
 
         a {
             color: #6b5240;
-            text-decoration: none;
+            text-decoration: underline;
         }
 
         a:hover {
