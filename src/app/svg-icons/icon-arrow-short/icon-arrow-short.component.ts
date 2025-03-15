@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
 })
 export class IconArrowShortComponent {
 
-  @Input() color?: string
+  @Input() color: string = '#6b5240'
   @Input() size: string = '24px'
   @Input() direction: string = 'down'
 
