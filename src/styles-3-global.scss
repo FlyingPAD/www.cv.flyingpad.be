@@ -17,7 +17,7 @@ html {
 
 .layout {
     margin-top: 15px;
-    
+
     background-color: var(--colorMainOpacity1);
     border-radius: 15px;
     backdrop-filter: blur(3px);
@@ -41,6 +41,14 @@ html {
         p {
             color: var(--colorMain);
             font-size: 14px;
+
+            a {
+                color: var(--colorMainOpacity7);
+            }
+            a:hover {
+                color: var(--colorMain);
+                transition-duration: 300ms;
+            }
         }
 
         hr {
@@ -99,5 +107,11 @@ html {
     .layout {
         width: 800px;
         margin: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .layout {
+        border-radius: 0;
     }
 }
