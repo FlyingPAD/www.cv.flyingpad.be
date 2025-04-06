@@ -39,5 +39,22 @@
         "first": "Audio & Video Production",
         "second": "Coding music applications",
         "third": "Playing & teaching music"
+    },
+    "training": {
+        "internship": "Internship",
+        "dotnet-dev": ".NET Developer",
+        "web-dev": "WEB Developer",
+        "fundamentals": "IT Fundamentals",
+        "php-init": "PHP Initiation",
+        "visual-arts": "Visual Arts"
+    },
+    "freelance": {
+        "sales": "Sales & After-Sales Services",
+        "consultancy": "Consultancy"
+    },
+    "interim": {
+        "first": "Sale & Restocking",
+        "second": "Construction",
+        "third": "Hospitality Industry"
     }
 }

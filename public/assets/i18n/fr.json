@@ -39,5 +39,22 @@
         "first": "Production Audio & Video",
         "second": "Coder des applications musicales",
         "third": "Jouer et enseigner la musique"
+    },
+    "training": {
+        "internship": "Stage PFI",
+        "dotnet-dev": "Développeur .NET",
+        "web-dev": "Développeur WEB",
+        "fundamentals": "Fondements IT",
+        "php-init": "Initiation au PHP",
+        "visual-arts": "Arts Visuels"
+    },
+    "freelance": {
+        "sales": "Vente & services après-vente",
+        "consultancy": "Consultance"
+    },
+    "interim": {
+        "first": "Vente et Réassort",
+        "second": "Bâtiment",
+        "third": "Horeca"
     }
 }

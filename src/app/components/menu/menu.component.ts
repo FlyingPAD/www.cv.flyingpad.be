@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
 import { CommonModule } from '@angular/common';
 import { MenuToggleComponent } from '../menu-toggle/menu-toggle.component';
-import { IconHamburgerComponent } from "../../svg-icons/icon-hamburger/icon-hamburger.component";
 import { RouterModule } from '@angular/router';
 import { IconHomeComponent } from 'src/app/svg-icons/icon-home/icon-home.component';
 import { SpacerComponent } from "../spacer/spacer.component";
@@ -16,7 +15,6 @@ import { IconResumeComponent } from 'src/app/svg-icons/icon-resume/icon-resume.c
 @Component({
   selector: 'app-menu',
   imports: [CommonModule, RouterModule, MenuToggleComponent, SpacerComponent,
-    IconHamburgerComponent, 
     IconHomeComponent,
     IconTrainingComponent,
     IconExperienceComponent,
