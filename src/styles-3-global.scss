@@ -45,6 +45,7 @@ html {
             a {
                 color: var(--colorMainOpacity7);
             }
+
             a:hover {
                 color: var(--colorMain);
                 transition-duration: 300ms;
@@ -76,6 +77,12 @@ html {
                 font-size: 14px;
                 font-weight: bold;
             }
+        }
+
+        .link-name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 
