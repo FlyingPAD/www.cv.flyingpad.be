@@ -5,6 +5,10 @@ on:
     branches:
       - master
 
+concurrency:
+  group: cv-production-ftp
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -15,17 +19,14 @@ jobs:
 
       # Setup Node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 18
-
-      # Install Angular CLI
-      - name: Install Angular CLI
-        run: npm install -g @angular/cli
+          cache: npm
 
       # Install project dependencies
       - name: Install project dependencies
-        run: npm install
+        run: npm ci
 
       # Install lftp
       - name: Install lftp
@@ -33,7 +34,7 @@ jobs:
 
       # Build Angular
       - name: Build Angular
-        run: ng build --configuration production
+        run: npm run build -- --configuration production
 
       # Deploy to FTP
       - name: Deploy to FTP
