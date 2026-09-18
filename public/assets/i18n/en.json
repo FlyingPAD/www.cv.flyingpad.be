@@ -3,7 +3,7 @@
         "about-me": "About me",
         "languages": "Languages",
         "contact-me": "Contact me",
-        "add-info": "Addiotional Info",
+        "add-info": "Additional Info",
         "hobbies": "Hobbies",
         "education": "Education",
         "training": "Training",
@@ -32,7 +32,7 @@
         "website": "Website"
     },
     "info": {
-        "birthday": "July 15th 1982 ( 42 years old )",
+        "birthday": "July 15th 1982",
         "license": "Driver's license ( B )"
     },
     "hobbies": {
@@ -43,7 +43,7 @@
     "training": {
         "internship": "Internship",
         "dotnet-dev": ".NET Developer",
-        "web-dev": "WEB Developer",
+        "web-dev": "Web Developer",
         "fundamentals": "IT Fundamentals",
         "php-init": "PHP Initiation",
         "visual-arts": "Visual Arts"
@@ -53,7 +53,7 @@
         "consultancy": "Consultancy"
     },
     "interim": {
-        "first": "Sale & Restocking",
+        "first": "Sales & Restocking",
         "second": "Construction",
         "third": "Hospitality Industry"
     }
