@@ -7,7 +7,7 @@
         "hobbies": "Passe-temps",
         "education": "Formation",
         "training": "Formation",
-        "work-experience": "Expérience Professionelle",
+        "work-experience": "Expérience Professionnelle",
         "employee": "Employé",
         "freelance": "Freelance",
         "interim": "Intérim"
@@ -29,10 +29,10 @@
     "contact": {
         "e-mail": "Courriel",
         "network": "Réseau",
-        "website": "Site WEB"
+        "website": "Site Web"
     },
     "info": {
-        "birthday": "15 Juillet 1982 ( 42 ans )",
+        "birthday": "15 juillet 1982",
         "license": "Permis de conduire ( B )"
     },
     "hobbies": {
@@ -43,7 +43,7 @@
     "training": {
         "internship": "Stage PFI",
         "dotnet-dev": "Développeur .NET",
-        "web-dev": "Développeur WEB",
+        "web-dev": "Développeur Web",
         "fundamentals": "Fondements IT",
         "php-init": "Initiation au PHP",
         "visual-arts": "Arts Visuels"
