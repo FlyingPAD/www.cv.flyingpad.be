@@ -17,7 +17,7 @@ Accepted V2 IA: **Home · Work · Journey · Profile**. Base dark DA is validate
 Primary navigation explicitly includes Home before Work/Journey/Profile. Email is deliberately styled as a distinct action and labelled **Email ↗**, rather than masquerading as a normal internal Contact route; its accessible label states that it opens the user's mail application. The adjacent name also links Home while the miniature Nine remains passive.
 
 ### Home
-The hero has been simplified: the redundant `01 / Start with the idea` eyebrow and dead `Explore` CTA are removed. The system heading is now **Colors are alive.** rather than `The system`; the phrase no longer repeats in the footer. Interactive system cards are the intended exploratory CTA.
+The hero has been simplified: the redundant `01 / Start with the idea` eyebrow, explanatory intro copy and dead `Explore` CTA are removed. The identity line is now deliberately personal and slightly idiosyncratic: **`I create thing ...`**. The disciplines line sits lower to give the statement more breathing room. The system heading is **Colors are alive.** and the interactive system cards are the intended exploratory CTA.
 
 ### Shared shell
 Miniature mark: invisible/missing top-left position, visible sequence begins top-middle, eighth visible position is Black with no outline. Passive hover glow only.
