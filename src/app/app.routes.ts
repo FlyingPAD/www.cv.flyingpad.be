@@ -1,22 +1,21 @@
 import { Routes } from '@angular/router'
-import { ExperienceComponent } from './pages/experience/experience.component'
-import { HardSkillsComponent } from './pages/hard-skills/hard-skills.component'
 import { HomeComponent } from './pages/home/home.component'
-import { ProjectsComponent } from './pages/projects/projects.component'
-import { SoftSkillsComponent } from './pages/soft-skills/soft-skills.component'
-import { TrainingComponent } from './pages/training/training.component'
+import { WorkComponent } from './pages/work/work.component'
+import { JourneyComponent } from './pages/journey/journey.component'
+import { ProfileComponent } from './pages/profile/profile.component'
 import { ResumeComponent } from './pages/resume/resume.component'
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, title: 'Tony\'s Resume' },
-
-  { path: 'training', component: TrainingComponent, title: 'Tony\'s Resume | Training' },
-  { path: 'experience', component: ExperienceComponent, title: 'Tony\'s Resume | Experience' },
-  { path: 'hard-skills', component: HardSkillsComponent, title: 'Tony\'s Resume | Hard-Skills' },
-  { path: 'soft-skills', component: SoftSkillsComponent, title: 'Tony\'s Resume | Soft Skills' },
-  { path: 'projects', component: ProjectsComponent, title: 'Tony\'s Resume | Projects' },
-  { path: 'resume', component: ResumeComponent, title: 'Tony\'s Resume | Resume' },
-
+  { path: 'home', component: HomeComponent, title: 'Tony Van Langenhove' },
+  { path: 'work', component: WorkComponent, title: 'Tony Van Langenhove | Work' },
+  { path: 'journey', component: JourneyComponent, title: 'Tony Van Langenhove | Journey' },
+  { path: 'profile', component: ProfileComponent, title: 'Tony Van Langenhove | Profile' },
+  { path: 'resume', component: ResumeComponent, title: 'Tony Van Langenhove | Resume' },
+  { path: 'projects', redirectTo: 'work' },
+  { path: 'experience', redirectTo: 'journey' },
+  { path: 'training', redirectTo: 'journey' },
+  { path: 'hard-skills', redirectTo: 'profile' },
+  { path: 'soft-skills', redirectTo: 'profile' },
   { path: '**', redirectTo: 'home' }
 ]

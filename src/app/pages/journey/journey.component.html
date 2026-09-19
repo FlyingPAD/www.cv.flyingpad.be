@@ -1,0 +1,13 @@
+<app-site-shell section="journey">
+  <section class="page-hero"><p>02 / Journey</p><h1>One trajectory.<br><em>More languages.</em></h1><blockquote>I didn’t change careers six times. I progressively expanded my creative vocabulary.</blockquote></section>
+  <section class="timeline">
+    @for(era of eras;track era.year;let i=$index){
+      <article class="era">
+        <div class="marker"><span>{{(i+1).toString().padStart(2,'0')}}</span><i></i></div>
+        <div class="date">{{era.year}}</div>
+        <div class="content"><small>{{era.kind}}</small><h2>{{era.title}}</h2><p>{{era.body}}</p><div class="details">@for(item of era.detail;track item){<span>{{item}}</span>}</div></div>
+      </article>
+    }
+  </section>
+  <section class="continuity"><span>Nothing was discarded.</span><strong>Each layer changed what the next one could become.</strong></section>
+</app-site-shell>

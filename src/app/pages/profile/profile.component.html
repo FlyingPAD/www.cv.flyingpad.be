@@ -1,0 +1,36 @@
+<app-site-shell section="profile">
+  <section class="page-hero"><p>03 / Profile</p><h1>The useful<br><em>details.</em></h1><p class="lead">A conventional view of an unconventional trajectory.</p></section>
+
+  <section class="profile-grid">
+    <aside>
+      <div class="fact"><small>Based in</small><strong>Belgium</strong></div>
+      <div class="fact"><small>Languages</small><strong>French C2<br>English B2+<br>Dutch / Flemish B2</strong></div>
+      <div class="fact"><small>Contact</small><a href="mailto:tonyvan@live.fr">Email me ↗</a></div>
+      <div class="fact"><small>Résumé</small><a routerLink="/resume">Printable / archived CV ↗</a></div>
+    </aside>
+
+    <div class="profile-main">
+      <section><div class="section-head"><span>Experience</span><span>Selected</span></div>
+        <div class="row"><time>2024</time><div><h2>.NET Developer</h2><p>Satellit · Pluxee Support Team</p><small>Frontend forms, backend data processing, API integration.</small></div></div>
+        <div class="row"><time>2015—2022</time><div><h2>Audio Producer</h2><p>Freelance · Various clients</p><small>Production, recording, editing, mixing, mastering and post-production.</small></div></div>
+        <div class="row"><time>2018—2022</time><div><h2>Webmaster</h2><p>Freelance · Various clients</p><small>Hosting, CMS installation, administration and maintenance.</small></div></div>
+        <div class="row"><time>2009—2015</time><div><h2>Audio Manager</h2><p>Freelance · Various clients</p><small>Stage management, composition, performance and music teaching.</small></div></div>
+        <div class="row"><time>2019—2020</time><div><h2>Audio Producer</h2><p>Brandy Jingles</p><small>Studio sessions and broadcast production / post-production.</small></div></div>
+      </section>
+
+      <section><div class="section-head"><span>Education & training</span><span>2002—2024</span></div>
+        <div class="compact"><b>2023—2024</b><span>.NET Developer · Satellit</span></div>
+        <div class="compact"><b>2023</b><span>Web Developer, Full Stack · Technofutur TIC</span></div>
+        <div class="compact"><b>2022</b><span>.NET Azure + IT Fundamentals · Technofutur TIC</span></div>
+        <div class="compact"><b>2021</b><span>Digital Coordinator · Google Digital Atelier</span></div>
+        <div class="compact"><b>2019</b><span>SEO, SEA, SMM · Technofutur TIC</span></div>
+        <div class="compact"><b>2017</b><span>Sound Design · Technocité</span></div>
+        <div class="compact"><b>2002</b><span>CESS · Visual Arts · Institut Ste-Marie</span></div>
+      </section>
+
+      <section><div class="section-head"><span>Toolkit</span><span>Used across disciplines</span></div>
+        <div class="toolkit">@for(group of toolkit;track group[0]){<div><h3>{{group[0]}}</h3>@for(item of group.slice(1);track item){<span>{{item}}</span>}</div>}</div>
+      </section>
+    </div>
+  </section>
+</app-site-shell>

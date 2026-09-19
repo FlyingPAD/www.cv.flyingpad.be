@@ -1,0 +1,24 @@
+<div class="site-shell">
+  <header class="site-header">
+    <a class="identity" routerLink="/home" aria-label="Tony Van Langenhove — Home">
+      <span class="nine-mark" aria-hidden="true">
+        <i class="missing"></i><i class="red"></i><i class="orange"></i>
+        <i class="yellow"></i><i class="green"></i><i class="blue"></i>
+        <i class="indigo"></i><i class="violet"></i><i class="black"></i>
+      </span>
+      <span class="identity-name">Tony<br>Van Langenhove</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a routerLink="/work" routerLinkActive="active">Work</a>
+      <a routerLink="/journey" routerLinkActive="active">Journey</a>
+      <a routerLink="/profile" routerLinkActive="active">Profile</a>
+      <a href="mailto:tonyvan@live.fr">Contact</a>
+    </nav>
+  </header>
+  <main><ng-content /></main>
+  <footer>
+    <span>Tony Van Langenhove</span>
+    <span class="alive">Colors are alive.</span>
+    <span>Belgium · 2026</span>
+  </footer>
+</div>
