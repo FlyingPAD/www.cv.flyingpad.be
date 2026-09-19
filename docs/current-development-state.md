@@ -1,6 +1,6 @@
 # Current Development State — CV V2
 
-Last consolidated after removing redundant page-intro heroes from secondary pages.
+Last consolidated after mobile navigation overlay implementation.
 
 ## Read order
 1. `/AGENTS.md`
@@ -14,18 +14,18 @@ Last consolidated after removing redundant page-intro heroes from secondary page
 Accepted V2 IA: **Home · Work · Journey · Profile**. Base dark DA is validated.
 
 ### Navigation
-Primary navigation explicitly includes Home before Work/Journey/Profile. Email is deliberately styled as a distinct action and labelled **Email ↗**, rather than masquerading as a normal internal Contact route. The adjacent name also links Home while the miniature Nine remains passive.
+Desktop keeps the explicit horizontal Home / Work / Journey / Profile navigation and distinct **Email ↗** action.
+
+At ≤700px the header collapses to identity + a textual **Menu** trigger. The mobile navigation opens as a full-screen overlay with large Home / Work / Journey / Profile destinations, active-state color signals, a distinct direct-email action, explicit Close control, Escape support and background-scroll lock. The mobile overlay preserves the same visual language without reproducing the desktop nav as cramped buttons.
 
 ### Home
 Hero remains the primary identity statement: **I create things ...** plus the disciplines line. `Colors are alive` heads the interactive domain system.
 
 ### Secondary pages
-Profile, Work and Journey no longer begin with large generic page-intro heroes. Each page starts directly with useful content:
+Profile, Work and Journey start directly with useful content rather than generic page-intro heroes:
 - Profile → Based in / languages / contact / résumé, alongside experience.
 - Work → selected project cards.
 - Journey → timeline.
-
-This is now an intentional IA rule: secondary pages should not restate their route name or add decorative slogans unless the content genuinely needs orientation.
 
 ### Shared shell
 Miniature mark: invisible/missing top-left position, visible sequence begins top-middle, eighth visible position is Black with no outline. Passive hover glow only.
@@ -45,7 +45,7 @@ Miniature mark: invisible/missing top-left position, visible sequence begins top
 Legacy compatibility/print/archive surface; scheduled for replacement.
 
 ## Next likely work
-1. Real-device review/fine tuning across Work/Journey/Profile.
+1. Real-device review/fine tuning across Work/Journey/Profile and the new mobile overlay.
 2. Replace legacy Resume with V2 printable Profile/resume.
 3. Add deliberate reveal/motion layer respecting reduced motion.
 4. Reintegrate i18n.

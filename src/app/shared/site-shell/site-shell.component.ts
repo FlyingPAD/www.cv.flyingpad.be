@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core'
+import { DOCUMENT } from '@angular/common'
+import { Component, effect, inject, Input, signal } from '@angular/core'
 import { RouterLink, RouterLinkActive } from '@angular/router'
 
 @Component({
@@ -10,4 +11,25 @@ import { RouterLink, RouterLinkActive } from '@angular/router'
 })
 export class SiteShellComponent {
   @Input() section = ''
+
+  readonly menuOpen = signal(false)
+  private readonly document = inject(DOCUMENT)
+
+  constructor() {
+    effect(() => {
+      this.document.body.style.overflow = this.menuOpen() ? 'hidden' : ''
+    })
+  }
+
+  openMenu() {
+    this.menuOpen.set(true)
+  }
+
+  closeMenu() {
+    this.menuOpen.set(false)
+  }
+
+  onOverlayKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') this.closeMenu()
+  }
 }
