@@ -14,10 +14,10 @@ Last consolidated after V2 cross-page polish and the first interactive Nine pass
 Accepted V2 IA: **Home · Work · Journey · Profile**. Base dark DA is validated.
 
 ### Home
-Uses the shared shell. Hero, Nine projection, FlyingPAD feature and journey preview are active. Position 01 is missing; 02–09 are visible. The eight manifested domain cards are now navigation surfaces rather than decorative dead ends: internal concepts route toward Journey/Profile/Work while Music and Experiments can route to their relevant public surfaces. The mapping is a CV navigation projection, not canonical Pad/color identity. Mobile keeps the Nine sequential.
+Uses the shared shell. Hero, Nine projection, FlyingPAD feature and journey preview are active. Position 01 is missing; 02–09 are visible. The eight manifested domain cards are navigation surfaces rather than decorative dead ends. Their mapping is a CV navigation projection, not canonical Pad/color identity. Mobile keeps the Nine sequential.
 
 ### Shared shell
-Header mark now follows the local CV projection more strictly: missing top-left position, seven chromatic positions, and the final ninth cell physically absent rather than rendered as a black dot. This intentionally differs from the full Home system, where 09 remains represented as the Black/Experiments position.
+The miniature mark is a passive identity signal, not navigation. Its 3×3 geometry reserves the top-left position as an invisible/missing cell, then presents the visible sequence from the top-middle onward; the eighth visible position is Black. There is no outline around Black. The mark may glow subtly on hover but is not clickable; only the adjacent name links Home.
 
 ### Work / Journey / Profile
 Remain on the first cross-page polish pass: vivid color as signal, layout-stable interactions, recruiter-readable Profile.
@@ -32,7 +32,8 @@ Legacy compatibility/print/archive surface; scheduled for replacement.
 - Desktop spatial; tablet simplified; mobile sequential.
 - No essential information depends on Nine/lore.
 - `Colors are alive.` remains understated.
-- Domain-card links must remain semantically ordinary navigation; do not explain them as lore.
+- Domain-card links remain semantically ordinary navigation.
+- Miniature Nine mark is decorative/passive and must not imply clickability.
 
 ## Next likely work
 1. Real-device review/fine tuning.
