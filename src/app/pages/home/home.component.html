@@ -1,49 +1,25 @@
 <app-site-shell section="home">
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-copy">
-      <p class="eyebrow"><span>01</span> / Start with the idea</p>
-      <h1 id="hero-title">I create<br><em>things.</em></h1>
-      <p class="disciplines">Software · Music · Audiovisual · Interactive systems</p>
-      <p class="intro">Ideas are the starting point. Each project finds its own form.</p>
-      <a class="text-link" href="#system">Explore <span aria-hidden="true">→</span></a>
-    </div>
-
+    <div class="hero-copy"><p class="eyebrow"><span>01</span> / Start with the idea</p><h1 id="hero-title">I create<br><em>things.</em></h1><p class="disciplines">Software · Music · Audiovisual · Interactive systems</p><p class="intro">Ideas are the starting point. Each project finds its own form.</p><a class="text-link" href="#system">Explore <span aria-hidden="true">→</span></a></div>
     <div class="system-wrap" id="system">
       <div class="system-heading"><span>The system</span><small>Colors are alive.</small></div>
       <div class="system-grid">
         <div class="domain-card missing" aria-hidden="true"><span class="domain-index">01</span><span class="missing-core"></span></div>
         @for(domain of domains;track domain.index){
-          <article class="domain-card" [class]="'domain-card tone-'+domain.tone">
-            <span class="domain-index">{{domain.index}}</span><span class="domain-signal" aria-hidden="true"></span>
-            <div><h2>{{domain.name}}</h2><p>{{domain.detail}}</p></div>
-          </article>
+          @if(domain.external){
+            <a class="domain-card domain-link" [class]="'domain-card domain-link tone-'+domain.tone" [href]="domain.href" target="_blank" rel="noreferrer" [attr.aria-label]="domain.name+' — '+domain.detail+' (opens in a new tab)'">
+              <span class="domain-index">{{domain.index}}</span><span class="domain-signal" aria-hidden="true"></span><div><h2>{{domain.name}}</h2><p>{{domain.detail}}</p></div><span class="domain-arrow" aria-hidden="true">↗</span>
+            </a>
+          } @else {
+            <a class="domain-card domain-link" [class]="'domain-card domain-link tone-'+domain.tone" [routerLink]="domain.href" [attr.aria-label]="domain.name+' — '+domain.detail">
+              <span class="domain-index">{{domain.index}}</span><span class="domain-signal" aria-hidden="true"></span><div><h2>{{domain.name}}</h2><p>{{domain.detail}}</p></div><span class="domain-arrow" aria-hidden="true">→</span>
+            </a>
+          }
         }
       </div>
     </div>
     <div class="hero-rail" aria-hidden="true"><span>01</span><i></i><span>09</span></div>
   </section>
-
-  <section class="featured" id="work">
-    <div class="section-label"><span>Selected work</span><span>01 / 02</span></div>
-    <a class="featured-card" href="https://www.flyingpad.be" target="_blank" rel="noreferrer">
-      <div class="featured-copy">
-        <p class="project-kicker">Active project · Music · Knowledge · Creation</p>
-        <h2>FlyingPAD</h2>
-        <p>A living platform for understanding, learning and creating music — built across software, media and interactive experiences.</p>
-        <span class="text-link">Discover FlyingPAD <span aria-hidden="true">↗</span></span>
-      </div>
-      <div class="featured-visual" aria-hidden="true"><span class="orbit orbit-a"></span><span class="orbit orbit-b"></span><span class="orbit orbit-c"></span><span class="project-mark">FP</span></div>
-    </a>
-    <a class="section-cta text-link" routerLink="/work">View selected work <span aria-hidden="true">→</span></a>
-  </section>
-
-  <section class="journey" id="journey">
-    <div class="section-label"><span>Journey, in brief</span><span>Accumulation, not replacement</span></div>
-    <div class="journey-line">
-      @for(item of journey;track item.year){
-        <div class="journey-stop"><span class="journey-dot"></span><strong>{{item.year}}</strong><span>{{item.label}}</span></div>
-      }
-    </div>
-    <a class="text-link" routerLink="/journey">Explore the journey <span aria-hidden="true">→</span></a>
-  </section>
+  <section class="featured" id="work"><div class="section-label"><span>Selected work</span><span>01 / 02</span></div><a class="featured-card" href="https://www.flyingpad.be" target="_blank" rel="noreferrer"><div class="featured-copy"><p class="project-kicker">Active project · Music · Knowledge · Creation</p><h2>FlyingPAD</h2><p>A living platform for understanding, learning and creating music — built across software, media and interactive experiences.</p><span class="text-link">Discover FlyingPAD <span aria-hidden="true">↗</span></span></div><div class="featured-visual" aria-hidden="true"><span class="orbit orbit-a"></span><span class="orbit orbit-b"></span><span class="orbit orbit-c"></span><span class="project-mark">FP</span></div></a><a class="section-cta text-link" routerLink="/work">View selected work <span aria-hidden="true">→</span></a></section>
+  <section class="journey" id="journey"><div class="section-label"><span>Journey, in brief</span><span>Accumulation, not replacement</span></div><div class="journey-line">@for(item of journey;track item.year){<div class="journey-stop"><span class="journey-dot"></span><strong>{{item.year}}</strong><span>{{item.label}}</span></div>}</div><a class="text-link" routerLink="/journey">Explore the journey <span aria-hidden="true">→</span></a></section>
 </app-site-shell>
