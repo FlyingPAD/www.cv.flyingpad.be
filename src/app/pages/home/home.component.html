@@ -1,19 +1,15 @@
 <app-site-shell section="home">
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-copy"><p class="eyebrow"><span>01</span> / Start with the idea</p><h1 id="hero-title">I create<br><em>things.</em></h1><p class="disciplines">Software · Music · Audiovisual · Interactive systems</p><p class="intro">Ideas are the starting point. Each project finds its own form.</p><a class="text-link" href="#system">Explore <span aria-hidden="true">→</span></a></div>
+    <div class="hero-copy"><h1 id="hero-title">I create<br><em>things.</em></h1><p class="disciplines">Software · Music · Audiovisual · Interactive systems</p><p class="intro">Ideas are the starting point. Each project finds its own form.</p></div>
     <div class="system-wrap" id="system">
-      <div class="system-heading"><span>The system</span><small>Colors are alive.</small></div>
+      <div class="system-heading"><span>Colors are alive.</span></div>
       <div class="system-grid">
         <div class="domain-card missing" aria-hidden="true"><span class="domain-index">01</span><span class="missing-core"></span></div>
         @for(domain of domains;track domain.index){
           @if(domain.external){
-            <a class="domain-card domain-link" [class]="'domain-card domain-link tone-'+domain.tone" [href]="domain.href" target="_blank" rel="noreferrer" [attr.aria-label]="domain.name+' — '+domain.detail+' (opens in a new tab)'">
-              <span class="domain-index">{{domain.index}}</span><span class="domain-signal" aria-hidden="true"></span><div><h2>{{domain.name}}</h2><p>{{domain.detail}}</p></div><span class="domain-arrow" aria-hidden="true">↗</span>
-            </a>
+            <a class="domain-card domain-link" [class]="'domain-card domain-link tone-'+domain.tone" [href]="domain.href" target="_blank" rel="noreferrer" [attr.aria-label]="domain.name+' — '+domain.detail+' (opens in a new tab)'"><span class="domain-index">{{domain.index}}</span><span class="domain-signal" aria-hidden="true"></span><div><h2>{{domain.name}}</h2><p>{{domain.detail}}</p></div><span class="domain-arrow" aria-hidden="true">↗</span></a>
           } @else {
-            <a class="domain-card domain-link" [class]="'domain-card domain-link tone-'+domain.tone" [routerLink]="domain.href" [attr.aria-label]="domain.name+' — '+domain.detail">
-              <span class="domain-index">{{domain.index}}</span><span class="domain-signal" aria-hidden="true"></span><div><h2>{{domain.name}}</h2><p>{{domain.detail}}</p></div><span class="domain-arrow" aria-hidden="true">→</span>
-            </a>
+            <a class="domain-card domain-link" [class]="'domain-card domain-link tone-'+domain.tone" [routerLink]="domain.href" [attr.aria-label]="domain.name+' — '+domain.detail"><span class="domain-index">{{domain.index}}</span><span class="domain-signal" aria-hidden="true"></span><div><h2>{{domain.name}}</h2><p>{{domain.detail}}</p></div><span class="domain-arrow" aria-hidden="true">→</span></a>
           }
         }
       </div>

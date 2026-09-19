@@ -14,10 +14,10 @@ Last consolidated after V2 readability/navigation fine tuning.
 Accepted V2 IA: **Home · Work · Journey · Profile**. Base dark DA is validated.
 
 ### Navigation
-Primary navigation explicitly includes **Home** before Work/Journey/Profile/Contact. The adjacent name also links Home, while the miniature Nine mark remains passive/decorative. This deliberately favors discoverability over relying only on logo/name conventions.
+Primary navigation explicitly includes Home before Work/Journey/Profile. Email is deliberately styled as a distinct action and labelled **Email ↗**, rather than masquerading as a normal internal Contact route; its accessible label states that it opens the user's mail application. The adjacent name also links Home while the miniature Nine remains passive.
 
 ### Home
-The system cards remain interactive navigation surfaces. First readability pass increases small type, contrast and structural borders while retaining the spacious composition. Major structural/card boundaries use 2px where extra visual consistency helps; the miniature mark itself stays borderless.
+The hero has been simplified: the redundant `01 / Start with the idea` eyebrow and dead `Explore` CTA are removed. The system heading is now **Colors are alive.** rather than `The system`; the phrase no longer repeats in the footer. Interactive system cards are the intended exploratory CTA.
 
 ### Shared shell
 Miniature mark: invisible/missing top-left position, visible sequence begins top-middle, eighth visible position is Black with no outline. Passive hover glow only.
@@ -25,18 +25,18 @@ Miniature mark: invisible/missing top-left position, visible sequence begins top
 ### Visual rules
 - Dark, calm, precise base.
 - Vivid color is signal, not wallpaper.
-- Readability beats excessive delicacy: avoid sub-10px essential text.
-- Strong structural boundaries may use 2px; do not indiscriminately thicken every decorative detail.
+- Readability beats excessive delicacy.
+- Strong structural boundaries may use 2px.
 - No scale/jump hover effects.
 - Desktop spatial; tablet simplified; mobile sequential.
 - No essential information depends on Nine/lore.
-- `Colors are alive.` remains understated.
+- Avoid deceptive affordances: external/protocol actions must be visually or textually distinguishable from internal navigation.
 
 ### Resume
 Legacy compatibility/print/archive surface; scheduled for replacement.
 
 ## Next likely work
-1. Real-device review/fine tuning across Work/Journey/Profile with the new readability baseline.
+1. Real-device review/fine tuning across Work/Journey/Profile.
 2. Replace legacy Resume with V2 printable Profile/resume.
 3. Add deliberate reveal/motion layer respecting reduced motion.
 4. Reintegrate i18n.
