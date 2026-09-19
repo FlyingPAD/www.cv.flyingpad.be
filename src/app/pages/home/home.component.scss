@@ -51,13 +51,13 @@
 }
 
 .nine-mark i { border-radius: 50%; }
-.red { background: #ff554f; }
-.orange { background: #f59a45; }
-.yellow { background: #e8d450; }
-.green { background: #56bd78; }
-.blue { background: #54a7d8; }
-.indigo { background: #666ed5; }
-.violet { background: #a16acb; }
+.red { background: #ff3b38; }
+.orange { background: #ff9f1c; }
+.yellow { background: #ffe14a; }
+.green { background: #43dc78; }
+.blue { background: #35b9ff; }
+.indigo { background: #656dff; }
+.violet { background: #c05cff; }
 .black { background: #050708; outline: 1px solid rgba(255,255,255,.18); }
 .white { border: 1px dashed rgba(235,245,247,.55); background: transparent; }
 
@@ -167,9 +167,9 @@ h1 em {
 .domain-signal { width: 5px; height: 5px; border-radius: 50%; background: var(--tone); box-shadow: 0 0 14px var(--tone); }
 .domain-card h2 { font-size: 16px; font-weight: 400; margin: 0 0 7px; }
 .domain-card p { color: #6f7d82; font-size: 10px; margin: 0; }
-.tone-red { --tone:#ff554f; } .tone-orange { --tone:#f59a45; } .tone-yellow { --tone:#e8d450; }
-.tone-green { --tone:#56bd78; } .tone-blue { --tone:#54a7d8; } .tone-indigo { --tone:#666ed5; }
-.tone-violet { --tone:#a16acb; } .tone-black { --tone:#20282b; }
+.tone-red { --tone:#ff3b38; } .tone-orange { --tone:#ff9f1c; } .tone-yellow { --tone:#ffe14a; }
+.tone-green { --tone:#43dc78; } .tone-blue { --tone:#35b9ff; } .tone-indigo { --tone:#656dff; }
+.tone-violet { --tone:#c05cff; } .tone-black { --tone:#4d565a; }
 
 .missing { border-style: dashed; background: transparent; justify-content: space-between; }
 .missing::after { display: none; }
