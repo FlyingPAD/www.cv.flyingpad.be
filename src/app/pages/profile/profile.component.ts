@@ -1,7 +1,8 @@
 import { Component } from '@angular/core'
+import { RouterLink } from '@angular/router'
 import { SiteShellComponent } from '../../shared/site-shell/site-shell.component'
 
-@Component({selector:'app-profile',standalone:true,imports:[SiteShellComponent],templateUrl:'./profile.component.html',styleUrl:'./profile.component.scss'})
+@Component({selector:'app-profile',standalone:true,imports:[SiteShellComponent,RouterLink],templateUrl:'./profile.component.html',styleUrl:'./profile.component.scss'})
 export class ProfileComponent {
  readonly toolkit=[
   ['Software','C# / .NET','ASP.NET Core','EF Core','MediatR','REST APIs'],

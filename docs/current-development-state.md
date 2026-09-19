@@ -1,6 +1,6 @@
 # Current Development State — CV V2
 
-Last consolidated after the first complete V2 architecture pass.
+Last consolidated after the first complete V2 architecture pass and shell cleanup.
 
 ## Read order
 
@@ -23,10 +23,10 @@ The visual direction is considered validated as a base, not finished.
 
 ### Home
 
-Implemented as the initial V2 vertical slice.
+Implemented as the initial V2 vertical slice and now uses the shared V2 site shell.
 
 Current content:
-- identity header;
+- identity header and primary navigation;
 - hero: “I create things.”;
 - multidisciplinary qualifier;
 - Nine/system composition;
@@ -34,8 +34,8 @@ Current content:
 - visible colors 02–09;
 - “Colors are alive.”;
 - featured FlyingPAD card;
-- short journey preview;
-- footer.
+- direct CTA to Work;
+- short journey preview with direct CTA to Journey.
 
 The hero wording remains editable; it is not canonical identity language.
 
@@ -66,8 +66,6 @@ Narrative:
 Visual Arts → Music/Audio → Web → Software → Creative Systems.
 
 The key idea is accumulation, not replacement. Jobs and training support the trajectory instead of defining the identity.
-
-Current page mixes narrative eras with selected concrete professional/training events.
 
 ### Profile
 
@@ -105,13 +103,7 @@ Legacy redirects:
 
 ## Shared implementation
 
-`src/app/shared/site-shell/` now provides the V2 shell used by Work, Journey and Profile:
-- identity;
-- Nine mark;
-- navigation;
-- footer.
-
-Home currently has its own equivalent shell markup because it predates the shared extraction. Consolidating Home onto the shared shell is a likely refactor once the shared shell is visually settled.
+`src/app/shared/site-shell/` provides the V2 identity, Nine mark, navigation and footer for Home, Work, Journey and Profile.
 
 Global V2 tokens are in `src/styles-2-variables.scss`.
 
@@ -120,21 +112,20 @@ Global baseline/reset and temporary legacy résumé compatibility styles are in 
 ## Known provisional / follow-up work
 
 High priority:
-- inspect Work, Journey and Profile on real desktop/mobile after deployment;
+- inspect all V2 pages on real desktop/mobile after deployment;
 - tune typography, spacing and information density from screenshots/real-device feedback;
-- decide whether Home should consume the shared shell;
 - replace the legacy Resume with a V2 print stylesheet / printable profile;
 - refine mobile/tablet Nine projection;
 - add deliberate motion/micro-interaction system;
+- reintegrate i18n into the V2 content;
 - add a proper theme strategy only when the dark V2 foundation is stable;
 - improve metadata/SEO and accessibility audit;
-- eventually move substantial static content into typed data models where it benefits editing/i18n.
+- move substantial static content into typed data models where it benefits editing/i18n.
 
 Known temporary compromise:
 - Contact email remains directly in templates from the legacy project.
 - English is currently the V2 authoring language; existing translation infrastructure has not yet been reintegrated into the new pages.
 - No light theme yet.
-- The Home and shared shell duplicate some identity/navigation markup.
 - Legacy résumé styling remains globally available solely for `/resume`.
 
 ## Things not to do next
