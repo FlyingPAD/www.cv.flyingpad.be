@@ -29,9 +29,13 @@
     <div class="system-wrap" id="system">
       <div class="system-heading">
         <span>The system</span>
-        <small>Eight manifest states. One missing position.</small>
+        <small>Colors are alive.</small>
       </div>
       <div class="system-grid">
+        <div class="domain-card missing" aria-hidden="true">
+          <span class="domain-index">01</span>
+          <span class="missing-core"></span>
+        </div>
         @for (domain of domains; track domain.index) {
           <article class="domain-card" [class]="'domain-card tone-' + domain.tone">
             <span class="domain-index">{{ domain.index }}</span>
@@ -42,10 +46,6 @@
             </div>
           </article>
         }
-        <div class="domain-card missing" aria-hidden="true">
-          <span class="domain-index">09</span>
-          <span class="missing-core"></span>
-        </div>
       </div>
     </div>
 
