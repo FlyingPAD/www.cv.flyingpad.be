@@ -1,6 +1,6 @@
 # Current Development State — CV V2
 
-Last consolidated after the first complete V2 architecture pass and shell cleanup.
+Last consolidated after the first V2 cross-page polish pass.
 
 ## Read order
 
@@ -13,134 +13,45 @@ Last consolidated after the first complete V2 architecture pass and shell cleanu
 
 ## Current product state
 
-The CV is transitioning from an older conventional résumé site to a new identity architecture.
+Accepted V2 IA: **Home · Work · Journey · Profile**.
 
-The accepted V2 direction is:
-
-**Home · Work · Journey · Profile**
-
-The visual direction is considered validated as a base, not finished.
+The base dark DA is validated. A first cross-page polish pass now centralizes spacing/surface tokens, strengthens vivid color signals, keeps interactions layout-stable and improves mobile composition.
 
 ### Home
-
-Implemented as the initial V2 vertical slice and now uses the shared V2 site shell.
-
-Current content:
-- identity header and primary navigation;
-- hero: “I create things.”;
-- multidisciplinary qualifier;
-- Nine/system composition;
-- position 01 missing;
-- visible colors 02–09;
-- “Colors are alive.”;
-- featured FlyingPAD card;
-- direct CTA to Work;
-- short journey preview with direct CTA to Journey.
-
-The hero wording remains editable; it is not canonical identity language.
+Uses the shared shell. Hero, Nine projection, FlyingPAD feature and journey preview are active. Position 01 is missing; 02–09 are visible. Mobile turns the Nine grid into a sequential list rather than shrinking the desktop grid. The hero wording remains provisional.
 
 ### Work
-
-V2 page exists.
-
-Purpose:
-- present work before technology;
-- treat FlyingPAD as the primary public work/product;
-- present `projects.flyingpad.be` as the public experimentation lab;
-- avoid repository-centric portfolio language.
-
-Current structure:
-- large identity statement;
-- FlyingPAD feature;
-- layered Purpose/Product/Experience/System/Technology vocabulary;
-- experimentation lab;
-- creative operating principle.
-
-The content and visuals are a first architectural pass and require real-device tuning.
+FlyingPAD is the primary public work/product; `projects.flyingpad.be` is the public experimentation lab. Projects are framed through purpose/product/experience/system/technology rather than repository-first language. The first polish pass adds restrained hover light and chromatic signals without card movement.
 
 ### Journey
-
-V2 page exists.
-
-Narrative:
-Visual Arts → Music/Audio → Web → Software → Creative Systems.
-
-The key idea is accumulation, not replacement. Jobs and training support the trajectory instead of defining the identity.
+Narrative remains Visual Arts → Music/Audio → Web → Software → Creative Systems. The first polish pass adds color as a temporal signal while preserving readability and a simpler mobile projection.
 
 ### Profile
-
-V2 page exists and acts as the conventional recruiter-readable surface.
-
-Current content:
-- location and languages;
-- contact;
-- selected professional experience;
-- education/training;
-- toolkit grouped by domain;
-- link to legacy résumé.
-
-This page should remain unusually easy to scan even as the rest of the site becomes richer.
+Conventional recruiter-readable surface with selected experience, education, languages, toolkit, contact and résumé access. Interactions remain deliberately quieter than Work/Journey.
 
 ### Resume
-
-The old Resume component remains as a compatibility/print/archive surface. It still uses legacy styling and should eventually be replaced by a proper V2 printable résumé.
-
-## Routing
-
-Current primary routes:
-- `/home`
-- `/work`
-- `/journey`
-- `/profile`
-- `/resume`
-
-Legacy redirects:
-- `/projects` → `/work`
-- `/experience` → `/journey`
-- `/training` → `/journey`
-- `/hard-skills` → `/profile`
-- `/soft-skills` → `/profile`
+Legacy compatibility/print/archive surface. Still scheduled for replacement by a V2 printable résumé.
 
 ## Shared implementation
+`src/app/shared/site-shell/` owns identity, Nine mark, primary navigation and footer for all V2 pages. Global V2 tokens live in `src/styles-2-variables.scss`. Legacy résumé compatibility remains isolated in global styles until Resume is replaced.
 
-`src/app/shared/site-shell/` provides the V2 identity, Nine mark, navigation and footer for Home, Work, Journey and Profile.
+## Current visual rules
+- Dark, calm, precise base.
+- Vivid color is signal, not wallpaper.
+- No scale/jump hover effects.
+- Desktop may be spatial; tablet simplified; mobile sequential.
+- No essential information depends on Nine/lore.
+- `Colors are alive.` remains understated.
+- Shared gutter and surface tokens should be preferred over per-page approximations.
 
-Global V2 tokens are in `src/styles-2-variables.scss`.
+## Next likely work
+1. Real-device visual review of all four V2 pages.
+2. Replace legacy Resume with V2 printable Profile/resume.
+3. Add a deliberate reveal/motion layer that respects reduced motion.
+4. Reintegrate i18n.
+5. Theme/light-mode strategy after dark V2 is stable.
+6. Metadata/SEO/accessibility audit.
+7. Move larger static content into typed models where useful.
 
-Global baseline/reset and temporary legacy résumé compatibility styles are in `src/styles-3-global.scss`.
-
-## Known provisional / follow-up work
-
-High priority:
-- inspect all V2 pages on real desktop/mobile after deployment;
-- tune typography, spacing and information density from screenshots/real-device feedback;
-- replace the legacy Resume with a V2 print stylesheet / printable profile;
-- refine mobile/tablet Nine projection;
-- add deliberate motion/micro-interaction system;
-- reintegrate i18n into the V2 content;
-- add a proper theme strategy only when the dark V2 foundation is stable;
-- improve metadata/SEO and accessibility audit;
-- move substantial static content into typed data models where it benefits editing/i18n.
-
-Known temporary compromise:
-- Contact email remains directly in templates from the legacy project.
-- English is currently the V2 authoring language; existing translation infrastructure has not yet been reintegrated into the new pages.
-- No light theme yet.
-- Legacy résumé styling remains globally available solely for `/resume`.
-
-## Things not to do next
-
-Do not:
-- add HHH to the public CV;
-- turn Nine into an explanatory lore section;
-- invent a mapping where CV categories define canonical Pad/color identities;
-- add skill bars, GitHub vanity counters or generic portfolio widgets;
-- add heavy libraries before a demonstrated need;
-- optimize tiny CSS size while ignoring actual asset/performance costs;
-- rebuild architecture solely to look technically impressive.
-
-## Deployment note
-
-Production deploys from `master` using `.github/workflows/deploy.yml`.
-
-The workflow uses serialized deployment because simultaneous FTP mirror operations previously caused failed/incomplete production deployments. Check the active workflow before stacking another production push.
+## Deployment
+Production deploys from `master` via serialized GitHub Actions + FTP. Verify a deployment before stacking the next production commit.

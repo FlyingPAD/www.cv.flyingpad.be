@@ -1,27 +1,9 @@
 :root {
-  --fontFamily: 'Open Sans', sans-serif;
-  --cv-bg: #071014;
-  --cv-text: #e9eef0;
-  --cv-soft: #b9c4c8;
-  --cv-muted: #8d9ba1;
-  --cv-line: rgba(220, 235, 240, .15);
-  --pad-red: #ff3b38;
-  --pad-orange: #ff9f1c;
-  --pad-yellow: #ffe14a;
-  --pad-green: #43dc78;
-  --pad-blue: #35b9ff;
-  --pad-indigo: #656dff;
-  --pad-violet: #c05cff;
-  --pad-black: #050708;
-
-  /* Legacy tokens kept while the archived résumé view still uses them. */
-  --texture001: url('/assets/back-default.jpg');
-  --colorBackground: #fff;
-  --colorMain: rgb(107,82,64);
-  --colorMainOpacity1: rgb(107,82,64,.1);
-  --colorMainOpacity2: rgb(107,82,64,.2);
-  --colorMainOpacity3: rgb(107,82,64,.3);
-  --colorMainOpacity7: rgb(107,82,64,.7);
-  --colorWhite: #fff;
-  --colorWhiteOpacity5: rgba(255,255,255,.5);
+  --fontFamily:'Open Sans',sans-serif;
+  --cv-bg:#071014;--cv-surface:#091419;--cv-surface-raised:#0c191f;
+  --cv-text:#e9eef0;--cv-soft:#b9c4c8;--cv-muted:#8d9ba1;
+  --cv-line:rgba(220,235,240,.15);--cv-line-soft:rgba(220,235,240,.08);--cv-line-strong:rgba(220,235,240,.28);
+  --cv-accent:#9abcc9;--cv-gutter:clamp(18px,3vw,46px);
+  --pad-red:#ff3b38;--pad-orange:#ff9f1c;--pad-yellow:#ffe14a;--pad-green:#43dc78;--pad-blue:#35b9ff;--pad-indigo:#656dff;--pad-violet:#c05cff;--pad-black:#050708;
+  --texture001:url('/assets/back-default.jpg');--colorBackground:#fff;--colorMain:rgb(107,82,64);--colorMainOpacity1:rgb(107,82,64,.1);--colorMainOpacity2:rgb(107,82,64,.2);--colorMainOpacity3:rgb(107,82,64,.3);--colorMainOpacity7:rgb(107,82,64,.7);--colorWhite:#fff;--colorWhiteOpacity5:rgba(255,255,255,.5);
 }
