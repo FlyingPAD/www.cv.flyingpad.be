@@ -1,6 +1,6 @@
 # Current Development State — CV V2
 
-Last consolidated after V2 readability/navigation fine tuning.
+Last consolidated after removing redundant page-intro heroes from secondary pages.
 
 ## Read order
 1. `/AGENTS.md`
@@ -14,10 +14,18 @@ Last consolidated after V2 readability/navigation fine tuning.
 Accepted V2 IA: **Home · Work · Journey · Profile**. Base dark DA is validated.
 
 ### Navigation
-Primary navigation explicitly includes Home before Work/Journey/Profile. Email is deliberately styled as a distinct action and labelled **Email ↗**, rather than masquerading as a normal internal Contact route; its accessible label states that it opens the user's mail application. The adjacent name also links Home while the miniature Nine remains passive.
+Primary navigation explicitly includes Home before Work/Journey/Profile. Email is deliberately styled as a distinct action and labelled **Email ↗**, rather than masquerading as a normal internal Contact route. The adjacent name also links Home while the miniature Nine remains passive.
 
 ### Home
-The hero has been simplified: the redundant `01 / Start with the idea` eyebrow, explanatory intro copy and dead `Explore` CTA are removed. The identity line is now deliberately personal and slightly idiosyncratic: **`I create things ...`**. The disciplines line sits lower to give the statement more breathing room. The system heading is **Colors are alive.** and the interactive system cards are the intended exploratory CTA.
+Hero remains the primary identity statement: **I create things ...** plus the disciplines line. `Colors are alive` heads the interactive domain system.
+
+### Secondary pages
+Profile, Work and Journey no longer begin with large generic page-intro heroes. Each page starts directly with useful content:
+- Profile → Based in / languages / contact / résumé, alongside experience.
+- Work → selected project cards.
+- Journey → timeline.
+
+This is now an intentional IA rule: secondary pages should not restate their route name or add decorative slogans unless the content genuinely needs orientation.
 
 ### Shared shell
 Miniature mark: invisible/missing top-left position, visible sequence begins top-middle, eighth visible position is Black with no outline. Passive hover glow only.
@@ -31,6 +39,7 @@ Miniature mark: invisible/missing top-left position, visible sequence begins top
 - Desktop spatial; tablet simplified; mobile sequential.
 - No essential information depends on Nine/lore.
 - Avoid deceptive affordances: external/protocol actions must be visually or textually distinguishable from internal navigation.
+- Secondary pages start with content, not ceremonial headings.
 
 ### Resume
 Legacy compatibility/print/archive surface; scheduled for replacement.
