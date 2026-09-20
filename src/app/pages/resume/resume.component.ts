@@ -34,7 +34,7 @@ const COPY = {
     identity: '.NET / Angular Developer · Creative Systems',
     location: 'Mons · Belgium',
     summaryLabel: 'Profile',
-    summary: 'Full-stack .NET / Angular developer with a multidisciplinary background in software, web, audio and visual production. I build maintainable products with a strong focus on structure, clarity and the user experience.',
+    summary: 'I turn ideas into working systems. My core stack is .NET + Angular; my background in music, audio, web and visual production shapes how I approach software: structure first, then the right medium, with a strong bias toward clarity, maintainability and useful products.',
     experience: 'Experience',
     education: 'Education & training',
     toolkit: 'Toolkit',
@@ -54,7 +54,7 @@ const COPY = {
     identity: 'Développeur .NET / Angular · Systèmes créatifs',
     location: 'Mons · Belgique',
     summaryLabel: 'Profil',
-    summary: 'Développeur full-stack .NET / Angular au parcours multidisciplinaire mêlant logiciel, web, audio et production visuelle. Je conçois des produits maintenables avec une attention particulière portée à la structure, la clarté et l’expérience utilisateur.',
+    summary: 'Je transforme des idées en systèmes qui fonctionnent. Mon stack principal est .NET + Angular ; mon parcours en musique, audio, web et production visuelle nourrit ma manière d’aborder le logiciel : d’abord la structure, puis le bon médium, avec un goût marqué pour la clarté, la maintenabilité et les produits utiles.',
     experience: 'Expérience',
     education: 'Formation',
     toolkit: 'Compétences',
@@ -169,23 +169,23 @@ export class ResumeComponent {
 
   readonly toolkit: ResumeToolGroup[] = [
     {
-      title: { en: 'Backend', fr: 'Backend' },
-      items: ['C# / .NET', 'ASP.NET Core', 'EF Core', 'MediatR', 'REST APIs']
+      title: { en: 'Backend & data', fr: 'Backend & données' },
+      items: ['C# / .NET', 'ASP.NET Core', 'EF Core', 'REST APIs', 'SQL Server']
     },
     {
       title: { en: 'Frontend', fr: 'Frontend' },
-      items: ['Angular', 'TypeScript', 'RxJS', 'Signals', 'SCSS', 'React']
+      items: ['Angular', 'TypeScript', 'RxJS', 'Signals', 'SCSS']
     },
     {
       title: { en: 'Architecture', fr: 'Architecture' },
-      items: ['Clean Architecture', 'CQS / CQRS', 'DDD concepts', 'GitHub Actions', 'Azure DevOps']
+      items: ['Clean Architecture', 'DDD', 'CQS / CQRS', 'MediatR']
     },
     {
-      title: { en: 'Data & additional', fr: 'Données & complémentaire' },
-      items: ['SQL Server', 'MySQL / MariaDB', 'Node / Express', 'PHP / Symfony', 'Python / Flask']
+      title: { en: 'Delivery', fr: 'Delivery' },
+      items: ['GitHub Actions', 'Azure DevOps', 'CI / CD', 'Git']
     },
     {
-      title: { en: 'Creative', fr: 'Créatif' },
+      title: { en: 'Creative systems', fr: 'Systèmes créatifs' },
       items: ['Music production', 'Sound design', 'Audiovisual', 'AI pipelines', 'Interactive design']
     }
   ]

@@ -5,10 +5,11 @@ import { SiteShellComponent } from '../../shared/site-shell/site-shell.component
 @Component({selector:'app-profile',standalone:true,imports:[SiteShellComponent,RouterLink],templateUrl:'./profile.component.html',styleUrl:'./profile.component.scss'})
 export class ProfileComponent {
  readonly toolkit=[
-  ['Software','C# / .NET','ASP.NET Core','EF Core','MediatR','REST APIs'],
-  ['Front-end','Angular','TypeScript','RxJS','Signals','SCSS','React'],
-  ['Systems','Clean Architecture','CQS / CQRS','DDD concepts','CI / CD','GitHub Actions','Azure DevOps'],
-  ['Creative','Music production','Sound design','Audiovisual','AI pipelines','Interactive design'],
-  ['Additional','Node / Express','SQL Server','MySQL / MariaDB','PHP / Symfony','Python / Flask']
+  ['Backend & data','C# / .NET','ASP.NET Core','EF Core','REST APIs','SQL Server'],
+  ['Front-end','Angular','TypeScript','RxJS','Signals','SCSS'],
+  ['Architecture','Clean Architecture','DDD','CQS / CQRS','MediatR'],
+  ['Delivery','GitHub Actions','Azure DevOps','CI / CD','Git'],
+  ['Creative systems','Music production','Sound design','Audiovisual','AI pipelines','Interactive design'],
+  ['Additional','Node / Express','PHP / Symfony','Python / Flask','MySQL / MariaDB']
  ]
 }
