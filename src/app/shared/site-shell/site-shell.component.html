@@ -16,12 +16,16 @@
         <button type="button" [class.active]="language() === 'en'" (click)="setLanguage('en')" [attr.aria-pressed]="language() === 'en'">EN</button>
         <button type="button" [class.active]="language() === 'fr'" (click)="setLanguage('fr')" [attr.aria-pressed]="language() === 'fr'">FR</button>
       </div>
+      <button class="header-top desktop-top" type="button" [class.visible]="showBackToTop()" (click)="scrollToTop()" [attr.aria-label]="'shell.backToTop' | translate" [attr.aria-hidden]="!showBackToTop()" [attr.tabindex]="showBackToTop() ? 0 : -1"><span aria-hidden="true">↑</span></button>
       <a class="contact-link" href="mailto:tonyvan@live.fr">{{ 'shell.email' | translate }} <span aria-hidden="true">↗</span></a>
     </nav>
 
-    <button class="menu-trigger" type="button" (click)="openMenu()" [attr.aria-expanded]="menuOpen()" aria-controls="mobile-menu">
-      <span>{{ 'shell.menu' | translate }}</span><i aria-hidden="true"></i>
-    </button>
+    <div class="mobile-header-actions">
+      <button class="header-top mobile-top" type="button" [class.visible]="showBackToTop()" (click)="scrollToTop()" [attr.aria-label]="'shell.backToTop' | translate" [attr.aria-hidden]="!showBackToTop()" [attr.tabindex]="showBackToTop() ? 0 : -1"><span aria-hidden="true">↑</span></button>
+      <button class="menu-trigger" type="button" (click)="openMenu()" [attr.aria-expanded]="menuOpen()" aria-controls="mobile-menu">
+        <span>{{ 'shell.menu' | translate }}</span><i aria-hidden="true"></i>
+      </button>
+    </div>
   </header>
 
   <main id="main-content"><ng-content /></main>
@@ -40,11 +44,6 @@
   </footer>
 </div>
 
-@if(showBackToTop()){
-  <button class="back-to-top" type="button" (click)="scrollToTop()" [attr.aria-label]="'shell.backToTop' | translate">
-    <span aria-hidden="true">↑</span>
-  </button>
-}
 
 @if(menuMounted()){
   <div class="menu-overlay" [class.closing]="menuClosing()" id="mobile-menu" role="dialog" aria-modal="true" [attr.aria-label]="'shell.navigation' | translate" tabindex="-1" (keydown)="onOverlayKeydown($event)">
