@@ -2,12 +2,13 @@ import { DOCUMENT } from '@angular/common'
 import { Component, effect, HostListener, inject, Input, OnDestroy, signal } from '@angular/core'
 import { Router, RouterLink, RouterLinkActive } from '@angular/router'
 import { TranslateModule } from '@ngx-translate/core'
+import { BackToTopComponent } from '../back-to-top/back-to-top.component'
 import { SiteLanguage, SiteLanguageService } from '../site-language.service'
 
 @Component({
   selector: 'app-site-shell',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, TranslateModule],
+  imports: [RouterLink, RouterLinkActive, TranslateModule, BackToTopComponent],
   templateUrl: './site-shell.component.html',
   styleUrl: './site-shell.component.scss'
 })
@@ -18,7 +19,6 @@ export class SiteShellComponent implements OnDestroy {
   readonly menuMounted = signal(false)
   readonly menuClosing = signal(false)
   readonly headerScrolled = signal(false)
-  readonly showBackToTop = signal(false)
 
   readonly siteLanguage = inject(SiteLanguageService)
   readonly language = this.siteLanguage.language
@@ -30,7 +30,7 @@ export class SiteShellComponent implements OnDestroy {
   private restoreFocusElement: HTMLElement | null = null
 
   constructor() {
-    this.updateScrollState()
+    this.updateHeaderState()
 
     effect(() => {
       if (this.menuMounted()) this.lockPageScroll()
@@ -87,19 +87,12 @@ export class SiteShellComponent implements OnDestroy {
 
   @HostListener('window:scroll')
   onWindowScroll(): void {
-    this.updateScrollState()
+    this.updateHeaderState()
   }
 
-  private updateScrollState(): void {
+  private updateHeaderState(): void {
     const scrollY = this.document.defaultView?.scrollY ?? 0
     this.headerScrolled.set(scrollY > 12)
-    this.showBackToTop.set(scrollY > 560)
-  }
-
-  scrollToTop(): void {
-    const view = this.document.defaultView
-    const reduceMotion = view?.matchMedia('(prefers-reduced-motion: reduce)').matches ?? false
-    view?.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' })
   }
 
   onOverlayKeydown(event: KeyboardEvent): void {

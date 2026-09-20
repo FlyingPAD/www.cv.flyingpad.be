@@ -1,0 +1,11 @@
+@if(visible()){
+  <button
+    class="back-to-top"
+    type="button"
+    (click)="scrollToTop()"
+    [attr.aria-label]="'shell.backToTop' | translate"
+  >
+    <span class="accent" aria-hidden="true"></span>
+    <span class="arrow" aria-hidden="true">↑</span>
+  </button>
+}

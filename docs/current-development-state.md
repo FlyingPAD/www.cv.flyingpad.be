@@ -20,6 +20,8 @@ A global **EN / FR** control now lives in the shell and the language choice pers
 
 The footer carries the miniature Nine signature plus Email / FlyingPAD / Projects. A skip-to-content link is available for keyboard users.
 
+The back-to-top control is now an isolated fixed overlay component on desktop and mobile. It owns no layout space and therefore cannot shift or resize page composition.
+
 ### Home
 Hero signature is now **I build things ...** across languages, preserving the letter-by-letter motion and aligning the site with the broader public identity. The discipline line, domain copy, selected work and journey summary are localized.
 

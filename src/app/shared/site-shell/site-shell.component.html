@@ -40,11 +40,7 @@
   </footer>
 </div>
 
-@if(showBackToTop()){
-  <button class="back-to-top-dock" type="button" (click)="scrollToTop()" [attr.aria-label]="'shell.backToTop' | translate">
-    <span aria-hidden="true">↑</span>
-  </button>
-}
+<app-back-to-top />
 
 @if(menuMounted()){
   <div class="menu-overlay" [class.closing]="menuClosing()" id="mobile-menu" role="dialog" aria-modal="true" [attr.aria-label]="'shell.navigation' | translate" tabindex="-1" (keydown)="onOverlayKeydown($event)">

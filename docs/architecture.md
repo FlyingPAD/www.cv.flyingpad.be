@@ -32,6 +32,7 @@ Unknown routes resolve to a real not-found component. Historic compatibility URL
 src/app/
   shared/
     site-language.service.ts
+    back-to-top/
     site-shell/
   pages/
     home/
@@ -45,6 +46,8 @@ src/app/
 Historic routes such as `/experience`, `/training`, `/hard-skills`, `/soft-skills` and `/projects` remain redirect-only compatibility URLs.
 
 Use `shared/` for real responsibility/reuse boundaries. Do not componentize decorative fragments only for abstraction's sake.
+
+`BackToTopComponent` is an isolated viewport utility: it owns its own scroll threshold, motion preference and fixed overlay positioning. It never changes page geometry or shell width.
 
 ## Localization architecture
 `SiteLanguageService` is the single public language state:
