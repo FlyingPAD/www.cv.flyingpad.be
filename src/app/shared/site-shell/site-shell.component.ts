@@ -14,10 +14,12 @@ export class SiteShellComponent {
 
   readonly menuOpen = signal(false)
   private readonly document = inject(DOCUMENT)
+  private lockedScrollY = 0
 
   constructor() {
     effect(() => {
-      this.document.body.style.overflow = this.menuOpen() ? 'hidden' : ''
+      if (this.menuOpen()) this.lockPageScroll()
+      else this.unlockPageScroll()
     })
   }
 
@@ -27,6 +29,38 @@ export class SiteShellComponent {
 
   closeMenu() {
     this.menuOpen.set(false)
+  }
+
+  private lockPageScroll() {
+    const body = this.document.body
+    const root = this.document.documentElement
+    const view = this.document.defaultView
+
+    this.lockedScrollY = view?.scrollY ?? 0
+    root.style.overflow = 'hidden'
+    body.style.overflow = 'hidden'
+    body.style.position = 'fixed'
+    body.style.top = `-${this.lockedScrollY}px`
+    body.style.left = '0'
+    body.style.right = '0'
+    body.style.width = '100%'
+  }
+
+  private unlockPageScroll() {
+    const body = this.document.body
+    const root = this.document.documentElement
+    const view = this.document.defaultView
+    const wasLocked = body.style.position === 'fixed'
+
+    root.style.overflow = ''
+    body.style.overflow = ''
+    body.style.position = ''
+    body.style.top = ''
+    body.style.left = ''
+    body.style.right = ''
+    body.style.width = ''
+
+    if (wasLocked) view?.scrollTo({ top: this.lockedScrollY, behavior: 'instant' })
   }
 
   onOverlayKeydown(event: KeyboardEvent) {
