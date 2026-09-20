@@ -34,7 +34,7 @@ const COPY = {
     identity: '.NET / Angular Developer · End-to-end Creative Production',
     location: 'Mons · Belgium',
     summaryLabel: 'Profile',
-    summary: 'I turn ideas into working systems and can carry a project from concept to delivery across software, UI, AI-assisted image / video workflows, audio and post-production. My core stack is .NET + Angular; the wider production background helps me keep the whole pipeline coherent.',
+    summary: 'I turn ideas into working systems and can carry a project from concept to delivery across software, UI, AI-assisted image / video workflows, audio and post-production. I use AI-assisted development as an implementation accelerator, while architecture, design decisions, integration and review remain deliberate and developer-owned. My core stack is .NET + Angular.',
     experience: 'Experience',
     education: 'Education & training',
     toolkit: 'Toolkit',
@@ -54,7 +54,7 @@ const COPY = {
     identity: 'Développeur .NET / Angular · Production créative de bout en bout',
     location: 'Mons · Belgique',
     summaryLabel: 'Profil',
-    summary: 'Je transforme des idées en systèmes qui fonctionnent et peux porter un projet du concept à la livraison à travers le logiciel, l’UI, les workflows IA image / vidéo, l’audio et la post-production. Mon stack principal est .NET + Angular ; ce parcours de production élargi m’aide à garder l’ensemble du pipeline cohérent.',
+    summary: 'Je transforme des idées en systèmes qui fonctionnent et peux porter un projet du concept à la livraison à travers le logiciel, l’UI, les workflows IA image / vidéo, l’audio et la post-production. J’utilise aussi le développement assisté par IA comme accélérateur d’implémentation, tout en gardant l’architecture, les choix de conception, l’intégration et la revue sous contrôle développeur. Mon stack principal est .NET + Angular.',
     experience: 'Expérience',
     education: 'Formation',
     toolkit: 'Compétences',
@@ -181,7 +181,11 @@ export class ResumeComponent {
       items: ['Clean Architecture', 'DDD', 'CQS / CQRS', 'MediatR', 'GitHub Actions', 'Azure DevOps']
     },
     {
-      title: { en: 'AI workflows', fr: 'Workflows IA' },
+      title: { en: 'AI-assisted development', fr: 'Développement assisté par IA' },
+      items: ['ChatGPT', 'GLM', 'Venice AI', 'Review / refactoring']
+    },
+    {
+      title: { en: 'AI media workflows', fr: 'Workflows IA média' },
       items: ['ComfyUI', 'SDXL', 'WAN', 'LoRA workflows', 'Image / video pipelines']
     },
     {
