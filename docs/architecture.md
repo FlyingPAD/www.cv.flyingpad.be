@@ -107,7 +107,7 @@ Content parity matters more than geometry parity.
 `index.html` owns baseline public metadata: description, canonical URL, theme color, Open Graph/Twitter fields and Person JSON-LD.
 
 Public assets now include:
-- `/favicon.svg`;
+- the authored `/favicon.ico`;
 - `/assets/og-card.png`.
 
 Route titles provide page-specific browser titles.

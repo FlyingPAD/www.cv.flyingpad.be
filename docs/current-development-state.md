@@ -71,7 +71,7 @@ Unknown routes now render a designed 404 surface instead of silently redirecting
 ### Public identity / sharing
 The public surface now includes:
 - authored metadata and Person JSON-LD;
-- Nine-based SVG favicon;
+- authored favicon.ico;
 - dedicated 1200×630 Open Graph card;
 - large-image social sharing metadata.
 
