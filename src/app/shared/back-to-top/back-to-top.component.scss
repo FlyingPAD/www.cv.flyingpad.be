@@ -2,9 +2,9 @@
 .back-to-top{--scroll-angle:0deg;pointer-events:auto;position:relative;width:52px;height:52px;display:grid;place-items:center;box-sizing:border-box;border:1px solid transparent;background:linear-gradient(155deg,rgba(12,25,31,.94),rgba(7,16,20,.86)) padding-box,conic-gradient(from -90deg,var(--pad-blue) 0deg,var(--pad-violet) var(--scroll-angle),rgba(220,235,240,.14) var(--scroll-angle),rgba(220,235,240,.14) 360deg) border-box;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:#b3c2c7;cursor:pointer;box-shadow:0 14px 34px rgba(0,0,0,.22),inset 0 0 0 1px rgba(255,255,255,.018);overflow:hidden;animation:back-to-top-in .24s cubic-bezier(.16,1,.3,1) both;transition:color .18s,box-shadow .18s}
 .back-to-top::before{content:'';position:absolute;inset:6px;border:1px solid rgba(220,235,240,.06);pointer-events:none}
 .back-to-top::after{content:'';position:absolute;left:9px;right:9px;top:7px;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);opacity:.55;pointer-events:none}
-.button-core{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1;transition:transform .18s}
-.arrow{font-size:15px;font-weight:300;line-height:1;transform:translateY(-1px);transition:transform .18s,color .18s}
-.label{font-size:6px;line-height:1;letter-spacing:.18em;color:#73868d;transform:translateX(.09em);transition:color .18s}
+.button-core{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;line-height:1;transition:transform .18s}
+.arrow{font-size:16px;font-weight:300;line-height:1;transform:translateY(-1px);transition:transform .18s,color .18s}
+.label{font-size:8px;font-weight:500;line-height:1;letter-spacing:.12em;color:#8da0a7;transform:translateX(.06em);transition:color .18s}
 .back-to-top:hover,.back-to-top:focus-visible{color:#fff;box-shadow:0 16px 38px rgba(0,0,0,.28),0 0 24px rgba(53,185,255,.06),inset 0 0 0 1px rgba(255,255,255,.025)}
 .back-to-top:hover .button-core,.back-to-top:focus-visible .button-core{transform:translateY(-1px)}
 .back-to-top:hover .arrow,.back-to-top:focus-visible .arrow{transform:translateY(-3px)}
@@ -23,6 +23,7 @@
   :host{right:max(16px,env(safe-area-inset-right));bottom:max(18px,calc(env(safe-area-inset-bottom) + 12px))}
   .back-to-top{width:48px;height:48px}
   .back-to-top::before{inset:5px}
+  .label{font-size:7px}
 }
 
 @media(prefers-reduced-motion:reduce){
