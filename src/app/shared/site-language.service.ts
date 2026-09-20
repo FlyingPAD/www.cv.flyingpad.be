@@ -15,20 +15,31 @@ export class SiteLanguageService {
     this.translate.addLangs(['en', 'fr'])
     this.translate.setDefaultLang('en')
 
-    const storage = this.document.defaultView?.localStorage
-    const saved = storage?.getItem('cv-language')
-    const browser = this.translate.getBrowserLang()
-    const initial: SiteLanguage = saved === 'fr' || saved === 'en'
-      ? saved
-      : browser === 'fr' ? 'fr' : 'en'
-
-    this.setLanguage(initial)
+    // Keep the original English experience unless the visitor explicitly chose a language.
+    // This avoids unexpected browser-language switches and keeps layout changes intentional.
+    this.setLanguage(this.readSavedLanguage() ?? 'en', false)
   }
 
-  setLanguage(language: SiteLanguage): void {
+  setLanguage(language: SiteLanguage, persist = true): void {
     this.language.set(language)
     this.translate.use(language)
     this.document.documentElement.lang = language
-    this.document.defaultView?.localStorage.setItem('cv-language', language)
+
+    if (!persist) return
+
+    try {
+      this.document.defaultView?.localStorage.setItem('cv-language', language)
+    } catch {
+      // Storage may be unavailable in private/restricted contexts.
+    }
+  }
+
+  private readSavedLanguage(): SiteLanguage | null {
+    try {
+      const saved = this.document.defaultView?.localStorage.getItem('cv-language')
+      return saved === 'fr' || saved === 'en' ? saved : null
+    } catch {
+      return null
+    }
   }
 }
