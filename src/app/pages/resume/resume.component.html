@@ -1,250 +1,139 @@
-<div class="layout">
-    <div class="page-title">
-        <app-icon-resume size="50px" />
-        <h1> ▸ Resume</h1>
-    </div>
-    <div class="box back">
-        <div class="box-title">
-            <p> ▸ Downloads</p>
-        </div>
-        <p> ▸ <a href="/assets/curriculum_vitae/archives/resume-tony.png" target="_blank">My Resume</a> ( English Version )</p>
-        <p> ▸ <a href="/assets/curriculum_vitae/archives/cv-tony.png" target="_blank">Mon C.V.</a> ( Version Française )</p>
-    </div>
-    <app-spacer height="15px" />
-</div>
+<app-site-shell section="profile">
+  <section class="resume-stage">
+    <header class="resume-console" aria-label="Resume controls">
+      <div class="console-id">
+        <span class="console-kicker">Résumé / CV</span>
+        <strong>{{ copy.printHint }}</strong>
+      </div>
 
-<app-spacer height="15px" />
+      <div class="console-controls">
+        <div class="control-group" aria-label="Language">
+          <span>LANG</span>
+          <button type="button" (click)="switchLanguage('en')" [class.active]="language() === 'en'" [attr.aria-pressed]="language() === 'en'">EN</button>
+          <button type="button" (click)="switchLanguage('fr')" [class.active]="language() === 'fr'" [attr.aria-pressed]="language() === 'fr'">FR</button>
+        </div>
 
-<div class="languages">
-    <div class="language" (click)="switchLanguage('fr')" [class.active]="currentLanguage === 'fr' ">
-        <img src="/assets/icons-flags/fr.png" alt="Français">
-        <p>Français</p>
-    </div>
-    <div class="language" (click)="switchLanguage('en')" [class.active]="currentLanguage === 'en' ">
-        <img src="/assets/icons-flags/en.png" alt="Anglais">
-        <p>English</p>
-    </div>
-</div>
+        <div class="control-group" aria-label="Resume style">
+          <span>MODE</span>
+          <button type="button" (click)="switchMode('design')" [class.active]="mode() === 'design'" [attr.aria-pressed]="mode() === 'design'">{{ copy.design }}</button>
+          <button type="button" (click)="switchMode('essential')" [class.active]="mode() === 'essential'" [attr.aria-pressed]="mode() === 'essential'">{{ copy.essential }}</button>
+        </div>
 
-<div class="page">
-    <div class="left">
-        <div class="photo">
-            <img src="/assets/curriculum_vitae/tony.jpg" alt="Tony Van Langenhove">
+        <button class="print-action" type="button" (click)="printResume()">{{ copy.print }} <span aria-hidden="true">↗</span></button>
+      </div>
+    </header>
+
+    <article class="resume-sheet" [class.essential]="mode() === 'essential'" [attr.lang]="language()">
+      <div class="chromatic-line" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+
+      <header class="resume-hero">
+        <div class="portrait-wrap">
+          <img class="portrait" src="/assets/curriculum_vitae/tony.jpg" alt="Tony Van Langenhove">
+          <span class="portrait-index" aria-hidden="true">01 / 09</span>
         </div>
-        <div class="full-name">
-            <h1>Tony Van Langenhove</h1>
+
+        <div class="identity">
+          <p class="document-type">{{ copy.document }}</p>
+          <h1>Tony<br><em>Van Langenhove</em></h1>
+          <p class="role">{{ copy.identity }}</p>
         </div>
-        <div class="main-traits">
-            <h2>{{ "traits.first" | translate }} | {{ "traits.second" | translate }} | {{ "traits.third" | translate }}</h2>
+
+        <div class="hero-meta">
+          <span>{{ copy.location }}</span>
+          <a href="mailto:tonyvan@live.fr">tonyvan&#64;live.fr</a>
+          <a href="https://cv.flyingpad.be" target="_blank" rel="noreferrer">cv.flyingpad.be ↗</a>
         </div>
-        <hr>
-        <div class="category-title">
-            <img class="icon" src="/assets/curriculum_vitae/icons/icon_1.png" alt="About me">
-            <h3>{{ "section.about-me" | translate }}</h3>
-        </div>
-        <div class="category-content">
-            <p>{{ "message.about" | translate }}</p>
-        </div>
-        <hr>
-        <div class="category-title">
-            <img class="icon" src="/assets/curriculum_vitae/icons/icon_2.png" alt="Languages">
-            <h3>{{ "section.languages" | translate }}</h3>
-        </div>
-        <div class="category-content">
-            <div class="elao">
-                <div class="group">
-                    <p> ▸ <b>{{ "title.french" | translate }}</b> :</p>
-                    <p class="tweak">C2</p>
-                </div>
-                <div class="group">
-                    <p> ▸ <b>{{ "title.dutch" | translate }}</b> :</p>
-                    <p class="tweak">B2</p>
-                </div>
-                <div class="group">
-                    <p> ▸ <b>{{ "title.english" | translate }}</b> :</p>
-                    <p>B2 +</p>
-                </div>
+      </header>
+
+      <div class="resume-layout">
+        <aside class="resume-sidebar">
+          <section class="resume-section contact-section">
+            <div class="section-label"><span>01</span><h2>{{ copy.contact }}</h2></div>
+            <div class="contact-list">
+              <a href="mailto:tonyvan@live.fr">tonyvan&#64;live.fr</a>
+              <a href="tel:+32472425744">+32 472 42 57 44</a>
+              <a href="https://www.linkedin.com/in/tony-van-langenhove-37373450/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+              <a href="https://www.flyingpad.be" target="_blank" rel="noreferrer">flyingpad.be ↗</a>
+              <span>{{ copy.licence }}</span>
             </div>
-        </div>
-        <hr>
-        <div class="category-title">
-            <img class="icons" src="/assets/curriculum_vitae/icons/icon_4.png" alt="Contact me">
-            <h3 class="title">{{ "section.contact-me" | translate }}</h3>
-        </div>
-        <div class="category-content">
-            <p>
-                +32 ( 0 ) 472 / 42 57 44<br>
-                Rue Lamir 8B / 2 ( 7000 ) Mons<br><br>
-                ▸ {{ "contact.e-mail" | translate }} : <a href="mailto:tonyvan@live.fr">tonyvan&#64;live.fr</a><br>
-                ▸ {{ "contact.network" | translate }} : <a target="_blank" href="https://www.linkedin.com/in/tony-van-langenhove-37373450/">Linkedin</a><br>
-                ▸ {{ "contact.website" | translate }} : <a href="https://cv.flyingpad.be" target="_blank">cv.flyingpad.be</a>
-            </p>
-        </div>
-        <hr>
-        <div class="category-title">
-            <img class="icons" src="/assets/curriculum_vitae/icons/icon_5.png" alt="Additional info">
-            <h3 class="title">{{ "section.add-info" | translate }}</h3>
-        </div>
-        <div class="category-content">
-            <p>
-                ▸ {{ "info.birthday" | translate }}<br>
-                ▸ {{ "info.license" | translate }}
-            </p>
-        </div>
-        <hr>
-        <div class="category-title">
-            <img class="icons" src="/assets/curriculum_vitae/icons/icon_3.png" alt="Hobbies">
-            <h3 class="title">{{ "section.hobbies" | translate }}</h3>
-        </div>
-        <div class="category-content">
-            <p>
-                ▸ {{ "hobbies.first" | translate }}<br>
-                ▸ {{ "hobbies.second" | translate }}<br>
-                ▸ {{ "hobbies.third" | translate }}<br>
-            </p>
-            <p>( <a target="_blank" href="https://www.flyingpad.be">www.flyingpad.be</a> )</p>
-        </div>
-    </div>
+          </section>
 
-    <div class="right">
-        <app-spacer height="10px" />
-        <div class="category-title">
-            <img class="icons" src="/assets/curriculum_vitae/icons/icon_6.png" alt="Education">
-            <h3 class="title">{{ "section.education" | translate }}</h3>
-        </div>
-        <h4>{{ "section.training" | translate }}</h4>
-        <div class="category-content">
-            <div class="period">▸ 2023-2024</div>
-            <div class="title">{{ "training.internship" | translate }} ( {{ "training.dotnet-dev" | translate }} )</div>
-            <div class="place">&#64; <a href="http://www.satellit.be/" target="_blank">Satellit</a></div>
-        </div>
-        <p class="description">{{ "training.dotnet-dev" | translate }} / API's / Azure / Services & WEB Integration</p>
-        <div class="category-content">
-            <div class="period">▸ 2023</div>
-            <div class="title">{{ "training.web-dev" | translate }} ( Full Stack )</div>
-            <div class="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a></div>
-        </div>
-        <p class="description">JavaScript | Restful API in NodeJS (SQL Server) | Angular | React</p>
-        <div class="category-content">
-            <div class="period">▸ 2022</div>
-            <div class="title">.NET Azure</div>
-            <div class="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a></div>
-        </div>
-        <p class="description">Restful API in .NET C# (SQL Server) | Angular | ASP MVC | WPF MVVM</p>
-        <div class="category-content">
-            <div class="period">▸ 2022</div>
-            <div class="title">{{ "training.fundamentals" | translate }}</div>
-            <div class="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a></div>
-        </div>
-        <p class="description">Algorithmics, Object-oriented programming, UML, ERD & ER Schema, SQL</p>
-        <div class="category-content">
-            <div class="period">▸ 2022</div>
-            <div class="title">{{ "training.php-init" | translate }}</div>
-            <div class="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a></div>
-        </div>
-        <div class="category-content">
-            <div class="period">▸ 2021</div>
-            <div class="title">Digital Coordinator / E-Commerce</div>
-            <div class="place">&#64; <a href="https://grow.google/intl/ch-fr" target="_blank">Google Digital Atelier</a></div>
-        </div>
-        <div class="category-content">
-            <div class="period">▸ 2019</div>
-            <div class="title">SEO, SEA, SMM</div>
-            <div class="place">&#64; <a href="http://www.technofuturtic.be/" target="_blank">Technofutur TIC</a></div>
-        </div>
-        <div class="category-content">
-            <div class="period">▸ 2017</div>
-            <div class="title">Sound Design</div>
-            <div class="place">&#64; <a href="https://www.technocite.be" target="_blank">Technocité</a></div>
-        </div>
-        <h4>C.E.S.S.</h4>
-        <div class="right_category">
-            <table class="table_date">
-                <tr>
-                    <td class="period">▸ 2002</td>
-                    <td class="title">{{ "training.visual-arts" | translate }}</td>
-                    <td class="place">&#64; <a href="https://www.sainte-marie.be" target="_blank">Institut Ste-Marie</a>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <hr>
-        <div class="category-title">
-            <img class="icons" src="/assets/curriculum_vitae/icons/icon_7.png" alt="Work experience">
-            <h3 class="title">{{ "section.work-experience" | translate }}</h3>
-        </div>
-        <h4>{{ "section.employee" | translate }}</h4>
-        <div class="right_category">
-            <table class="table_date">
-                <tr>
-                    <td class="period">▸ 2024</td>
-                    <td class="title">{{ "training.dotnet-dev" | translate }} ( Full Stack )</td>
-                    <td class="place">&#64; <a href="https://www.satellit.be" target="_blank">Satellit</a></td>
-                </tr>
-            </table>
-            <p class="star">Backend & Frontend Development / Azure Services / CI-CD</p>
-            <table class="table_date">
-                <tr>
-                    <td class="period">▸ 2019 - 2020</td>
-                    <td class="title">Audio Producer</td>
-                    <td class="place">&#64; <a href="https://www.brandy-jingles.com" target="_blank">Brandy Jingles</a>
-                    </td>
-                </tr>
-            </table>
-            <p class="star">( Outlook ) Planification | Customer reception | Production & Post-Production</p>
-            <table class="table_date">
-                <tr>
-                    <td class="period">▸ 2006 - 2008</td>
-                    <td class="title">Administrative</td>
-                    <td class="place">&#64; <a href="https://www.vivaqua.be" target="_blank">Vivaqua</a></td>
-                </tr>
-            </table>
-            <p class="star">Helpdesk | Encoding ( Excel / SAP ) | File Management</p>
-        </div>
-        <h4>Freelance</h4>
-        <div class="right_category">
-            <table class="table_date">
-                <tr>
-                    <td class="period">▸ 2015 - 2022</td>
-                    <td class="title">Audio Producer</td>
-                    <td class="place">&#64; <a href="https://www.flyingpad.be" target="_blank">Flying PAD</a></td>
-                </tr>
-            </table>
-            <p class="star">Prospection | Edition & Production | {{ "freelance.sales" | translate }}</p>
-            <table class="table_date">
-                <tr>
-                    <td class="period">▸ 2018 - 2022</td>
-                    <td class="title">Webmaster</td>
-                    <td class="place">&#64; <a href="#">Various Clients</a></td>
-                </tr>
-            </table>
-            <p class="star">{{ "freelance.consultancy" | translate }} | Conception | Administration & Maintenance</p>
-        </div>
-        <h4>{{ "section.interim" | translate }}</h4>
-        <div class="right_category">
-            <table class="table_date">
-                <tr>
-                    <td class="period">▸ 2021</td>
-                    <td class="title">{{ "interim.first" | translate }}</td>
-                    <td class="place">&#64; <a href="https://www.sportsdirect.com" target="_blank">Sport Direct</a></td>
-                </tr>
-            </table>
-            <table class="table_date">
-                <tr>
-                    <td class="period">▸ 2005</td>
-                    <td class="title">{{ "interim.second" | translate }}</td>
-                    <td class="place">&#64; <a href="https://www.outlet-kantoormeubelen.be" target="_blank">Mewaf</a></td>
-                </tr>
-            </table>
-            <table class="table_date">
-                <tr>
-                    <td class="period">▸ 2004</td>
-                    <td class="title">{{ "interim.third" | translate }}</td>
-                    <td class="place">&#64; <a href="https://www.kasteelgrootbijgaarden.be" target="_blank">Art Catering</a></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</div>
+          <section class="resume-section">
+            <div class="section-label"><span>02</span><h2>{{ copy.languages }}</h2></div>
+            <div class="language-list">
+              @for(level of copy.languageLevels; track level) {
+                <p>{{ level }}</p>
+              }
+            </div>
+          </section>
 
-<app-spacer height="200px" />
+          <section class="resume-section toolkit-section">
+            <div class="section-label"><span>03</span><h2>{{ copy.toolkit }}</h2></div>
+            <div class="toolkit-list">
+              @for(group of toolkit; track group.title.en) {
+                <div class="tool-group">
+                  <h3>{{ text(group.title) }}</h3>
+                  <p>
+                    @for(item of group.items; track item; let last = $last) {
+                      <span>{{ item }}</span>@if(!last){<b aria-hidden="true"> · </b>}
+                    }
+                  </p>
+                </div>
+              }
+            </div>
+          </section>
+        </aside>
+
+        <main class="resume-main">
+          <section class="resume-section summary-section">
+            <div class="section-label"><span>04</span><h2>{{ copy.summaryLabel }}</h2></div>
+            <p class="summary">{{ copy.summary }}</p>
+          </section>
+
+          <section class="resume-section">
+            <div class="section-label split-label">
+              <div><span>05</span><h2>{{ copy.experience }}</h2></div>
+              <small>{{ copy.selected }}</small>
+            </div>
+
+            <div class="timeline">
+              @for(item of experience; track item.period + item.company) {
+                <article class="timeline-item">
+                  <time>{{ item.period }}</time>
+                  <div>
+                    <h3>{{ text(item.role) }}</h3>
+                    <p class="company">{{ item.company }}</p>
+                    <p class="detail">{{ text(item.detail) }}</p>
+                  </div>
+                </article>
+              }
+            </div>
+          </section>
+
+          <section class="resume-section education-section">
+            <div class="section-label"><span>06</span><h2>{{ copy.education }}</h2></div>
+            <div class="education-list">
+              @for(item of education; track item.period + item.place) {
+                <article class="education-item">
+                  <time>{{ item.period }}</time>
+                  <div>
+                    <h3>{{ text(item.title) }}</h3>
+                    <p>{{ item.place }}</p>
+                  </div>
+                </article>
+              }
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer class="resume-foot">
+        <span>{{ copy.footer }}</span>
+        <span class="foot-rule" aria-hidden="true"></span>
+        <span>{{ mode() === 'design' ? copy.design : copy.essential }}</span>
+      </footer>
+    </article>
+  </section>
+</app-site-shell>

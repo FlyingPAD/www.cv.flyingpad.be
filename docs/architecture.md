@@ -44,7 +44,7 @@ src/app/
     work/
     journey/
     profile/
-    resume/   # legacy migration boundary
+    resume/   # live localized + printable professional artifact
 ```
 
 Use `shared/` for genuinely reusable UI/behavior. Avoid turning every visual fragment into a component without a reuse or responsibility boundary.
