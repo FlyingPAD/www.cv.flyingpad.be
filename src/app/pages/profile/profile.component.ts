@@ -10,7 +10,6 @@ export class ProfileComponent {
   ['Architecture & delivery','Clean Architecture','DDD','CQS / CQRS','MediatR','GitHub Actions','Azure DevOps','CI / CD'],
   ['AI-assisted development','ChatGPT','GLM','Venice AI','Code generation','Review / refactoring'],
   ['AI media workflows','ComfyUI','SDXL','WAN','LoRA workflows','Image / video pipelines'],
-  ['Audiovisual production','Adobe Premiere Pro','Cubase','Paint.NET','Sound design','Post-production'],
-  ['Additional','Node / Express','PHP / Symfony','Python / Flask','MySQL / MariaDB']
+  ['Audiovisual production','Adobe Premiere Pro','Cubase','Paint.NET','Sound design','Post-production']
  ]
 }
