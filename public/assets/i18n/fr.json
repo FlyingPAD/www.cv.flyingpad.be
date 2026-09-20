@@ -3,12 +3,12 @@
     "skip": "Aller au contenu",
     "primaryNav": "Navigation principale",
     "mobileNav": "Navigation mobile",
-    "footerNav": "Contact et travaux publics",
+    "footerNav": "Contact et projets publics",
     "home": "Accueil",
-    "work": "Travaux",
+    "work": "Projets",
     "journey": "Parcours",
     "profile": "Profil",
-    "email": "E-mail",
+    "email": "Email",
     "menu": "Menu",
     "navigation": "Navigation",
     "close": "Fermer",
@@ -21,7 +21,7 @@
   },
   "home": {
     "hero": {
-      "aria": "Je crée des choses ...",
+      "aria": "I create things ...",
       "disciplinesAria": "Logiciel, Musique, Audiovisuel, Systèmes interactifs",
       "software": "Logiciel",
       "music": "Musique",
@@ -36,7 +36,7 @@
       },
       "software": {
         "name": "Logiciel",
-        "detail": "Des systèmes rendus tangibles"
+        "detail": "Donner forme aux systèmes"
       },
       "music": {
         "name": "Musique",
@@ -52,7 +52,7 @@
       },
       "web": {
         "name": "Web",
-        "detail": "Interfaces & expériences"
+        "detail": "Interfaces & expérience"
       },
       "systems": {
         "name": "Systèmes",
@@ -60,59 +60,59 @@
       },
       "experiments": {
         "name": "Expérimentations",
-        "detail": "Jouer, tester, itérer"
+        "detail": "Tester, jouer, itérer"
       }
     },
-    "selectedWork": "Travail sélectionné",
-    "activeProject": "Projet actif · Musique · Connaissance",
-    "flyingpadDesc": "Une plateforme vivante pour comprendre, apprendre et créer la musique — construite à travers le logiciel, les médias et les expériences interactives.",
+    "selectedWork": "Projet phare",
+    "activeProject": "Projet actif · Musique · Transmission",
+    "flyingpadDesc": "Une plateforme vivante pour comprendre la musique, l’apprendre et la créer — à la croisée du logiciel, de l’audiovisuel et de l’interactif.",
     "discoverFlyingpad": "Découvrir FlyingPAD",
     "primaryPublicWork": "Projet public principal",
-    "journeyBrief": "Le parcours, en bref",
-    "accumulation": "Accumulation, pas remplacement",
-    "exploreJourney": "Explorer le parcours",
-    "disciplinesAccumulated": "Des disciplines accumulées avec le temps",
+    "journeyBrief": "Le parcours en quelques étapes",
+    "accumulation": "Tout s’additionne",
+    "exploreJourney": "Voir le parcours",
+    "disciplinesAccumulated": "Des disciplines qui se sont ajoutées au fil du temps",
     "now": "Maintenant",
     "journeyLabels": {
       "visual": "Arts visuels",
       "audio": "Musique / Audio",
       "web": "Web",
       "software": "Logiciel",
-      "systems": "Systèmes créatifs"
+      "systems": "Creative Systems"
     }
   },
   "work": {
-    "flyingpadMeta": "Projet actif · Musique · Connaissance · Création",
-    "flyingpadStatement": "Une plateforme pensée pour rendre la connaissance musicale compréhensible sans l’aplatir — en combinant pédagogie, logiciel, production audiovisuelle et expériences interactives.",
-    "ownershipTitle": "Ce que je porte",
-    "ownershipMeta": "Un seul pipeline cohérent",
-    "ownershipNote": "FlyingPAD n’est pas une démo centrée sur une seule compétence. Je porte la direction produit, l’architecture de l’information, le logiciel et l’UI, la structure pédagogique, la production audiovisuelle et le chemin jusqu’à la livraison.",
+    "flyingpadMeta": "Projet actif · Musique · Transmission · Création",
+    "flyingpadStatement": "Une plateforme pour rendre la musique compréhensible sans la simplifier à outrance — en réunissant pédagogie, logiciel, audiovisuel et interaction.",
+    "ownershipTitle": "Ce que je prends en charge",
+    "ownershipMeta": "Un pipeline de bout en bout",
+    "ownershipNote": "FlyingPAD n’est pas la vitrine d’une compétence isolée. J’en porte la direction produit, l’architecture de l’information, le logiciel et l’UI, la pédagogie, la production audiovisuelle et la mise en ligne.",
     "scope": {
       "concept": "Concept",
-      "product": "Direction produit",
+      "product": "Direction du produit",
       "architecture": "Architecture de l’information",
       "software": "Logiciel",
       "ui": "UI",
       "pedagogy": "Pédagogie",
       "audiovisual": "Audio / vidéo",
-      "delivery": "Livraison"
+      "delivery": "Mise en ligne & itération"
     },
     "visit": "Visiter FlyingPAD",
     "primaryPublicWork": "Projet public principal",
     "labMeta": "Laboratoire public",
     "labTitle": "Expérimentations",
-    "labStatement": "Un espace pour les prototypes, les études d’interface et les expérimentations créatives et techniques. Toutes les idées n’ont pas besoin de devenir un produit pour mériter d’exister.",
+    "labStatement": "Un espace pour les prototypes, les études d’interface et les essais créatifs et techniques. Une idée peut être intéressante avant même de devenir un produit.",
     "exploreProjects": "Explorer Projects",
-    "publicLab": "Laboratoire créatif et technique public",
-    "principle": "PRINCIPE DE FONCTIONNEMENT",
+    "publicLab": "Laboratoire créatif et technique",
+    "principle": "THE OPERATING PRINCIPLE",
     "flow": "Idée → intention → abstraction → système → médium → production → itération."
   },
   "journey": {
     "now": "Maintenant",
     "visual": {
-      "kind": "Fondation",
+      "kind": "Point de départ",
       "title": "Arts visuels",
-      "body": "Le premier langage était visuel : composition, forme, contraste et l’habitude de transformer une intention en quelque chose de perceptible.",
+      "body": "Tout a commencé par le visuel : composition, forme, contraste — et l’habitude de transformer une intention en quelque chose que l’on peut percevoir.",
       "details": [
         "CESS · Arts visuels"
       ]
@@ -120,7 +120,7 @@
     "audio": {
       "kind": "Pratique",
       "title": "Musique & Audio",
-      "body": "La création est devenue temporelle et collaborative : composition, performance, enseignement, enregistrement, production et sound design.",
+      "body": "Puis la création est devenue temporelle et collective : composition, scène, enseignement, enregistrement, production et sound design.",
       "details": [
         "Responsable audio · 2009–2015",
         "Producteur audio · 2015–2022",
@@ -129,9 +129,9 @@
       ]
     },
     "web": {
-      "kind": "Expansion",
+      "kind": "Ouverture",
       "title": "Web",
-      "body": "Les interfaces ont ajouté l’interaction. Les sites sont devenus une autre manière de structurer l’information, créer une expérience et livrer un travail à un public.",
+      "body": "Avec le web est arrivée l’interaction : structurer l’information, construire une expérience et la mettre entre les mains d’un public.",
       "details": [
         "Webmaster freelance · 2018–2022",
         "SEO / SEA / SMM · 2019",
@@ -139,9 +139,9 @@
       ]
     },
     "software": {
-      "kind": "Système",
+      "kind": "Systèmes",
       "title": "Logiciel",
-      "body": "La programmation a encore élargi le vocabulaire : abstraction, architecture, données, API et systèmes capables de porter des idées de plus en plus complexes.",
+      "body": "Le code a ajouté un autre niveau d’abstraction : architecture, données, API et systèmes capables de porter des idées plus complexes.",
       "details": [
         "Fondements IT · 2022",
         ".NET / Azure · 2022",
@@ -152,8 +152,8 @@
     },
     "systems": {
       "kind": "Convergence",
-      "title": "Systèmes créatifs",
-      "body": "Les disciplines ne vivent plus dans des cases séparées. Logiciel, musique, image, vidéo et interaction sont des matériaux choisis selon ce dont l’idée a besoin.",
+      "title": "Creative Systems",
+      "body": "Aujourd’hui, ces disciplines ne vivent plus dans des cases séparées. Logiciel, musique, image, vidéo et interaction deviennent simplement les matériaux à choisir selon ce dont l’idée a besoin.",
       "details": [
         "FlyingPAD",
         "Systèmes interactifs",
@@ -175,9 +175,9 @@
     "resume": "CV",
     "openResume": "Ouvrir le CV",
     "resumeHint": "Interactif · FR / EN · Impression / PDF",
-    "productionScope": "Périmètre de production",
-    "conceptDelivery": "Concept → livraison",
-    "scopeStatement": "Je peux porter un projet depuis l’idée initiale et la conception du système jusqu’à l’implémentation logicielle et UI, aux workflows IA image / vidéo, à la production audio et à la post-production finale. J’utilise aussi le développement assisté par IA comme accélérateur lorsque c’est pertinent ; l’architecture, les choix de conception, l’intégration et la revue restent délibérés et sous contrôle développeur.",
+    "productionScope": "Ce que je prends en charge",
+    "conceptDelivery": "Du concept à la livraison",
+    "scopeStatement": "Je peux prendre en charge un projet de l’idée à la livraison : conception du système, développement logiciel et UI, workflows IA pour l’image et la vidéo, audio et post-production. J’utilise aussi l’IA pour accélérer l’implémentation quand elle apporte quelque chose, sans lui déléguer l’architecture, les choix de conception, l’intégration ni la revue finale.",
     "scopeChips": {
       "software": "Logiciel",
       "ui": "UI",
@@ -188,32 +188,32 @@
       "audio": "Audio",
       "post": "Post-production"
     },
-    "operating": "Principes de fonctionnement",
-    "howIBuild": "Ma manière de construire",
+    "operating": "Operating principles",
+    "howIBuild": "Comment je travaille",
     "principles": {
       "own": {
-        "title": "Prendre en charge le problème entier.",
-        "body": "Comprendre l’objectif, les contraintes et le chemin jusqu’à la livraison — pas seulement le code au milieu."
+        "title": "Prendre le problème dans son ensemble.",
+        "body": "Comprendre l’objectif, les contraintes et le chemin jusqu’à la livraison — pas seulement la partie code."
       },
       "structure": {
-        "title": "Structurer avant d’implémenter.",
-        "body": "Modéliser les responsabilités et les flux d’abord ; choisir ensuite la structure la plus simple qui reste claire."
+        "title": "Structurer avant de coder.",
+        "body": "Poser d’abord les responsabilités et les flux, puis choisir la structure la plus simple qui reste claire."
       },
       "architecture": {
-        "title": "Dimensionner l’architecture au problème.",
-        "body": "Utiliser les patterns lorsqu’ils apportent quelque chose. Éviter la cérémonie pour elle-même."
+        "title": "Adapter l’architecture au problème.",
+        "body": "Utiliser les patterns quand ils apportent réellement quelque chose. Pas de cérémonie gratuite."
       },
       "legible": {
         "title": "Rendre la complexité lisible.",
-        "body": "Un bon système doit rester compréhensible — pour les utilisateurs, les collaborateurs et la personne qui le maintiendra plus tard."
+        "body": "Un bon système doit rester compréhensible — pour les utilisateurs, les collaborateurs et la personne qui devra le maintenir ensuite."
       },
       "ai": {
-        "title": "Utiliser l’IA comme levier.",
+        "title": "Se servir de l’IA comme levier.",
         "body": "Accélérer l’exploration et l’implémentation sans lui déléguer la conception, l’intégration ni la revue."
       },
       "refine": {
         "title": "Livrer. Observer. Affiner.",
-        "body": "Mettre une vraie version en circulation, apprendre de son usage, puis polir ce qui compte réellement."
+        "body": "Mettre une vraie version en usage, regarder ce qui se passe, puis polir ce qui compte vraiment."
       }
     },
     "experience": "Expérience",
@@ -242,8 +242,8 @@
       "sound": "Sound Design · Technocité",
       "arts": "CESS · Arts visuels · Institut Ste-Marie"
     },
-    "toolkit": "Boîte à outils",
-    "toolkitMeta": "Des outils au service du travail",
+    "toolkit": "Outils",
+    "toolkitMeta": "Ceux qui servent vraiment le travail",
     "toolkitGroups": {
       "backend": "Backend & données",
       "frontend": "Front-end",
@@ -256,8 +256,8 @@
   "notFound": {
     "kicker": "Signal perdu",
     "title": "Cette route n’existe pas.",
-    "detail": "Le signal s’arrête ici, mais le reste du système est intact.",
+    "detail": "Le signal s’arrête ici. Le reste du système, lui, fonctionne toujours.",
     "back": "Retour à l’accueil",
-    "backHint": "Revenir au signal principal"
+    "backHint": "Revenir au point de départ"
   }
 }
