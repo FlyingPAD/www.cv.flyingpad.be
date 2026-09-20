@@ -4,7 +4,7 @@
       <article class="era">
         <div class="marker"><span>{{(i+1).toString().padStart(2,'0')}}</span><i></i></div>
         <div class="date">{{era.year}}</div>
-        <div class="content"><small>{{era.kind}}</small><h2>{{era.title}}</h2><p>{{era.body}}</p><div class="details">@for(item of era.detail;track item){<span>{{item}}</span>}</div></div>
+        <div class="content"><small>{{era.kind}}</small><h2>{{era.title}}</h2><p>{{era.body}}</p><div class="details cv-chip-list">@for(item of era.detail;track item){<span class="cv-chip">{{item}}</span>}</div></div>
       </article>
     }
   </section>

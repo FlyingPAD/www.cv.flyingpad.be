@@ -5,16 +5,16 @@
       <div class="fact"><small>Languages</small><div class="language-levels"><span>French</span><b>C2</b><span>English</span><b>B2+</b><span>Dutch / Flemish</span><b>B2</b></div></div>
       <div class="fact action-fact">
         <small>Contact</small>
-        <a class="profile-action" href="mailto:tonyvan@live.fr" aria-label="Email Tony Van Langenhove — opens your mail application">
-          <span class="action-copy"><b>Email me</b><em>Direct contact</em></span>
-          <span class="action-arrow" aria-hidden="true">↗</span>
+        <a class="cv-action" href="mailto:tonyvan@live.fr" aria-label="Email Tony Van Langenhove — opens your mail application">
+          <span class="cv-action-copy"><b>Email me</b><em>Direct contact</em></span>
+          <span class="cv-action-arrow" aria-hidden="true">↗</span>
         </a>
       </div>
       <div class="fact action-fact">
         <small>Résumé</small>
-        <a class="profile-action" routerLink="/resume" aria-label="Open interactive and printable résumé">
-          <span class="action-copy"><b>Open résumé</b><em>Interactive · FR / EN · Print / PDF</em></span>
-          <span class="action-arrow" aria-hidden="true">→</span>
+        <a class="cv-action" routerLink="/resume" aria-label="Open interactive and printable résumé">
+          <span class="cv-action-copy"><b>Open résumé</b><em>Interactive · FR / EN · Print / PDF</em></span>
+          <span class="cv-action-arrow" aria-hidden="true">→</span>
         </a>
       </div>
     </aside>
@@ -39,7 +39,7 @@
       </section>
 
       <section><div class="section-head"><span>Toolkit</span><span>Used across disciplines</span></div>
-        <div class="toolkit">@for(group of toolkit;track group[0]){<div><h3>{{group[0]}}</h3>@for(item of group.slice(1);track item){<span>{{item}}</span>}</div>}</div>
+        <div class="toolkit">@for(group of toolkit;track group[0]){<div><h3>{{group[0]}}</h3><div class="cv-chip-list">@for(item of group.slice(1);track item){<span class="cv-chip">{{item}}</span>}</div></div>}</div>
       </section>
     </div>
   </section>
