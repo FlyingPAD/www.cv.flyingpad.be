@@ -1,3 +1,5 @@
+<a class="skip-link" href="#main-content">{{ 'shell.skip' | translate }}</a>
+
 <div class="site-shell">
   <header class="site-header" [class.scrolled]="headerScrolled()">
     <div class="identity">
@@ -5,28 +7,32 @@
       <a class="identity-name" routerLink="/home">Tony<br>Van Langenhove</a>
     </div>
 
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a routerLink="/home" routerLinkActive="active">Home</a>
-      <a routerLink="/work" routerLinkActive="active">Work</a>
-      <a routerLink="/journey" routerLinkActive="active">Journey</a>
-      <a routerLink="/profile" routerLinkActive="active">Profile</a>
-      <a class="contact-link" href="mailto:tonyvan@live.fr" aria-label="Email Tony Van Langenhove — opens your mail application">Email <span aria-hidden="true">↗</span></a>
+    <nav class="desktop-nav" [attr.aria-label]="'shell.primaryNav' | translate">
+      <a routerLink="/home" routerLinkActive="active">{{ 'shell.home' | translate }}</a>
+      <a routerLink="/work" routerLinkActive="active">{{ 'shell.work' | translate }}</a>
+      <a routerLink="/journey" routerLinkActive="active">{{ 'shell.journey' | translate }}</a>
+      <a routerLink="/profile" routerLinkActive="active">{{ 'shell.profile' | translate }}</a>
+      <div class="language-control" [attr.aria-label]="'shell.language' | translate">
+        <button type="button" [class.active]="language() === 'en'" (click)="setLanguage('en')" [attr.aria-pressed]="language() === 'en'">EN</button>
+        <button type="button" [class.active]="language() === 'fr'" (click)="setLanguage('fr')" [attr.aria-pressed]="language() === 'fr'">FR</button>
+      </div>
+      <a class="contact-link" href="mailto:tonyvan@live.fr">{{ 'shell.email' | translate }} <span aria-hidden="true">↗</span></a>
     </nav>
 
     <button class="menu-trigger" type="button" (click)="openMenu()" [attr.aria-expanded]="menuOpen()" aria-controls="mobile-menu">
-      <span>Menu</span><i aria-hidden="true"></i>
+      <span>{{ 'shell.menu' | translate }}</span><i aria-hidden="true"></i>
     </button>
   </header>
 
-  <main><ng-content /></main>
+  <main id="main-content"><ng-content /></main>
 
   <footer class="site-footer">
     <div class="footer-signature">
       <span class="nine-mark footer-mark" aria-hidden="true"><i class="missing"></i><i class="red"></i><i class="orange"></i><i class="yellow"></i><i class="green"></i><i class="blue"></i><i class="indigo"></i><i class="violet"></i><i class="black"></i></span>
-      <span>Tony Van Langenhove · Belgium</span>
+      <span>Tony Van Langenhove · {{ 'shell.belgium' | translate }}</span>
     </div>
-    <nav class="footer-links" aria-label="Contact and public work">
-      <a href="mailto:tonyvan@live.fr">Email ↗</a>
+    <nav class="footer-links" [attr.aria-label]="'shell.footerNav' | translate">
+      <a href="mailto:tonyvan@live.fr">{{ 'shell.email' | translate }} ↗</a>
       <a href="https://www.flyingpad.be" target="_blank" rel="noreferrer">FlyingPAD ↗</a>
       <a href="https://projects.flyingpad.be" target="_blank" rel="noreferrer">Projects ↗</a>
     </nav>
@@ -35,31 +41,37 @@
 </div>
 
 @if(showBackToTop()){
-  <button class="back-to-top" type="button" (click)="scrollToTop()" aria-label="Back to top">
+  <button class="back-to-top" type="button" (click)="scrollToTop()" [attr.aria-label]="'shell.backToTop' | translate">
     <span aria-hidden="true">↑</span>
   </button>
 }
 
 @if(menuMounted()){
-  <div class="menu-overlay" [class.closing]="menuClosing()" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site navigation" tabindex="-1" (keydown)="onOverlayKeydown($event)">
+  <div class="menu-overlay" [class.closing]="menuClosing()" id="mobile-menu" role="dialog" aria-modal="true" [attr.aria-label]="'shell.navigation' | translate" tabindex="-1" (keydown)="onOverlayKeydown($event)">
     <div class="overlay-top">
       <div class="overlay-signature" aria-hidden="true">
         <span class="overlay-mark"><i></i><i class="red"></i><i class="orange"></i><i class="yellow"></i><i class="green"></i><i class="blue"></i><i class="indigo"></i><i class="violet"></i><i class="black"></i></span>
-        <span>Navigation</span>
+        <span>{{ 'shell.navigation' | translate }}</span>
       </div>
-      <button class="close-menu" type="button" (click)="closeMenu()" aria-label="Close navigation">Close <span aria-hidden="true">×</span></button>
+      <div class="overlay-actions">
+        <div class="language-control overlay-language" [attr.aria-label]="'shell.language' | translate">
+          <button type="button" [class.active]="language() === 'en'" (click)="setLanguage('en')" [attr.aria-pressed]="language() === 'en'">EN</button>
+          <button type="button" [class.active]="language() === 'fr'" (click)="setLanguage('fr')" [attr.aria-pressed]="language() === 'fr'">FR</button>
+        </div>
+        <button class="close-menu" type="button" (click)="closeMenu()" [attr.aria-label]="'shell.closeNavigation' | translate">{{ 'shell.close' | translate }} <span aria-hidden="true">×</span></button>
+      </div>
     </div>
 
-    <nav class="overlay-nav" aria-label="Mobile navigation">
-      <a href="/home" [class.active]="section === 'home'" (click)="navigateFromMenu($event, '/home')"><span>Home</span><i aria-hidden="true">→</i></a>
-      <a href="/work" [class.active]="section === 'work'" (click)="navigateFromMenu($event, '/work')"><span>Work</span><i aria-hidden="true">→</i></a>
-      <a href="/journey" [class.active]="section === 'journey'" (click)="navigateFromMenu($event, '/journey')"><span>Journey</span><i aria-hidden="true">→</i></a>
-      <a href="/profile" [class.active]="section === 'profile'" (click)="navigateFromMenu($event, '/profile')"><span>Profile</span><i aria-hidden="true">→</i></a>
+    <nav class="overlay-nav" [attr.aria-label]="'shell.mobileNav' | translate">
+      <a href="/home" [class.active]="section === 'home'" (click)="navigateFromMenu($event, '/home')"><span>{{ 'shell.home' | translate }}</span><i aria-hidden="true">→</i></a>
+      <a href="/work" [class.active]="section === 'work'" (click)="navigateFromMenu($event, '/work')"><span>{{ 'shell.work' | translate }}</span><i aria-hidden="true">→</i></a>
+      <a href="/journey" [class.active]="section === 'journey'" (click)="navigateFromMenu($event, '/journey')"><span>{{ 'shell.journey' | translate }}</span><i aria-hidden="true">→</i></a>
+      <a href="/profile" [class.active]="section === 'profile'" (click)="navigateFromMenu($event, '/profile')"><span>{{ 'shell.profile' | translate }}</span><i aria-hidden="true">→</i></a>
     </nav>
 
     <div class="overlay-bottom">
-      <span>Direct contact</span>
-      <a href="mailto:tonyvan@live.fr" (click)="closeMenu()" aria-label="Email Tony Van Langenhove — opens your mail application">Email me <i aria-hidden="true">↗</i></a>
+      <span>{{ 'shell.directContact' | translate }}</span>
+      <a href="mailto:tonyvan@live.fr" (click)="closeMenu()">{{ 'shell.emailMe' | translate }} <i aria-hidden="true">↗</i></a>
     </div>
   </div>
 }

@@ -1,66 +1,24 @@
 <app-site-shell section="profile">
   <section class="profile-grid">
     <aside>
-      <div class="fact"><small>Based in</small><strong>Belgium</strong></div>
-      <div class="fact"><small>Languages</small><div class="language-levels"><span>French</span><b>C2</b><span>English</span><b>B2+</b><span>Dutch / Flemish</span><b>B2</b></div></div>
-      <div class="fact action-fact">
-        <small>Contact</small>
-        <a class="cv-action" href="mailto:tonyvan@live.fr" aria-label="Email Tony Van Langenhove — opens your mail application">
-          <span class="cv-action-copy"><b>Email me</b><em>Direct contact</em></span>
-          <span class="cv-action-arrow" aria-hidden="true">↗</span>
-        </a>
-      </div>
-      <div class="fact action-fact">
-        <small>Résumé</small>
-        <a class="cv-action" routerLink="/resume" aria-label="Open interactive and printable résumé">
-          <span class="cv-action-copy"><b>Open résumé</b><em>Interactive · FR / EN · Print / PDF</em></span>
-          <span class="cv-action-arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
+      <div class="fact"><small>{{ 'profile.basedIn' | translate }}</small><strong>{{ 'profile.belgium' | translate }}</strong></div>
+      <div class="fact"><small>{{ 'profile.languages' | translate }}</small><div class="language-levels"><span>{{ 'profile.french' | translate }}</span><b>C2</b><span>{{ 'profile.english' | translate }}</span><b>B2+</b><span>{{ 'profile.dutch' | translate }}</span><b>B2</b></div></div>
+      <div class="fact action-fact"><small>{{ 'profile.contact' | translate }}</small><a class="cv-action" href="mailto:tonyvan@live.fr"><span class="cv-action-copy"><b>{{ 'profile.emailMe' | translate }}</b><em>{{ 'profile.directContact' | translate }}</em></span><span class="cv-action-arrow" aria-hidden="true">↗</span></a></div>
+      <div class="fact action-fact"><small>{{ 'profile.resume' | translate }}</small><a class="cv-action" routerLink="/resume"><span class="cv-action-copy"><b>{{ 'profile.openResume' | translate }}</b><em>{{ 'profile.resumeHint' | translate }}</em></span><span class="cv-action-arrow" aria-hidden="true">→</span></a></div>
     </aside>
-
     <div class="profile-main">
       <section class="production-scope">
-        <div class="section-head"><span>Production scope</span><span>Concept → delivery</span></div>
-        <p class="scope-statement">I can carry a project from the initial idea and system design through software and UI implementation, AI-assisted image / video workflows, audio production and final post-production. I also use AI-assisted development as an accelerator where it makes sense; architecture, design decisions, integration and final review remain deliberate and developer-owned.</p>
-        <div class="scope-flow cv-chip-list" aria-label="End-to-end production scope">
-          <span class="cv-chip">Software</span><span class="cv-chip">UI</span><span class="cv-chip">AI-assisted development</span><span class="cv-chip">AI media</span><span class="cv-chip">Image</span><span class="cv-chip">Video</span><span class="cv-chip">Audio</span><span class="cv-chip">Post-production</span>
-        </div>
+        <div class="section-head"><span>{{ 'profile.productionScope' | translate }}</span><span>{{ 'profile.conceptDelivery' | translate }}</span></div>
+        <p class="scope-statement">{{ 'profile.scopeStatement' | translate }}</p>
+        <div class="scope-flow cv-chip-list"><span class="cv-chip">{{ 'profile.scopeChips.software' | translate }}</span><span class="cv-chip">{{ 'profile.scopeChips.ui' | translate }}</span><span class="cv-chip">{{ 'profile.scopeChips.aiDev' | translate }}</span><span class="cv-chip">{{ 'profile.scopeChips.aiMedia' | translate }}</span><span class="cv-chip">{{ 'profile.scopeChips.image' | translate }}</span><span class="cv-chip">{{ 'profile.scopeChips.video' | translate }}</span><span class="cv-chip">{{ 'profile.scopeChips.audio' | translate }}</span><span class="cv-chip">{{ 'profile.scopeChips.post' | translate }}</span></div>
       </section>
-
       <section class="operating-principles">
-        <div class="section-head"><span>Operating principles</span><span>How I build</span></div>
-        <div class="principles-grid">
-          <article><h3>Own the whole problem.</h3><p>Understand the goal, constraints and delivery path — not only the code in the middle.</p></article>
-          <article><h3>Structure before implementation.</h3><p>Model responsibilities and flows first; then choose the simplest structure that stays clear.</p></article>
-          <article><h3>Right-size the architecture.</h3><p>Use patterns when they earn their keep. Avoid ceremony for its own sake.</p></article>
-          <article><h3>Make complexity legible.</h3><p>Good systems should remain understandable — to users, collaborators and the person maintaining them later.</p></article>
-          <article><h3>Use AI as leverage.</h3><p>Accelerate exploration and implementation without outsourcing design, integration or review.</p></article>
-          <article><h3>Ship. Observe. Refine.</h3><p>Get a real version into use, learn from it, then polish what actually matters.</p></article>
-        </div>
+        <div class="section-head"><span>{{ 'profile.operating' | translate }}</span><span>{{ 'profile.howIBuild' | translate }}</span></div>
+        <div class="principles-grid"><article><h3>{{ 'profile.principles.own.title' | translate }}</h3><p>{{ 'profile.principles.own.body' | translate }}</p></article><article><h3>{{ 'profile.principles.structure.title' | translate }}</h3><p>{{ 'profile.principles.structure.body' | translate }}</p></article><article><h3>{{ 'profile.principles.architecture.title' | translate }}</h3><p>{{ 'profile.principles.architecture.body' | translate }}</p></article><article><h3>{{ 'profile.principles.legible.title' | translate }}</h3><p>{{ 'profile.principles.legible.body' | translate }}</p></article><article><h3>{{ 'profile.principles.ai.title' | translate }}</h3><p>{{ 'profile.principles.ai.body' | translate }}</p></article><article><h3>{{ 'profile.principles.refine.title' | translate }}</h3><p>{{ 'profile.principles.refine.body' | translate }}</p></article></div>
       </section>
-
-      <section><div class="section-head"><span>Experience</span><span>Selected path</span></div>
-        <div class="row"><time>2024</time><div><h2>.NET Developer</h2><p>Satellit · Pluxee Support Team</p><small>Frontend forms, backend data processing, API integration and delivery around Azure services.</small></div></div>
-        <div class="row"><time>2015—2022</time><div><h2>Audio Producer</h2><p>Freelance · Various clients</p><small>From brief to delivery: recording, editing, mixing, mastering and post-production.</small></div></div>
-        <div class="row"><time>2018—2022</time><div><h2>Webmaster</h2><p>Freelance · Various clients</p><small>Client sites: hosting, CMS setup, administration and maintenance.</small></div></div>
-        <div class="row"><time>2009—2015</time><div><h2>Audio Manager</h2><p>Freelance · Various clients</p><small>Stage management, composition, performance and music teaching.</small></div></div>
-        <div class="row"><time>2019—2020</time><div><h2>Audio Producer</h2><p>Brandy Jingles</p><small>Studio sessions, planning and broadcast production / post-production.</small></div></div>
-      </section>
-
-      <section><div class="section-head"><span>Education & training</span><span>2002—2024</span></div>
-        <div class="compact"><b>2023—2024</b><span>.NET Developer · Satellit</span></div>
-        <div class="compact"><b>2023</b><span>Web Developer, Full Stack · Technofutur TIC</span></div>
-        <div class="compact"><b>2022</b><span>.NET Azure + IT Fundamentals · Technofutur TIC</span></div>
-        <div class="compact"><b>2021</b><span>Digital Coordinator · Google Digital Atelier</span></div>
-        <div class="compact"><b>2019</b><span>SEO, SEA, SMM · Technofutur TIC</span></div>
-        <div class="compact"><b>2017</b><span>Sound Design · Technocité</span></div>
-        <div class="compact"><b>2002</b><span>CESS · Visual Arts · Institut Ste-Marie</span></div>
-      </section>
-
-      <section><div class="section-head"><span>Toolkit</span><span>Tools that serve the work</span></div>
-        <div class="toolkit">@for(group of toolkit;track group[0]){<div><h3>{{group[0]}}</h3><div class="cv-chip-list">@for(item of group.slice(1);track item){<span class="cv-chip">{{item}}</span>}</div></div>}</div>
-      </section>
+      <section><div class="section-head"><span>{{ 'profile.experience' | translate }}</span><span>{{ 'profile.selectedPath' | translate }}</span></div><div class="row"><time>2024</time><div><h2>{{ 'profile.exp.satellitRole' | translate }}</h2><p>{{ 'profile.exp.satellitCompany' | translate }}</p><small>{{ 'profile.exp.satellitDetail' | translate }}</small></div></div><div class="row"><time>2015—2022</time><div><h2>{{ 'profile.exp.audioRole' | translate }}</h2><p>{{ 'profile.exp.freelanceCompany' | translate }}</p><small>{{ 'profile.exp.audioDetail' | translate }}</small></div></div><div class="row"><time>2018—2022</time><div><h2>{{ 'profile.exp.webmasterRole' | translate }}</h2><p>{{ 'profile.exp.freelanceCompany' | translate }}</p><small>{{ 'profile.exp.webmasterDetail' | translate }}</small></div></div><div class="row"><time>2009—2015</time><div><h2>{{ 'profile.exp.audioManagerRole' | translate }}</h2><p>{{ 'profile.exp.freelanceCompany' | translate }}</p><small>{{ 'profile.exp.audioManagerDetail' | translate }}</small></div></div><div class="row"><time>2019—2020</time><div><h2>{{ 'profile.exp.audioRole' | translate }}</h2><p>{{ 'profile.exp.brandyCompany' | translate }}</p><small>{{ 'profile.exp.brandyDetail' | translate }}</small></div></div></section>
+      <section><div class="section-head"><span>{{ 'profile.education' | translate }}</span><span>2002—2024</span></div><div class="compact"><b>2023—2024</b><span>{{ 'profile.edu.dotnet' | translate }}</span></div><div class="compact"><b>2023</b><span>{{ 'profile.edu.fullstack' | translate }}</span></div><div class="compact"><b>2022</b><span>{{ 'profile.edu.azure' | translate }}</span></div><div class="compact"><b>2021</b><span>{{ 'profile.edu.digital' | translate }}</span></div><div class="compact"><b>2019</b><span>{{ 'profile.edu.seo' | translate }}</span></div><div class="compact"><b>2017</b><span>{{ 'profile.edu.sound' | translate }}</span></div><div class="compact"><b>2002</b><span>{{ 'profile.edu.arts' | translate }}</span></div></section>
+      <section><div class="section-head"><span>{{ 'profile.toolkit' | translate }}</span><span>{{ 'profile.toolkitMeta' | translate }}</span></div><div class="toolkit">@for(group of toolkit;track group[0]){<div><h3>{{group[0] | translate}}</h3><div class="cv-chip-list">@for(item of group.slice(1);track item){<span class="cv-chip">{{item}}</span>}</div></div>}</div></section>
     </div>
   </section>
 </app-site-shell>

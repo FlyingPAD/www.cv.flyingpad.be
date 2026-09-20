@@ -1,60 +1,263 @@
 {
-    "section": {
-        "about-me": "About me",
-        "languages": "Languages",
-        "contact-me": "Contact me",
-        "add-info": "Additional Info",
-        "hobbies": "Hobbies",
-        "education": "Education",
-        "training": "Training",
-        "work-experience": "Work Experience",
-        "employee": "Employee",
-        "freelance": "Freelance",
-        "interim": "Interim"
+  "shell": {
+    "skip": "Skip to content",
+    "primaryNav": "Primary navigation",
+    "mobileNav": "Mobile navigation",
+    "footerNav": "Contact and public work",
+    "home": "Home",
+    "work": "Work",
+    "journey": "Journey",
+    "profile": "Profile",
+    "email": "Email",
+    "menu": "Menu",
+    "navigation": "Navigation",
+    "close": "Close",
+    "closeNavigation": "Close navigation",
+    "language": "Language",
+    "directContact": "Direct contact",
+    "emailMe": "Email me",
+    "belgium": "Belgium",
+    "backToTop": "Back to top"
+  },
+  "home": {
+    "hero": {
+      "aria": "I create things ...",
+      "disciplinesAria": "Software, Music, Audiovisual, Interactive systems",
+      "software": "Software",
+      "music": "Music",
+      "audiovisual": "Audiovisual",
+      "interactive": "Interactive systems"
     },
-    "title": {
-        "training": "Training",
-        "french" : "French",
-        "dutch" : "Dutch",
-        "english" : "English"
+    "colorsAlive": "Colors are alive",
+    "domains": {
+      "ideas": {
+        "name": "Ideas",
+        "detail": "The starting point"
+      },
+      "software": {
+        "name": "Software",
+        "detail": "Systems made tangible"
+      },
+      "music": {
+        "name": "Music",
+        "detail": "Composition & language"
+      },
+      "audio": {
+        "name": "Audio",
+        "detail": "Production & sound"
+      },
+      "visual": {
+        "name": "Visual",
+        "detail": "Image & motion"
+      },
+      "web": {
+        "name": "Web",
+        "detail": "Interfaces & experiences"
+      },
+      "systems": {
+        "name": "Systems",
+        "detail": "Architecture & abstraction"
+      },
+      "experiments": {
+        "name": "Experiments",
+        "detail": "Play, test, iterate"
+      }
     },
-    "message": {
-        "about": "I'm a quick learner, passionate about learning & sharing new techniques."
-    },
-    "traits": {
-        "first": "Rigorous",
-        "second": "Curious",
-        "third": "Assertive"
-    },
-    "contact": {
-        "e-mail": "E-Mail",
-        "network": "Network",
-        "website": "Website"
-    },
-    "info": {
-        "birthday": "July 15th 1982",
-        "license": "Driver's license ( B )"
-    },
-    "hobbies": {
-        "first": "Audio & Video Production",
-        "second": "Coding music applications",
-        "third": "Playing & teaching music"
-    },
-    "training": {
-        "internship": "Internship",
-        "dotnet-dev": ".NET Developer",
-        "web-dev": "Web Developer",
-        "fundamentals": "IT Fundamentals",
-        "php-init": "PHP Initiation",
-        "visual-arts": "Visual Arts"
-    },
-    "freelance": {
-        "sales": "Sales & After-Sales Services",
-        "consultancy": "Consultancy"
-    },
-    "interim": {
-        "first": "Sales & Restocking",
-        "second": "Construction",
-        "third": "Hospitality Industry"
+    "selectedWork": "Selected work",
+    "activeProject": "Active project · Music · Knowledge",
+    "flyingpadDesc": "A living platform for understanding, learning and creating music — built across software, media and interactive experiences.",
+    "discoverFlyingpad": "Discover FlyingPAD",
+    "primaryPublicWork": "Primary public work",
+    "journeyBrief": "Journey, in brief",
+    "accumulation": "Accumulation, not replacement",
+    "exploreJourney": "Explore the journey",
+    "disciplinesAccumulated": "Disciplines accumulated over time",
+    "now": "Now",
+    "journeyLabels": {
+      "visual": "Visual Arts",
+      "audio": "Music / Audio",
+      "web": "Web",
+      "software": "Software",
+      "systems": "Creative systems"
     }
+  },
+  "work": {
+    "flyingpadMeta": "Active project · Music · Knowledge · Creation",
+    "flyingpadStatement": "A platform built to make musical knowledge understandable without flattening it — combining pedagogy, software, audiovisual production and interactive experiences.",
+    "ownershipTitle": "What I own",
+    "ownershipMeta": "One coherent pipeline",
+    "ownershipNote": "FlyingPAD is not a demo around one skill. I own the product direction, information architecture, software and UI, pedagogical structure, audiovisual production and the path to delivery.",
+    "scope": {
+      "concept": "Concept",
+      "product": "Product direction",
+      "architecture": "Information architecture",
+      "software": "Software",
+      "ui": "UI",
+      "pedagogy": "Pedagogy",
+      "audiovisual": "Audio / video",
+      "delivery": "Delivery"
+    },
+    "visit": "Visit FlyingPAD",
+    "primaryPublicWork": "Primary public work",
+    "labMeta": "Public laboratory",
+    "labTitle": "Experiments",
+    "labStatement": "A place for prototypes, interface studies and creative-technical experiments. Not every idea needs to become a product before it deserves to exist.",
+    "exploreProjects": "Explore Projects",
+    "publicLab": "Public creative-technical lab",
+    "principle": "THE OPERATING PRINCIPLE",
+    "flow": "Idea → intention → abstraction → system → medium → production → iteration."
+  },
+  "journey": {
+    "now": "Now",
+    "visual": {
+      "kind": "Foundation",
+      "title": "Visual Arts",
+      "body": "The first language was visual: composition, form, contrast and the habit of turning an intention into something perceivable.",
+      "details": [
+        "CESS · Visual Arts"
+      ]
+    },
+    "audio": {
+      "kind": "Practice",
+      "title": "Music & Audio",
+      "body": "Creation became temporal and collaborative: composition, performance, teaching, recording, production and sound design.",
+      "details": [
+        "Audio Manager · 2009–2015",
+        "Audio Producer · 2015–2022",
+        "Brandy Jingles · 2019–2020",
+        "Sound Design · 2017"
+      ]
+    },
+    "web": {
+      "kind": "Expansion",
+      "title": "Web",
+      "body": "Interfaces added interaction. Websites became another way to structure information, create an experience and ship work to an audience.",
+      "details": [
+        "Freelance Webmaster · 2018–2022",
+        "SEO / SEA / SMM · 2019",
+        "Digital Coordinator · 2021"
+      ]
+    },
+    "software": {
+      "kind": "System",
+      "title": "Software",
+      "body": "Programming expanded the vocabulary again: abstraction, architecture, data, APIs and systems capable of carrying increasingly complex ideas.",
+      "details": [
+        "IT Fundamentals · 2022",
+        ".NET / Azure · 2022",
+        "Full Stack Web · 2023",
+        ".NET Developer · 2023–2024",
+        "Satellit / Pluxee · 2024"
+      ]
+    },
+    "systems": {
+      "kind": "Convergence",
+      "title": "Creative Systems",
+      "body": "The disciplines no longer sit in separate boxes. Software, music, image, video and interaction are materials selected according to what the idea needs.",
+      "details": [
+        "FlyingPAD",
+        "Interactive systems",
+        "Audiovisual production",
+        "Creative-technical experimentation"
+      ]
+    }
+  },
+  "profile": {
+    "basedIn": "Based in",
+    "belgium": "Belgium",
+    "languages": "Languages",
+    "french": "French",
+    "english": "English",
+    "dutch": "Dutch / Flemish",
+    "contact": "Contact",
+    "emailMe": "Email me",
+    "directContact": "Direct contact",
+    "resume": "Résumé",
+    "openResume": "Open résumé",
+    "resumeHint": "Interactive · FR / EN · Print / PDF",
+    "productionScope": "Production scope",
+    "conceptDelivery": "Concept → delivery",
+    "scopeStatement": "I can carry a project from the initial idea and system design through software and UI implementation, AI-assisted image / video workflows, audio production and final post-production. I also use AI-assisted development as an accelerator where it makes sense; architecture, design decisions, integration and final review remain deliberate and developer-owned.",
+    "scopeChips": {
+      "software": "Software",
+      "ui": "UI",
+      "aiDev": "AI-assisted development",
+      "aiMedia": "AI media",
+      "image": "Image",
+      "video": "Video",
+      "audio": "Audio",
+      "post": "Post-production"
+    },
+    "operating": "Operating principles",
+    "howIBuild": "How I build",
+    "principles": {
+      "own": {
+        "title": "Own the whole problem.",
+        "body": "Understand the goal, constraints and delivery path — not only the code in the middle."
+      },
+      "structure": {
+        "title": "Structure before implementation.",
+        "body": "Model responsibilities and flows first; then choose the simplest structure that stays clear."
+      },
+      "architecture": {
+        "title": "Right-size the architecture.",
+        "body": "Use patterns when they earn their keep. Avoid ceremony for its own sake."
+      },
+      "legible": {
+        "title": "Make complexity legible.",
+        "body": "Good systems should remain understandable — to users, collaborators and the person maintaining them later."
+      },
+      "ai": {
+        "title": "Use AI as leverage.",
+        "body": "Accelerate exploration and implementation without outsourcing design, integration or review."
+      },
+      "refine": {
+        "title": "Ship. Observe. Refine.",
+        "body": "Get a real version into use, learn from it, then polish what actually matters."
+      }
+    },
+    "experience": "Experience",
+    "selectedPath": "Selected path",
+    "exp": {
+      "satellitRole": ".NET Developer",
+      "satellitCompany": "Satellit · Pluxee Support Team",
+      "satellitDetail": "Frontend forms, backend data processing, API integration and delivery around Azure services.",
+      "audioRole": "Audio Producer",
+      "freelanceCompany": "Freelance · Various clients",
+      "audioDetail": "From brief to delivery: recording, editing, mixing, mastering and post-production.",
+      "webmasterRole": "Webmaster",
+      "webmasterDetail": "Client sites: hosting, CMS setup, administration and maintenance.",
+      "audioManagerRole": "Audio Manager",
+      "audioManagerDetail": "Stage management, composition, performance and music teaching.",
+      "brandyCompany": "Brandy Jingles",
+      "brandyDetail": "Studio sessions, planning and broadcast production / post-production."
+    },
+    "education": "Education & training",
+    "edu": {
+      "dotnet": ".NET Developer · Satellit",
+      "fullstack": "Web Developer, Full Stack · Technofutur TIC",
+      "azure": ".NET Azure + IT Fundamentals · Technofutur TIC",
+      "digital": "Digital Coordinator · Google Digital Atelier",
+      "seo": "SEO, SEA, SMM · Technofutur TIC",
+      "sound": "Sound Design · Technocité",
+      "arts": "CESS · Visual Arts · Institut Ste-Marie"
+    },
+    "toolkit": "Toolkit",
+    "toolkitMeta": "Tools that serve the work",
+    "toolkitGroups": {
+      "backend": "Backend & data",
+      "frontend": "Front-end",
+      "architecture": "Architecture & delivery",
+      "aiDev": "AI-assisted development",
+      "aiMedia": "AI media workflows",
+      "av": "Audiovisual production"
+    }
+  },
+  "notFound": {
+    "kicker": "Signal lost",
+    "title": "This route doesn't exist.",
+    "detail": "The signal stops here, but the rest of the system is intact.",
+    "back": "Back home",
+    "backHint": "Return to the main signal"
+  }
 }

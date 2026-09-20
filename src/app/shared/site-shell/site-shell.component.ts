@@ -1,11 +1,13 @@
 import { DOCUMENT } from '@angular/common'
 import { Component, effect, HostListener, inject, Input, OnDestroy, signal } from '@angular/core'
 import { Router, RouterLink, RouterLinkActive } from '@angular/router'
+import { TranslateModule } from '@ngx-translate/core'
+import { SiteLanguage, SiteLanguageService } from '../site-language.service'
 
 @Component({
   selector: 'app-site-shell',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, TranslateModule],
   templateUrl: './site-shell.component.html',
   styleUrl: './site-shell.component.scss'
 })
@@ -18,6 +20,9 @@ export class SiteShellComponent implements OnDestroy {
   readonly headerScrolled = signal(false)
   readonly showBackToTop = signal(false)
 
+  readonly siteLanguage = inject(SiteLanguageService)
+  readonly language = this.siteLanguage.language
+
   private readonly document = inject(DOCUMENT)
   private readonly router = inject(Router)
   private lockedScrollY = 0
@@ -29,6 +34,10 @@ export class SiteShellComponent implements OnDestroy {
       if (this.menuMounted()) this.lockPageScroll()
       else this.unlockPageScroll()
     })
+  }
+
+  setLanguage(language: SiteLanguage): void {
+    this.siteLanguage.setLanguage(language)
   }
 
   openMenu(): void {

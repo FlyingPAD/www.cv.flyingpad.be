@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core'
-import { TranslateService } from '@ngx-translate/core'
+import { SiteLanguageService } from '../../shared/site-language.service'
 import { SiteShellComponent } from '../../shared/site-shell/site-shell.component'
 
 type ResumeLanguage = 'en' | 'fr'
@@ -76,9 +76,9 @@ const COPY = {
   styleUrl: './resume.component.scss'
 })
 export class ResumeComponent {
-  private readonly translate = inject(TranslateService)
+  private readonly siteLanguage = inject(SiteLanguageService)
 
-  readonly language = signal<ResumeLanguage>(this.translate.currentLang === 'fr' ? 'fr' : 'en')
+  readonly language = this.siteLanguage.language
   readonly mode = signal<ResumeMode>('design')
 
   readonly experience: ResumeExperience[] = [
@@ -203,8 +203,7 @@ export class ResumeComponent {
   }
 
   switchLanguage(language: ResumeLanguage): void {
-    this.language.set(language)
-    this.translate.use(language)
+    this.siteLanguage.setLanguage(language)
   }
 
   switchMode(mode: ResumeMode): void {

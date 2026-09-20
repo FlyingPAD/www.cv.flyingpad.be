@@ -3,8 +3,13 @@
     @for(era of eras;track era.year){
       <article class="era">
         <div class="marker" aria-hidden="true"><i></i></div>
-        <div class="date">{{era.year}}</div>
-        <div class="content"><small>{{era.kind}}</small><h2>{{era.title}}</h2><p>{{era.body}}</p><div class="details cv-chip-list">@for(item of era.detail;track item){<span class="cv-chip">{{item}}</span>}</div></div>
+        <div class="date">{{ era.year === 'Now' ? ('journey.now' | translate) : era.year }}</div>
+        <div class="content">
+          <small>{{ ('journey.'+era.key+'.kind') | translate }}</small>
+          <h2>{{ ('journey.'+era.key+'.title') | translate }}</h2>
+          <p>{{ ('journey.'+era.key+'.body') | translate }}</p>
+          <div class="details cv-chip-list">@for(key of era.detailKeys;track key){<span class="cv-chip">{{ key | translate }}</span>}</div>
+        </div>
       </article>
     }
   </section>

@@ -1,6 +1,6 @@
 # Current Development State — CV V2
 
-Last consolidated after the September 2026 premium polish / cleanup pass.
+Last consolidated after the global i18n / ownership / public identity pass.
 
 ## Read order
 1. `/AGENTS.md`
@@ -13,60 +13,68 @@ Last consolidated after the September 2026 premium polish / cleanup pass.
 ## Current product state
 Accepted public IA: **Home · Work · Journey · Profile**, plus the interactive **Resume** artifact. Dark V2 is the production baseline.
 
-### Navigation
-Desktop keeps explicit Home / Work / Journey / Profile navigation plus Email.
+### Navigation and shell
+Desktop keeps Home / Work / Journey / Profile plus direct email. At ≤700px the header collapses into the authored full-screen menu with enter/exit animation, scroll lock, Escape, keyboard focus trap and focus restoration.
 
-At ≤700px the header collapses to identity + Menu. The full-screen menu now has:
-- authored reveal and exit animation;
-- background-scroll lock;
-- hidden overlay scrollbar;
-- Escape support;
-- keyboard focus trap;
-- focus restoration;
-- delayed internal navigation so the exit animation is actually visible.
+A global **EN / FR** control now lives in the shell and the language choice persists in localStorage. The document `lang` attribute follows the active language.
 
-### Shared shell
-The miniature Nine mark keeps position 01 absent and 02–09 visible through Black. The footer now closes each page with the same restrained signature plus direct routes to Email, FlyingPAD and Projects.
+The footer carries the miniature Nine signature plus Email / FlyingPAD / Projects. A skip-to-content link is available for keyboard users.
 
 ### Home
-The hero remains **I create things ...** plus the discipline line. `Colors are alive` heads the canonical 01→09 projection. Unrelated UI numbering was removed so 01–09 remains reserved for this symbolic system.
+Hero remains **I create things ...** and has a French projection while preserving the letter-by-letter motion. The discipline line, domain copy, selected work and journey summary are localized.
+
+`Colors are alive` remains intentionally unchanged across languages.
 
 ### Work
-FlyingPAD is the primary public work. Projects is the public creative-technical laboratory. Shared chips and premium actions come from the global V2 primitive layer.
+FlyingPAD is now the explicit example of end-to-end ownership. The page states what is actually owned across the production pipeline:
+- concept;
+- product direction;
+- information architecture;
+- software;
+- UI;
+- pedagogy;
+- audio / video;
+- delivery.
+
+The point is proof of production scope, not a larger skill inventory.
+
+Projects remains the public creative-technical laboratory.
 
 ### Journey
-The timeline expresses accumulated disciplines without pretending they replaced one another. Timeline markers are neutral rather than borrowing Nine numbering.
+Timeline copy and evidence chips are localized. Neutral timeline markers remain intentionally separate from the Nine numbering system.
 
 ### Profile
-Profile now emphasizes:
+Profile is localized and continues to emphasize:
 - end-to-end production ownership;
 - operating principles;
 - .NET / Angular as the core development stack;
-- architecture and delivery;
+- right-sized architecture;
 - AI-assisted development used deliberately;
 - AI media workflows;
 - audiovisual production.
 
-The public profile intentionally omits secondary stacks the owner does not want to sell professionally.
-
 ### Resume
-Resume is now a live HTML professional artifact:
-- dynamic EN / FR;
-- Design / Essential modes from one typed content source;
-- browser Print / PDF;
+Resume remains a live HTML professional artifact with:
+- EN / FR;
+- Design / Essential;
+- Print / PDF;
 - A4 print CSS;
-- responsive screen reading mode;
-- no portrait until a genuinely suitable professional image exists;
-- Nine color signature with an intentionally empty first position.
+- one typed content source.
+
+Resume language changes now use the same site language service as the rest of the application, so shell and document stay synchronized.
+
+### 404
+Unknown routes now render a designed 404 surface instead of silently redirecting to Home.
+
+### Public identity / sharing
+The public surface now includes:
+- authored metadata and Person JSON-LD;
+- Nine-based SVG favicon;
+- dedicated 1200×630 Open Graph card;
+- large-image social sharing metadata.
 
 ### Motion
-Route changes use the browser View Transitions API when available, with a restrained fade / vertical reveal. Reduced-motion preferences disable decorative motion.
-
-### Metadata
-The app now has authored title, description, canonical URL, theme color, Open Graph / Twitter metadata and Person JSON-LD.
-
-### Legacy cleanup
-Old Experience / Training / Hard Skills / Soft Skills / Projects page components were removed. Their historic public URLs remain as redirects in `app.routes.ts`. Legacy brown-theme global CSS/tokens were removed.
+Route changes use the View Transitions API when available. Reduced-motion preferences remove decorative motion.
 
 ## Visual rules
 - Dark, calm, precise base.
@@ -74,16 +82,17 @@ Old Experience / Training / Hard Skills / Soft Skills / Projects page components
 - Readability beats excessive delicacy.
 - No scale/jump hover effects.
 - Desktop spatial; tablet simplified; mobile sequential.
-- 01–09 is reserved for the Nine projection, not generic section numbering.
+- 01–09 is reserved for the Nine projection.
 - No essential information depends on Nine/lore.
-- Repeated UI primitives belong in the global V2 style layer; page CSS owns composition only.
+- Repeated UI primitives belong in the global V2 style layer.
+- Localization must preserve tone, not merely replace words.
 
 ## Remaining review
-1. Real-device pass on the premium polish, especially very small mobile widths.
-2. Export all four Resume combinations: EN/FR × Design/Essential, then physically print at least one Design and one Essential copy.
-3. Global site i18n remains a separate content pass; Resume is already localized.
-4. Consider a dedicated social preview image when a final visual identity asset is approved.
-5. Light/theme strategy only after dark V2 is fully stable.
+1. Real-device pass after the language/ownership changes.
+2. Export all four Resume combinations: EN/FR × Design/Essential.
+3. Physically print at least one Design and one Essential copy.
+4. Consider route-specific dynamic social metadata only if social previews become an actual acquisition channel.
+5. Angular/runtime upgrade and broader optimization are a separate future technical pass.
 
 ## Deployment
-Production deploys from `master` via serialized GitHub Actions + FTP. Verify a deployment before stacking the next production commit.
+Production deploys from `master` via serialized GitHub Actions + FTP. Treat production commits as deployment events.
