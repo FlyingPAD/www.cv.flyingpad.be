@@ -7,11 +7,11 @@ import { ResumeComponent } from './pages/resume/resume.component'
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, title: 'Tony Van Langenhove' },
+  { path: 'home', component: HomeComponent, title: 'Tony Van Langenhove | Creative Systems' },
   { path: 'work', component: WorkComponent, title: 'Tony Van Langenhove | Work' },
   { path: 'journey', component: JourneyComponent, title: 'Tony Van Langenhove | Journey' },
   { path: 'profile', component: ProfileComponent, title: 'Tony Van Langenhove | Profile' },
-  { path: 'resume', component: ResumeComponent, title: 'Tony Van Langenhove | Resume' },
+  { path: 'resume', component: ResumeComponent, title: 'Tony Van Langenhove | Résumé' },
   { path: 'projects', redirectTo: 'work' },
   { path: 'experience', redirectTo: 'journey' },
   { path: 'training', redirectTo: 'journey' },

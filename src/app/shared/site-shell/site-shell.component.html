@@ -19,11 +19,23 @@
   </header>
 
   <main><ng-content /></main>
-  <footer><span>Tony Van Langenhove</span><span>Belgium · 2026</span></footer>
+
+  <footer class="site-footer">
+    <div class="footer-signature">
+      <span class="nine-mark footer-mark" aria-hidden="true"><i class="missing"></i><i class="red"></i><i class="orange"></i><i class="yellow"></i><i class="green"></i><i class="blue"></i><i class="indigo"></i><i class="violet"></i><i class="black"></i></span>
+      <span>Tony Van Langenhove · Belgium</span>
+    </div>
+    <nav class="footer-links" aria-label="Contact and public work">
+      <a href="mailto:tonyvan@live.fr">Email ↗</a>
+      <a href="https://www.flyingpad.be" target="_blank" rel="noreferrer">FlyingPAD ↗</a>
+      <a href="https://projects.flyingpad.be" target="_blank" rel="noreferrer">Projects ↗</a>
+    </nav>
+    <span class="footer-year">2026</span>
+  </footer>
 </div>
 
-@if(menuOpen()){
-  <div class="menu-overlay" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site navigation" tabindex="-1" (keydown)="onOverlayKeydown($event)">
+@if(menuMounted()){
+  <div class="menu-overlay" [class.closing]="menuClosing()" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site navigation" tabindex="-1" (keydown)="onOverlayKeydown($event)">
     <div class="overlay-top">
       <div class="overlay-signature" aria-hidden="true">
         <span class="overlay-mark"><i></i><i class="red"></i><i class="orange"></i><i class="yellow"></i><i class="green"></i><i class="blue"></i><i class="indigo"></i><i class="violet"></i><i class="black"></i></span>
@@ -33,10 +45,10 @@
     </div>
 
     <nav class="overlay-nav" aria-label="Mobile navigation">
-      <a routerLink="/home" routerLinkActive="active" (click)="closeMenu()"><small>01</small><span>Home</span><i aria-hidden="true">→</i></a>
-      <a routerLink="/work" routerLinkActive="active" (click)="closeMenu()"><small>02</small><span>Work</span><i aria-hidden="true">→</i></a>
-      <a routerLink="/journey" routerLinkActive="active" (click)="closeMenu()"><small>03</small><span>Journey</span><i aria-hidden="true">→</i></a>
-      <a routerLink="/profile" routerLinkActive="active" (click)="closeMenu()"><small>04</small><span>Profile</span><i aria-hidden="true">→</i></a>
+      <a href="/home" [class.active]="section === 'home'" (click)="navigateFromMenu($event, '/home')"><span>Home</span><i aria-hidden="true">→</i></a>
+      <a href="/work" [class.active]="section === 'work'" (click)="navigateFromMenu($event, '/work')"><span>Work</span><i aria-hidden="true">→</i></a>
+      <a href="/journey" [class.active]="section === 'journey'" (click)="navigateFromMenu($event, '/journey')"><span>Journey</span><i aria-hidden="true">→</i></a>
+      <a href="/profile" [class.active]="section === 'profile'" (click)="navigateFromMenu($event, '/profile')"><span>Profile</span><i aria-hidden="true">→</i></a>
     </nav>
 
     <div class="overlay-bottom">

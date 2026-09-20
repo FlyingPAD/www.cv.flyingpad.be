@@ -1,20 +1,13 @@
 # CV V2 Architecture
 
 ## Role of the application
+`cv.flyingpad.be` is the identity and routing surface of the public ecosystem. It explains the person and makes work reachable without trying to become the work itself.
 
-`cv.flyingpad.be` is the identity and routing surface of the public ecosystem. It should explain the person and make the work reachable without trying to become the work itself.
-
-The site is intentionally smaller in ambition than FlyingPAD as a product and freer of experimentation than `projects.flyingpad.be`.
+The product now presents Tony less as a list of unrelated skills and more as a systems/production profile: software is a core medium, not the only identity.
 
 ## Information architecture
-
 ### Home
-A short orientation layer. It answers:
-- Who is this?
-- What kind of things are created?
-- Where should I go next?
-
-It should work in roughly ten seconds.
+Fast orientation: identity, disciplines, Nine projection, selected work and journey entry.
 
 ### Work
 Selected public work organized around purpose and experience rather than implementation trivia.
@@ -23,18 +16,15 @@ Preferred hierarchy:
 **Purpose → Product → Media/Experience → System → Architecture → Technology**
 
 ### Journey
-A narrative model of accumulated disciplines. Education and employment are evidence inside the trajectory, not isolated identity categories.
+A narrative model of accumulated disciplines. Education and employment are evidence inside the trajectory rather than separate identity silos.
 
 ### Profile
-The conventional professional projection. It must be scannable and useful without requiring the visitor to engage with the narrative or deeper design language.
+The conventional professional projection, now including end-to-end production scope, operating principles, selected experience, education and a curated toolkit.
 
 ### Resume
-A printable/exportable professional artifact. The current implementation is legacy and scheduled for replacement.
+A live localized printable/exportable professional artifact. EN/FR and Design/Essential share one typed content source.
 
 ## Angular structure
-
-Current V2 direction:
-
 ```text
 src/app/
   shared/
@@ -44,55 +34,56 @@ src/app/
     work/
     journey/
     profile/
-    resume/   # live localized + printable professional artifact
+    resume/
 ```
 
-Use `shared/` for genuinely reusable UI/behavior. Avoid turning every visual fragment into a component without a reuse or responsibility boundary.
+Historic routes such as `/experience`, `/training`, `/hard-skills`, `/soft-skills` and `/projects` remain redirect-only compatibility URLs. Their old components are intentionally removed.
 
-As the content grows, prefer typed data structures for timeline events, projects and toolkit groups rather than large duplicated template fragments.
+Use `shared/` for genuine responsibility/reuse boundaries. Do not componentize decorative fragments only for abstraction's sake.
 
 ## Styling
-
 Global responsibilities:
 - design tokens;
 - baseline document behavior;
-- cross-page accessibility behavior;
-- temporary isolated legacy compatibility.
+- accessibility defaults;
+- shared low-level visual primitives;
+- route transition styling.
 
 Component responsibilities:
 - page composition;
 - local responsive behavior;
 - feature-specific presentation.
 
-The target is a coherent design system, not one enormous global stylesheet.
+Legacy V1 theme tokens and `.layout` compatibility CSS are no longer part of the production architecture.
+
+## Motion
+Router configuration enables `withViewTransitions()`. Browsers without support fall back to normal navigation. Reduced-motion preferences remove decorative route and overlay motion.
+
+The mobile navigation owns explicit mounted/open/closing states so exit motion can complete before internal navigation.
+
+## Accessibility
+The mobile menu behaves as a modal dialog:
+- background scroll is locked;
+- Escape closes it;
+- Tab focus is trapped;
+- focus moves into the dialog on open;
+- focus returns to the trigger on close.
 
 ## Responsive model
-
-Responsive design is a projection problem, not a shrinking problem.
-
-The same conceptual system can materialize differently by medium:
+Responsive design is a projection problem, not a shrinking problem:
 - desktop: spatial;
-- tablet: fragmented/simplified;
+- tablet: simplified;
 - mobile: sequential/rhythmic.
 
 Content parity matters more than geometry parity.
 
-No essential navigation or professional information may be hidden behind decorative interaction.
+## SEO / identity metadata
+`index.html` owns the baseline public metadata: description, canonical URL, theme color, Open Graph/Twitter fields and Person JSON-LD. Route titles provide page-specific browser titles.
 
 ## Cross-project architecture
-
-The repository consumes shared concepts but does not own them.
-
-Global/canonical concepts belong to the GPT Library / workspace. Local documents should record only:
-- how a concept is projected here;
-- implementation constraints;
-- local decisions;
-- current state.
-
-This prevents canon drift between FlyingPAD, HHH, CV and future surfaces.
+The repository consumes shared concepts but does not own them. Global/canonical concepts belong to the GPT Library/workspace; local docs record projection and implementation decisions only.
 
 ## Deployment architecture
+Push to `master` → serialized GitHub Actions → Angular production build → FTP deployment.
 
-Push to `master` → GitHub Actions → Angular production build → FTP deployment.
-
-The workflow is serialized. Treat production commits as deployment events, not merely source-control bookkeeping.
+Treat production commits as deployment events, not merely source-control bookkeeping.

@@ -45,7 +45,7 @@
       <div class="resume-layout">
         <aside class="resume-sidebar">
           <section class="resume-section contact-section">
-            <div class="section-label"><span>01</span><h2>{{ copy.contact }}</h2></div>
+            <div class="section-label"><h2>{{ copy.contact }}</h2></div>
             <div class="contact-list">
               <a href="mailto:tonyvan@live.fr">tonyvan&#64;live.fr</a>
               <a href="tel:+32472425744">+32 472 42 57 44</a>
@@ -56,7 +56,7 @@
           </section>
 
           <section class="resume-section">
-            <div class="section-label"><span>02</span><h2>{{ copy.languages }}</h2></div>
+            <div class="section-label"><h2>{{ copy.languages }}</h2></div>
             <div class="language-list">
               @for(level of copy.languageLevels; track level) {
                 <p>{{ level }}</p>
@@ -65,7 +65,7 @@
           </section>
 
           <section class="resume-section toolkit-section">
-            <div class="section-label"><span>03</span><h2>{{ copy.toolkit }}</h2></div>
+            <div class="section-label"><h2>{{ copy.toolkit }}</h2></div>
             <div class="toolkit-list">
               @for(group of toolkit; track group.title.en) {
                 <div class="tool-group">
@@ -83,13 +83,13 @@
 
         <main class="resume-main">
           <section class="resume-section summary-section">
-            <div class="section-label"><span>04</span><h2>{{ copy.summaryLabel }}</h2></div>
+            <div class="section-label"><h2>{{ copy.summaryLabel }}</h2></div>
             <p class="summary">{{ copy.summary }}</p>
           </section>
 
           <section class="resume-section">
             <div class="section-label split-label">
-              <div><span>05</span><h2>{{ copy.experience }}</h2></div>
+              <div><h2>{{ copy.experience }}</h2></div>
               <small>{{ copy.selected }}</small>
             </div>
 
@@ -108,7 +108,7 @@
           </section>
 
           <section class="resume-section education-section">
-            <div class="section-label"><span>06</span><h2>{{ copy.education }}</h2></div>
+            <div class="section-label"><h2>{{ copy.education }}</h2></div>
             <div class="education-list">
               @for(item of education; track item.period + item.place) {
                 <article class="education-item">
