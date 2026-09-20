@@ -30,6 +30,8 @@ export class SiteShellComponent implements OnDestroy {
   private restoreFocusElement: HTMLElement | null = null
 
   constructor() {
+    this.updateScrollState()
+
     effect(() => {
       if (this.menuMounted()) this.lockPageScroll()
       else this.unlockPageScroll()
@@ -85,6 +87,10 @@ export class SiteShellComponent implements OnDestroy {
 
   @HostListener('window:scroll')
   onWindowScroll(): void {
+    this.updateScrollState()
+  }
+
+  private updateScrollState(): void {
     const scrollY = this.document.defaultView?.scrollY ?? 0
     this.headerScrolled.set(scrollY > 12)
     this.showBackToTop.set(scrollY > 560)
