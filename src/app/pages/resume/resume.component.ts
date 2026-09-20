@@ -31,10 +31,10 @@ const COPY = {
     design: 'Design',
     essential: 'Essential',
     print: 'Print / PDF',
-    identity: '.NET / Angular Developer · Creative Systems',
+    identity: '.NET / Angular Developer · End-to-end Creative Production',
     location: 'Mons · Belgium',
     summaryLabel: 'Profile',
-    summary: 'I turn ideas into working systems. My core stack is .NET + Angular; my background in music, audio, web and visual production shapes how I approach software: structure first, then the right medium, with a strong bias toward clarity, maintainability and useful products.',
+    summary: 'I turn ideas into working systems and can carry a project from concept to delivery across software, UI, AI-assisted image / video workflows, audio and post-production. My core stack is .NET + Angular; the wider production background helps me keep the whole pipeline coherent.',
     experience: 'Experience',
     education: 'Education & training',
     toolkit: 'Toolkit',
@@ -51,10 +51,10 @@ const COPY = {
     design: 'Design',
     essential: 'Essentiel',
     print: 'Imprimer / PDF',
-    identity: 'Développeur .NET / Angular · Systèmes créatifs',
+    identity: 'Développeur .NET / Angular · Production créative de bout en bout',
     location: 'Mons · Belgique',
     summaryLabel: 'Profil',
-    summary: 'Je transforme des idées en systèmes qui fonctionnent. Mon stack principal est .NET + Angular ; mon parcours en musique, audio, web et production visuelle nourrit ma manière d’aborder le logiciel : d’abord la structure, puis le bon médium, avec un goût marqué pour la clarté, la maintenabilité et les produits utiles.',
+    summary: 'Je transforme des idées en systèmes qui fonctionnent et peux porter un projet du concept à la livraison à travers le logiciel, l’UI, les workflows IA image / vidéo, l’audio et la post-production. Mon stack principal est .NET + Angular ; ce parcours de production élargi m’aide à garder l’ensemble du pipeline cohérent.',
     experience: 'Expérience',
     education: 'Formation',
     toolkit: 'Compétences',
@@ -177,16 +177,16 @@ export class ResumeComponent {
       items: ['Angular', 'TypeScript', 'RxJS', 'Signals', 'SCSS']
     },
     {
-      title: { en: 'Architecture', fr: 'Architecture' },
-      items: ['Clean Architecture', 'DDD', 'CQS / CQRS', 'MediatR']
+      title: { en: 'Architecture & delivery', fr: 'Architecture & delivery' },
+      items: ['Clean Architecture', 'DDD', 'CQS / CQRS', 'MediatR', 'GitHub Actions', 'Azure DevOps']
     },
     {
-      title: { en: 'Delivery', fr: 'Delivery' },
-      items: ['GitHub Actions', 'Azure DevOps', 'CI / CD', 'Git']
+      title: { en: 'AI workflows', fr: 'Workflows IA' },
+      items: ['ComfyUI', 'SDXL', 'WAN', 'LoRA workflows', 'Image / video pipelines']
     },
     {
-      title: { en: 'Creative systems', fr: 'Systèmes créatifs' },
-      items: ['Music production', 'Sound design', 'Audiovisual', 'AI pipelines', 'Interactive design']
+      title: { en: 'Audiovisual production', fr: 'Production audiovisuelle' },
+      items: ['Adobe Premiere Pro', 'Cubase', 'Paint.NET', 'Sound design', 'Post-production']
     }
   ]
 
