@@ -1,5 +1,5 @@
 <div class="site-shell">
-  <header class="site-header">
+  <header class="site-header" [class.scrolled]="headerScrolled()">
     <div class="identity">
       <span class="nine-mark" aria-hidden="true"><i class="missing"></i><i class="red"></i><i class="orange"></i><i class="yellow"></i><i class="green"></i><i class="blue"></i><i class="indigo"></i><i class="violet"></i><i class="black"></i></span>
       <a class="identity-name" routerLink="/home">Tony<br>Van Langenhove</a>
@@ -33,6 +33,12 @@
     <span class="footer-year">2026</span>
   </footer>
 </div>
+
+@if(showBackToTop()){
+  <button class="back-to-top" type="button" (click)="scrollToTop()" aria-label="Back to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+}
 
 @if(menuMounted()){
   <div class="menu-overlay" [class.closing]="menuClosing()" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site navigation" tabindex="-1" (keydown)="onOverlayKeydown($event)">

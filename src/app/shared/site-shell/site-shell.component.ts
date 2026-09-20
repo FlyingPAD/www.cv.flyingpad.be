@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common'
-import { Component, effect, inject, Input, OnDestroy, signal } from '@angular/core'
+import { Component, effect, HostListener, inject, Input, OnDestroy, signal } from '@angular/core'
 import { Router, RouterLink, RouterLinkActive } from '@angular/router'
 
 @Component({
@@ -15,6 +15,8 @@ export class SiteShellComponent implements OnDestroy {
   readonly menuOpen = signal(false)
   readonly menuMounted = signal(false)
   readonly menuClosing = signal(false)
+  readonly headerScrolled = signal(false)
+  readonly showBackToTop = signal(false)
 
   private readonly document = inject(DOCUMENT)
   private readonly router = inject(Router)
@@ -70,6 +72,19 @@ export class SiteShellComponent implements OnDestroy {
   navigateFromMenu(event: MouseEvent, path: string): void {
     event.preventDefault()
     this.closeMenu(() => void this.router.navigateByUrl(path))
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    const scrollY = this.document.defaultView?.scrollY ?? 0
+    this.headerScrolled.set(scrollY > 12)
+    this.showBackToTop.set(scrollY > 560)
+  }
+
+  scrollToTop(): void {
+    const view = this.document.defaultView
+    const reduceMotion = view?.matchMedia('(prefers-reduced-motion: reduce)').matches ?? false
+    view?.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' })
   }
 
   onOverlayKeydown(event: KeyboardEvent): void {
