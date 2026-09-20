@@ -21,7 +21,7 @@ A global **EN / FR** control now lives in the shell and the language choice pers
 The footer carries the miniature Nine signature plus Email / FlyingPAD / Projects. A skip-to-content link is available for keyboard users.
 
 ### Home
-Hero remains **I create things ...** and has a French projection while preserving the letter-by-letter motion. The discipline line, domain copy, selected work and journey summary are localized.
+Hero signature is now **I build things ...** across languages, preserving the letter-by-letter motion and aligning the site with the broader public identity. The discipline line, domain copy, selected work and journey summary are localized.
 
 `Colors are alive` remains intentionally unchanged across languages.
 
